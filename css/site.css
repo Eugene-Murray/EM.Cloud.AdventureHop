@@ -1,0 +1,25 @@
+/* CSS Document */
+
+body { padding-top: 50px; }
+
+@font-face {
+    font-family: google-Lobster;
+    src: url(../fonts/google/Lobster/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: google-Oswald-Bold;
+    src: url(../fonts/google/Oswald/Oswald-Bold.ttf);
+}
+
+.heading {
+	font-family: google-Oswald-Bold;
+	font-size:20px
+}
+
+
+.title {
+    font-family: google-Lobster;
+	font-size:80px
+}
+
