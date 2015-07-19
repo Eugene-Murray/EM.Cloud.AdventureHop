@@ -1,0 +1,17 @@
+@media only screen and (min-width: 1140px) {
+
+body { padding-top: 50px; }
+
+.heading {
+	font-family: google-Oswald-Bold;
+	font-size:20px
+}
+
+
+.title {
+    font-family: google-Lobster;
+	font-size:80px
+}
+
+
+} /*end of the media query */

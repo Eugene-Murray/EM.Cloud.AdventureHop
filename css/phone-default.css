@@ -1,6 +1,5 @@
-/* CSS Document */
-
 body { padding-top: 50px; }
+
 
 @font-face {
     font-family: google-Lobster;
@@ -14,12 +13,11 @@ body { padding-top: 50px; }
 
 .heading {
 	font-family: google-Oswald-Bold;
-	font-size:20px
+	font-size:12px
 }
 
 
 .title {
     font-family: google-Lobster;
-	font-size:80px
+	font-size:50px
 }
-
