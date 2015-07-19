@@ -1,6 +1,3 @@
-body { padding-top: 50px; }
-
-
 @font-face {
     font-family: google-Lobster;
     src: url(../fonts/google/Lobster/Lobster-Regular.ttf);
@@ -9,6 +6,17 @@ body { padding-top: 50px; }
 @font-face {
     font-family: google-Oswald-Bold;
     src: url(../fonts/google/Oswald/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: google-Oswald-Regular;
+    src: url(../fonts/google/Oswald/Oswald-Regular.ttf);
+}
+
+body { 
+	padding-top: 50px; 
+	font-family: google-Oswald-Regular, Verdana, Arial;
+	font-size:12px
 }
 
 .heading {
