@@ -22,6 +22,7 @@
 <link rel="stylesheet" type="text/css" href="css/phone-default.css">
 <link rel="stylesheet" type="text/css" href="css/tablet.css">
 <link rel="stylesheet" type="text/css" href="css/desktop.css">
+<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -92,12 +93,117 @@
     
   </div>
   <hr>
+  
+  <img src="https://farm9.staticflickr.com/8627/16397929385_206fcddeb7_o.jpg" width="100%" alt="North America">
+  
+  <hr>
 </div>
+
+
+
+
+
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+        <div class="thumbnail">
+          <a class="image-link" href="https://farm4.staticflickr.com/3690/11621280904_d2a4789643.jpg">
+            <img src="https://farm4.staticflickr.com/3690/11621280904_d2a4789643.jpg" />
+          </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+        <div class="thumbnail">
+          <a class="image-link" href="https://farm8.staticflickr.com/7337/11913191405_cee3237a80.jpg">
+            <img src="https://farm8.staticflickr.com/7337/11913191405_cee3237a80.jpg" />
+          </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+        <div class="thumbnail">
+          <a class="image-link" href="https://farm8.staticflickr.com/7418/12001279283_3247502a77.jpg">
+            <img src="https://farm8.staticflickr.com/7418/12001279283_3247502a77.jpg" />
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        <div class="thumbnail">
+          <a class="image-link" href="https://farm6.staticflickr.com/5503/12002553266_044219ab62.jpg">
+            <img src="https://farm6.staticflickr.com/5503/12002553266_044219ab62.jpg" />
+          </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <a class="image-link" href="https://farm8.staticflickr.com/7611/16750238131_c928118b66.jpg">
+            <img src="https://farm8.staticflickr.com/7611/16750238131_c928118b66.jpg" />
+          </a>
+        </div>
+        <div class="col-md-4">
+        <div class="thumbnail">
+          <a class="image-link" href="https://farm4.staticflickr.com/3941/15666583441_bfd56c5a41.jpg">
+            <img src="https://farm4.staticflickr.com/3941/15666583441_bfd56c5a41.jpg" />
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom: 10%;">
+        <div class="col-md-4">
+        <div class="thumbnail">
+          <a class="image-link" href="https://farm4.staticflickr.com/3954/15483175128_e44a6f7378.jpg">
+            <img src="https://farm4.staticflickr.com/3954/15483175128_e44a6f7378.jpg" />
+          </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+        <div class="thumbnail">
+          <a class="image-link" href="https://farm8.staticflickr.com/7575/16126317089_d3fe317563.jpg">
+            <img src="https://farm8.staticflickr.com/7575/16126317089_d3fe317563.jpg" />
+          </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+        <div class="thumbnail">
+          <a class="image-link" href="https://farm9.staticflickr.com/8646/16175970590_e836b435b7.jpg">
+            <img src="https://farm9.staticflickr.com/8646/16175970590_e836b435b7.jpg" />
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="js/jquery-1.11.2.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script>
+
+<script src="js/jquery.magnific-popup.js"></script>
+    <script type="text/javascript">
+	 $('.image-link').magnificPopup({ 
+  type: 'image',
+  mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+
+  zoom: {
+    enabled: true, // By default it's false, so don't forget to enable it
+
+    duration: 300, // duration of the effect, in milliseconds
+    easing: 'ease-in-out', // CSS transition easing function 
+
+    // The "opener" function should return the element from which popup will be zoomed in
+    // and to which popup will be scaled down
+    // By defailt it looks for an image tag:
+    opener: function(openerElement) {
+      // openerElement is the element on which popup was initialized, in this case its <a> tag
+      // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+      return openerElement.is('img') ? openerElement : openerElement.find('img');
+    }
+  }
+
+});	</script>
+
 </body>
 </html>
