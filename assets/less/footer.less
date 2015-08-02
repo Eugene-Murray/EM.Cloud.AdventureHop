@@ -1,0 +1,145 @@
+/* .footer and affected links and text inside 
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.footer,
+.footer a {
+    color: @footer-text
+}
+/* .footer base styles
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+    margin-right: -52px;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid @footer-border-color;
+    border-right: 1px solid @footer-border-color;
+}
+.footer-column-wrapper {
+    background: @footer-col-wrapper-bg
+}
+.footer .footer-col {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 60px;
+    background: @footer-bg;
+}
+.footer .footer-row:not(:last-child) {
+    border-bottom: @footer-border-width solid @footer-border-color
+}
+.footer .footer-col:not(:last-child) {
+    border-bottom: @footer-border-width solid @footer-border-color
+}
+.footer .footer-col *:first-child {
+    margin-top: 0
+}
+.footer .footer-col *:last-child {
+    margin-bottom: 0
+}
+@media (min-width:768px) { 
+	.footer {
+	    margin-right: 0;
+	    font-size: 90%;
+	}
+	.footer-column-wrapper {
+	    padding: 0
+	}
+	.footer .container {
+	    padding: 0 30px
+	}
+	.footer .footer-col:not(:last-child) {
+	    border-bottom: 0px
+	}
+	.footer .footer-col {
+	    border-right: @footer-border-width solid @footer-border-color;
+	    border-bottom: 0px;
+	}
+	.footer .footer-col:first-child {
+	    border-left: @footer-border-width solid @footer-border-color
+	}
+}
+@media (min-width:992px) { 
+	.sticky-footer {
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	}
+}
+/* .footer-title
+ -------------------------------------------------------------------------------------------- */
+.footer-title {
+    text-transform: uppercase
+}
+/* .footer > borders on bootstrap components 
+ -------------------------------------------------------------------------------------------- */
+.footer .form-control-footer {
+    border-color: @footer-form-border-color;
+    background: transparent;
+    color: @footer-btn-text;
+}
+.footer .form-control-footer::-moz-placeholder {
+    opacity: .8;
+    color: @footer-btn-text;
+}
+.footer .form-control-footer:-ms-input-placeholder {
+    color: @footer-btn-text;
+    opacity: .8;
+}
+.footer .form-control-footer::-webkit-input-placeholder {
+    color: @footer-btn-text;
+    opacity: .8;
+}
+/* ----- .btn-footer -------- */
+.btn-footer {
+    color: @footer-btn-text;
+    border-color: @footer-btn-border;
+    background-color: @footer-btn-bg;
+}
+.btn-footer:hover,
+.btn-footer:focus,
+.btn-footer:active,
+.btn-footer.active {
+    color: @footer-btn-hover-text;
+    border-color: @footer-btn-hover-border;
+    background-color: @footer-btn-hover-bg;
+}
+/* .footer-copyright 
+ -------------------------------------------------------------------------------------------- */
+.footer-copyright {
+    padding: 20px 0;
+    border-top: @footer-border-width solid @footer-border-color;
+    margin: 0;
+    text-align: center;
+    background: @footer-copyright-bg;
+    color: @footer-copyright-text;
+}
+.footer-copyright p {
+    font-size: 12px;
+    margin: 0px;
+}
+.footer-copyright a {
+    color: @footer-copyright-link
+}
+/* #go-to-top 
+ -------------------------------------------------------------------------------------------------------------------------------------*/
+#go-to-top {
+    bottom: 3px;
+    left: 3px;
+    color: @go-to-top-color;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 50px;
+    position: fixed;
+    text-align: center;
+    width: 50px;
+    z-index: 20;
+    background: @go-to-top-bg;
+}
+#go-to-top i {
+    position: relative;
+    top: 1px;
+}
+#go-to-top.position-1 {
+    bottom: 3px;
+    right: 3px;
+    left: auto;
+}

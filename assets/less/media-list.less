@@ -1,0 +1,88 @@
+/* .media-list :: used outside the widget
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.media-list {
+    clear: left
+}
+.media-list > li:not(:last-child) {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.media-list > li a {
+    text-decoration: none;
+    color: inherit;
+}
+.media-list .media-list-visual img {
+    width: 100%;
+    height: auto;
+    border: 1px solid @pg-bg-clr;
+}
+.media-list-visual {
+    width: 40px;
+    height: auto;
+    margin-right: -45px;
+    float: left;
+}
+.media-list .media-list-content {
+    float: left;
+    padding-left: 45px;
+}
+.media-list .media-list-content *:first-child {
+    margin-top: 0
+}
+.media-list .media-list-content *:last-child {
+    margin-top: 0
+}
+.media-list:hover > li {
+    transition: all .5s ease-in-out;
+}
+.media-list > li:hover {
+    opacity: .5;
+}
+.media-list .media-list {
+    clear: both;
+    padding: 10px 0 0 0;
+    margin-left: 5%;
+}
+.media-list-date {
+    background: @darkest;
+    color: @lightest;
+    height: auto;
+    padding: 5px 0;
+    width: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    display: table;
+    vertical-align: middle;
+}
+.media-list-date .month {
+    font-size: 14px
+}
+.media-list-date .year {
+    font-size: 11px
+}
+.media-list-date span {
+    line-height: 1.0;
+    display: block;
+}
+.media-list-date .day {
+    font-size: 25px;
+    margin-top: -1px;
+}
+.media-list-date .media-list-date-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media (min-width:768px) { 
+	.media-list-visual {
+	    width: 80px;
+	    margin-right: -85px;
+	}
+	.media-list .media-list-content {
+	    padding-left: 85px
+	}
+	.media-list-date {
+	    height: 70px;
+	    width: 70px;
+	}
+}

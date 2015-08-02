@@ -1,0 +1,97 @@
+/* .page-header-primary
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.page-header-primary {
+    .page-header-primary-mixin;
+    text-align: center;
+}
+.page-header-primary h2,
+.page-header-primary .h2 {
+    margin: 0;
+    color: @page-header-text;
+    text-transform: @page-header-case;
+    font-weight: @page-header-font-weight;
+    font-style: @page-header-style;
+    font-size: 16px;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+@media (min-width:480px) { 
+	.page-header-primary h2,
+	.page-header-primary .h2 {
+	    font-size: 22px
+	}
+}
+@media (min-width:@screen-md-min) and (min-height:868px) { 
+	.page-header-primary {
+	    .page-header-primary-mixin-lvp; 
+	}
+	.page-header-primary h2,
+	.page-header-primary .h2 {
+	    font-size: 36px
+	}
+}
+.page-header-primary small {
+    display: block;
+    color: inherit;
+    font-size: 14px;
+}
+
+/* .page-header-breadcrumb
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.breadcrumb.page-header-breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+.breadcrumb.page-header-breadcrumb,
+.breadcrumb.page-header-breadcrumb a {
+    color: @page-header-text
+}
+.breadcrumb.page-header-breadcrumb > .active {
+    color: @page-header-breadcrumb-text;
+    font-weight: bold;
+}
+.breadcrumb.page-header-breadcrumb > li + li:before {
+    content: "/";
+    color: @page-header-text;
+    font-weight: normal;
+}
+@media (min-width:@screen-md-min) { 
+	.page-header-primary .container {
+	    display: table
+	}
+	.page-header-primary h2,
+	.page-header-primary .h2,
+	.page-header-breadcrumb {
+	    display: table-cell;
+	    vertical-align: middle;
+	    text-align:left;
+	}
+	.breadcrumb.page-header-breadcrumb {
+	    text-align: right;
+	    font-size: 16px;
+	}
+}
+
+//* .page-header-breadcrumb ellipses not used
+//-------------------------------------------------------------------------------------------------------------------------------------*/
+//@media (max-width:600px) {
+//.page-header-breadcrumb {
+//   padding-right:25px;
+//   position:relative;
+//   white-space:nowrap;
+//   overflow:hidden;
+//}
+//.page-header-breadcrumb:after {
+//  content:'...';
+//  position:absolute;
+//  right:0;
+//  bottom:0;
+//  color: @page-header-text;
+//  background:@page-header-bg;
+//}
+
+//}

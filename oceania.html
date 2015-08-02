@@ -1,124 +1,893 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if lte IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Adventure and travel photos, videos, reviews and articles from around the world...">
-		<meta name="keywords" content="Adventure, Travel, Holidays, Photos, Videos, 
-        Reviews Articles, World, Europe, Asia, USA, North America, Central America, 
-        South America, Ireland, UK, Britian, England, Tenerife, Japan, Maderia, Mauritius, 
-        Mexico, France, Crimea">
-<title>adventureHop - Adventure and travel from around the world...</title>
-
-<!-- Favicon -->
-<link rel="shortcut icon" href="content/site/adventureHop2.png">
-        
-
-<!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/phone-default.css">
-<link rel="stylesheet" type="text/css" href="css/tablet.css">
-<link rel="stylesheet" type="text/css" href="css/desktop.css">
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>adventureHop! - Oceania</title>
+  <meta name="description" content="Adventure travel community. Travel guides, photos, videos, reviews and articles from around the world. North America, Central America, South America, Europe, North Africa & Middle-East, Africa, Asia, Oceania and Polar Regions.">
+    
+    <!-- BASE CSS ============================================== -->
+    <!-- custom build of latest bootstrap see json or follow the link in the file ============================================== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- ASSET CSS (if you are on a secure server remove the http: but not the // it won't work local but will work for both http and httpS ============================================== -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/theme-assets.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- LOGO FONT, replace with your own ============================================== -->
+    <link href="assets/css/logo-font.css" rel="stylesheet" type="text/css">
+    
+    <!-- THEME CSS (unminified TOC version w/purchase) ============================================== -->
+    <link href="assets/css/b-different-bw.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- SCRIPTS IN HEAD ============================================== -->
+    <script src="assets/js/modernizr.2.8.3.js"></script>
+    
+    <!--[if lt IE 9]>
+   <script src="assets/js/respond.min.js"></script>
+   <![endif]-->
+    
+    <!-- +++++++ jQuery library ============================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+   if (!window.jQuery) {
+       document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>');
+   }
+   </script>
+    
+    <!-- WINDOWS 8 Phones BUG FIX -->
+    <script src="assets/js/windows-fix.js"></script>
 </head>
 <body>
 
-
-<!-- navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-
-<div class="container-fluid ">
-
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">
-      <h6 style="margin-left: 10px"><i class="fa fa-globe" style="color:#017FF4"></i> Home</h6>
-      </a>
-    </div>
-
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav ">
-        <li><a href="../north-america.html">North America</a></li>
-        <li><a href="../central-america.html">Central America</a></li>
-        <li><a href="../south-america.html">South America</a></li>
-        <li><a href="../europe.html">Europe</a></li>
-        <li><a href="../north-africa-middle-east.html">North Africa & Middle-East</a></li>
-      	<li><a href="../africa.html">Africa</a></li>
-        <li><a href="../asia.html">Asia</a></li>
-        <li><a href="../oceania.html">Oceania</a></li>
-        <li><a href="../polar-regions.html">Polar Regions</a></li>
-      </ul>
-      
-
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-plane"></i></a></li>
+<!-- +++++ No Script Fallback notice +++++ -->
+<noscript>
+<div>Turn on your JavaScript!</div>
+</noscript>
+<!-- accessibility skip to nav skip content -->
+<ul class="sr-only" id="top">
+    <li><a href="#nav" title="Skip to navigation" accesskey="n">Skip to Navigation</a></li>
+    <li><a href="#page" title="Skip to content" accesskey="c">Skip to Content</a></li>
+</ul>
+<!--  /.sr-only accessibility--> 
+<!-- =============== HEADER ==============================-->
+<header class="header">
+    <div class="header-inner"> 
+        <!-- :: info :: .header-inner acts like container --> 
+        <!-- #### logo font  -->
+        <div class="logo-brand logo-font"> <a href="index.html">
+            <span class="logo-brand-inner">
+                <h1>adventureHop!</h1>
+            </span>
+            </a> </div>
+        <!-- /.logo-brand-->
         
-      </ul>
-      
-    </div><!-- /.navbar-collapse -->
-    
-    
-  </div><!-- /.container-fluid -->
-
-</nav>
-<!-- ./ navbar -->
-
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3" >
-      <p class="text-center title">adventure<span style="color: #C31013">hop!</span></p>
-    </div>
-    
-  </div>
-  <hr>
-</div>
-
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-
-
-
-
-		</div>
-        <div class="col-md-6">
-
-
-
-<script type="text/javascript"><!--
-amazon_ad_tag = "emcco-21"; amazon_ad_width = "728"; amazon_ad_height = "90"; amazon_ad_include = "amazing+adventure+holidays+and+travel+photos+videos+reviews+and+articles+from+around+the+world+north+america+central+america+south+america+europe+north+africa+middleeast+africa+asia+oceania+and+polar+regions";//--></script>
-<script type="text/javascript" src="http://ir-uk.amazon-adsystem.com/s/ads.js"></script>
-
-        
+        <div class="header-btn-bar"> 
+            <!-- .menu-toggle --> 
+            <a href="#" class="menu-toggle" data-slide="slide" data-target="#navigation-panel"> 
+            <!-- this above data-slide toggles the #navigation-panel .slide-panel -->
+            <div class="menu-toggle-inner">
+                <span class="veggieburger">
+                    <span class="lines">
+                    </span>
+                </span>
+                <!--/.veggieburger-->
+                <span class="menu-toggle-text">
+                    M<i class="fa fa-bars"></i>NU
+                </span>
+            </div>
+            </a> 
+            <!-- /.menu-toggle-->
+            <div class="header-btn-wrapper clearfix"> 
+                <!-- .header-btn-row-->
+                <div class="header-btn-row half-row"> 
+                    <!-- BEGIN 1st .header-btn .header-btn-xl in first row --> 
+                    <a href="#" class="login-toggle header-btn header-btn-xl" data-slide="slide" data-target="#login-panel"> <i class="fa fa-sign-in header-icon"></i>
+                    <span class="header-btn-text">
+                        Login
+                    </span>
+                    </a> 
+                    <!-- this above data-slide toggles the #login-panel .slide-panel example --> 
+                    <!-- /END 1st .header-btn .header-btn-xl in first row --> 
+                    <!-- BEGIN 2nd.header-btn .header-btn-xl in first row --> 
+                    <a href="#" class="signin-toggle header-btn header-btn-xl" data-slide="slide" data-target="#signup-panel"> <i class="fa fa-pencil header-icon"></i>
+                    <span class="header-btn-text">
+                        Sign Up
+                    </span>
+                    </a> 
+                    <!-- this above data-slide toggles the #signup-panel .slide-panel example --> 
+                    <!-- /END 2nd .header-btn .header-btn-xl in first row --> 
+                </div>
+                <!-- /.header-btn-row-->
+                <div class="header-btn-row half-row"> 
+                    <!-- BEGIN 3rd .header-btn .header-btn-lg in second row --> 
+                    <a href="#" class="anchor header-btn header-btn-lg" data-slide="slide" data-target="#contact-panel"> <i class="fa fa-at header-icon"></i>
+                    <span class="header-btn-text">
+                        Contact
+                    </span>
+                    </a> 
+                    <!-- this above data-slide toggles the #contact-panel .slide-panel example --> 
+                    <!-- /END 3rd .header-btn .header-btn-lg in second row --> 
+                    <!-- BEGIN 4th .header-btn .header-btn-sm in second row--> 
+                    <a href="#" class="header-btn header-btn-sm search-toggle" data-slide="slide" data-target="#search-panel"  data-hover="tooltip" data-placement="left" title="search"> <i class="fa fa-search header-icon"></i> </a> 
+                    <!-- this above data-slide toggles the #search-panel .slide-panel example --> 
+                    <!-- /END 4th .header-btn .header-btn-sm in second row --> 
+                    <!-- BEGIN 5th .header-btn .header-btn-sm in second row--> 
+                    <a href="#" class="header-btn header-btn-sm" data-hover="tooltip" data-placement="left" title="follow us on twitter"> <i class="fa fa-twitter header-icon"></i> </a> 
+                    <!-- this link above links to your twitter page --> 
+                    <!-- /END 5th .header-btn .header-btn-sm in second row --> 
+                    <!-- BEGIN 6th .header-btn .header-btn-sm in second row--> 
+                    <a href="#" class="header-btn header-btn-sm" data-hover="tooltip" data-placement="left" title="like us on facebook"> <i class="fa fa-facebook header-icon"></i> </a> 
+                    <!-- this link above links to your facebook page --> 
+                    <!-- /END 6th .header-btn .header-btn-sm in second row --> 
+                    <!-- BEGIN 7th .header-btn .header-btn-sm in second row --> 
+                    <a href="#" class="header-btn header-btn-sm" data-hover="tooltip" data-placement="left" title="subscribe to our RSS"> <i class="fa fa-rss header-icon"></i> </a> 
+                    <!-- this link above links to your google+ page --> 
+                    <!-- /END 7th .header-btn .header-btn-sm in second row --> 
+                </div>
+                <!-- /END .header-btn-row--> 
+            </div>
+            <!-- /END .header-btn-wrapper--> 
         </div>
-     </div>   
-   </div>
+        <!-- /END .header-btn-bar --> 
+        
+    </div>
+    <!-- /END .header-inner --> 
+</header>
+<!-- =============== END HEADER ==============================--> 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.2.min.js"></script>
+<!-- ================== BEGIN SLIDE OUT PANELS  ================= -->
+<div class="slide-panel-parent"> 
+    <!-- .slide-panel-parent goes around all the panels --> 
+    <!-- _____________ NAVIGATION PANEL _______ -->
+    <div class="slide-panel" id="navigation-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-8"> <!-- _________ BEGIN NAVIGATION ___________ -->
+                    <nav id="nav" role="navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="north-america.html">North America</a></li>
+                            <li><a href="central-america.html">Central America</a></li>
+                            <li><a href="south-america.html">South America</a></li>
+                            <li><a href="europe.html">Europe</a></li>
+                            <li><a href="north-africa-middle-east.html">North Africa & Middle-East</a></li>
+                            <li><a href="africa.html">Africa</a></li>
+                            <li><a href="asia.html">Asia</a></li>
+                            <li><a href="oceania.html">Oceania</a></li>
+                            <li><a href="polar-regions.html">Polar Regions</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact / Advertise with Us</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="sign-up.html">Sign Up</a></li>
+                            <li><a href="site-map.html">Site Map</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--/.col-md-6 col-lg-8 -->
+                <div class="col-md-6 col-lg-4">
+                    <h4 class="h2">Latest News</h4>
+                    <ul>
+                        <li><a href="your-link-goes-here.html">We will amplify our power to benchmark...</a></li>
+                        <li><a href="your-link-goes-here.html">We have revolutionized the conceptualization...</a></li>
+                        <li><a href="your-link-goes-here.html">Everything is relative; relatively speaking.</a></li>
+                        <li><a href="your-link-goes-here.html">My other body is an immortal robot body.</a></li>
+                        <li><a href="your-link-goes-here.html">I don't know who they are but they're...</a></li>
+                        <li><a href="your-link-goes-here.html">For those about to rock, we salute you </a> </li>
+                    </ul>
+                    <h4 class="h2">Latest Work</h4>
+                    <ul class="img-widget fade-hover-img">
+                        <li><a href="#"><img src="assets/demo-images/img-widget/1.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/2.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/3.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/4.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/5.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/6.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/7.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/8.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/9.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/10.jpg" alt="" /></a></li>
+                    </ul>
+                    <!--/.img-widget--> 
+                </div>
+                <!--/.col-md-6 col-lg-4 --> </div>
+            <!--/.row --> </div>
+        <!--/.container inside #navigation-panel --> 
+    </div>
+    <!--/.slide-panel #navigation-panel --> 
+     
+    <!-- _________ CONTACT PANEL ___________ -->
+    <div class="slide-panel" id="contact-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h2 class="slide-panel-title text-center-md-view text-center-md-view">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 text-right-md-view text-right-lg-view">
+                    <h3>Organized Organization</h3>
+                    <p class="lead"> 1255 Nowhere Street<br>
+                        Tampa, FL 33655<br>
+                        <strong>phone:</strong> <a href="tel:8135551234">813.555.1234</a><br>
+                        <strong>fax:</strong> 813.555.1235<br>
+                        <span class="overflow">
+                            <strong>email:</strong> <a class="link-underline" href="mailto:email@domain.com">email@companydomain.com</a>
+                        </span>
+                    </p>
+                </div>
+                <!-- /.col-md-6 -->
+                
+                <div class="col-md-6">
+                    <h3>Find Us On...</h3>
+                    <ul class="social-icon-list">
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <!-- /.col-md-6 --> 
+                
+            </div>
+            <!--/.row --> 
+        </div>
+        <!--/.container --> 
+    </div>
+    <!--/.slide-panel #contact-panel --> 
+    <!-- _________ LOGIN PANEL #login-panel ___________ -->
+    <div class="slide-panel" id="login-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h2 class="slide-panel-title">Login</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="no-margin-top">Social Login</h4>
+                    <ul class="list-unstyled social-user">
+                        <li><a href="#" title="Login with Facebook" class="facebook"><i class="fa fa-facebook"></i>
+                            <span>
+                                Login with Facebook
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Login with Google Plus" class="google"><i class="fa fa-google-plus"></i>
+                            <span>
+                                Login with Google
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Login with Twitter" class="twitter"><i class="fa fa-twitter"></i>
+                            <span>
+                                Login with Twitter
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Login with Wordpress" class="wordpress"><i class="fa fa-wordpress"></i>
+                            <span>
+                                Login with Wordpress
+                            </span>
+                            </a></li>
+                    </ul>
+                    <!-- /.social-user --> 
+                </div>
+                <!-- /.col-*-6 -->
+                <div class="col-md-6">
+                    <h4 class="no-margin-top">Sign In</h4>
+                    <form role="form" action="your-script.php">
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control  form-control-lg" placeholder="Password">
+                        </div>
+                        <div class="form-group checkbox small">
+                            <label>
+                                <input type="checkbox">
+                                Remember Me </label>
+                        </div>
+                        <p class="text-center">
+                            <button class="btn btn-slide-panel btn-lg btn-block" type="submit"><i class="ti ti-lock"></i> Sign in</button>
+                        </p>
+                    </form>
+                    <p class="text-center clear"><a href="#" data-slide="slide" data-target="#forgot-password-panel" class="link-underline">Forgot your password?</a> <br>
+                        Don't have an account yet? <a class="link-underline signin-toggle" href="#" data-slide="slide" data-target="#signup-panel">Sign up</a> </p>
+                </div>
+                <!-- /.col-*-6 --> 
+            </div>
+            <!-- /.row --> 
+        </div>
+        <!-- /.container --> 
+    </div>
+    <!--/.slide-panel #login-panel --> 
+    <!-- _________ SIGNUP PANEL #signup-panel ___________ -->
+    <div class="slide-panel" id="signup-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h2 class="slide-panel-title">Sign In</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="no-margin-top">Sign Up with...</h4>
+                    <ul class="list-unstyled social-user">
+                        <li><a href="#" title="Signup with Facebook" class="facebook"><i class="fa fa-facebook"></i>
+                            <span>
+                                Signup with Facebook
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Signup with Google Plus" class="google"><i class="fa fa-google-plus"></i>
+                            <span>
+                                Signup with Google
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Signup with Twitter" class="twitter"><i class="fa fa-twitter"></i>
+                            <span>
+                                Signup with Twitter
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Signup with Wordpress" class="wordpress"><i class="fa fa-wordpress"></i>
+                            <span>
+                                Signup with Wordpress
+                            </span>
+                            </a></li>
+                    </ul>
+                    <!-- /.social-user --> 
+                </div>
+                <!-- /.col-*-6 -->
+                <div class="col-md-6">
+                    <h4 class="no-margin-top">Sign Up</h4>
+                    <form role="form" action="your-script.php">
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-lg" placeholder="Password">
+                        </div>
+                        <p class="text-center">
+                            <button class="btn btn-slide-panel btn-lg btn-block" type="submit"><i class="ti ti-lock"></i> Register</button>
+                        </p>
+                    </form>
+                    <p class="text-center clear">Already have an account? <a class="link-underline login-toggle" href="#" data-slide="slide" data-target="#login-panel">Login</a></p>
+                </div>
+                <!-- /.col-*-6 --> 
+            </div>
+            <!-- /.row --> 
+        </div>
+        <!-- /.container --> 
+    </div>
+    <!--/.slide-panel #signup-panel --> 
+    <!-- _________ FORGOT PASSWORD #forgot-password-panel ___________ -->
+    <div class="slide-panel" id="forgot-password-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h3 class="slide-panel-title">Forgot Password</h3>
+            <form role="form" action="your-script.php">
+                <div class="input-group input-group-lg input-group-slide-panel">
+                    <input class="form-control" placeholder="Your@EmailAddress.com" type="email">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-slide-panel btn-lg">Reset Password</button>
+                    </span>
+                    <!--/.input-group-btn--> 
+                </div>
+            </form>
+            <hr class="vertical-spacer height-20px">
+            <p class="text-center"><a href="#" data-slide="slide" data-target="#login-panel" class="link-underline login-toggle">Remembered your Password?</a></p>
+        </div>
+        <!-- /.container --> 
+    </div>
+    <!--/.slide-panel #forgot-password-panel --> 
+</div>
+<!-- END .slide-down-parent --> 
+<!-- ================== END SLIDE OUT PANELS  ================= --> 
+<!-- =============== BEGIN #page ==============================-->
+<div id="page"> 
+    <!-- =========== PAGE HEADER ON ALL BUT INDEX PAGES =========================================================================== --> 
+    <!-- _________ Page Header ___________ -->
+    <div class="page-header-primary">
+        <div class="container">
+            <h2>Oceania</h2>
+            <ol class="breadcrumb page-header-breadcrumb hidden-xs">
+                <li><a href="index.html" class="link-underline">Home</a></li>
+                <li class="active">Oceania</li>
+            </ol>
+        </div>
+        <!-- /.container (for page-header-primary) --> 
+    </div>
+    <!-- /.page-header-primary --> 
+    <!-- =========== BEGIN CONTENT FOR THE PAGE =========================================================================== -->
+    <div class="page-content" role="main"> 
+        <!--slide to sidebar toggle --> 
+        <a class="visible-xs slide-sidebar has-anchor" href="#sidebar"><i class="ti ti-menu"></i> <em>Sidebar</em></a>
+        <div class="container blog summary"> 
+            <!-- add class blog summary  -->
+            <div class="row"> 
+                <!-- ____ PRIMARY COLUMN GOES HERE ____ -->
+                <div class="col-sm-8 col-md-9 col-sm-push-4 col-md-push-3 primary-column" role="main"> 
+                    
+                    <!-- _____________ BEGIN 'entry-post' VIDEO HOLDER _________ -->
+                    <article class="entry-summary">
+                        <header class="entry-header">
+                            <h3 class="entry-title"> <a href="blog-single.html">Video Holder Post</a> </h3>
+                            <ul class="entry-meta list-inline">
+                                <li>
+                                    <span class="ti ti-pencil-alt">
+                                    </span>
+                                    by Nameof Author</li>
+                                <li><a href="blog-single.html#view-comments">
+                                    <span class="ti ti-comments">
+                                    </span>
+                                    5 Comments</a></li>
+                                <li>
+                                    <span class="ti ti-calendar">
+                                    </span>
+                                    January 8, 2015</li>
+                            </ul>
+                            <ul class="entry-tags hidden-xs">
+                                <!-- these are too tiny and not important for small screens-->
+                                <li><a href="#">video</a></li>
+                                <li><a href="#">css3</a></li>
+                                <li><a href="#">theme</a></li>
+                            </ul>
+                        </header>
+                        
+                        <!--/ entry-header -->
+                        <div class="row sixteen-gutter">
+                            <div class="col-md-6 col-lg-7 entry-visual">
+                                <div class="video-holder vimeo"> 
+                                    <!-- change to youtube if youtube --> 
+                                    <!--IF there is a problem the api for vimeo and youtube your page will delay loading, the solution is the following html combined with the script in the jquery.main.js file --> 
+                                    <a class="video-trigger" href="65543364"> 
+                                    <!-- id of video either at youtube or vimeo --> 
+                                    <i class="fa fa-youtube-play"> 
+                                    <!-- this icon for all sources of videos--> 
+                                    </i> <img src="http://b.vimeocdn.com/ts/436/594/436594814_640.jpg" alt=""/> </a> </div>
+                                <!-- ./video-holder vimeo --> 
+                            </div>
+                            <!-- ./entry-visual -->
+                            
+                            <div class="col-md-6 col-lg-5 entry-content">
+                                <p>Bootstrap Side Navigation practically invented the term "bloatware". We pride ourselves not only on our feature set, but our user-proof administration and non-complex configuration. What does the buzzword "customer-defined" really mean? We think that most leading-edge entry pages use far too much XSLT, and not enough AJAX...</p>
+                                <p><a class="btn btn-inverse" href="blog-single.html">Read More</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- / .entry-content /.row -->
+                        
+                        <div class="entry-fancy-date">
+                            <div>
+                                <span class="day">
+                                    8
+                                </span>
+                                <span class="month">
+                                    jan
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- _____________ END 'blog-entry-summary' VIDEO HOLDER _________ --> 
+                    
+                    <!-- _____________ BEGIN 'entry-post' MIXED CONTENT SLIDER _________ -->
+                    <article class="entry-summary">
+                        <header class="entry-header">
+                            <h3 class="entry-title"> <a href="blog-single.html">Mixed Content Slider</a> </h3>
+                            <ul class="entry-meta list-inline">
+                                <li>
+                                    <span class="ti ti-pencil-alt">
+                                    </span>
+                                    by Nameof Author</li>
+                                <li><a href="blog-single.html#view-comments">
+                                    <span class="ti ti-comments">
+                                    </span>
+                                    5 Comments</a></li>
+                                <li>
+                                    <span class="ti ti-calendar">
+                                    </span>
+                                    January 12, 2015</li>
+                            </ul>
+                            <ul class="entry-tags hidden-xs">
+                                <!-- these are too tiny and not important for small screens-->
+                                <li><a href="#">slider</a></li>
+                                <li><a href="#">css3</a></li>
+                                <li><a href="#">bootstrap theme</a></li>
+                            </ul>
+                        </header>
+                        
+                        <!--/ entry-header -->
+                        <div class="row sixteen-gutter">
+                            <div class="col-md-6 col-lg-7 entry-visual"> 
+                                <!-- _____________ BEGIN SLIDER _________ -->
+                                <div class="blog-slider loading-slick">
+                                    <div class="slick-slider-item">
+                                        <figure> <img src="assets/demo-images/portfolio/4937625727.png" alt="" />
+                                            <figcaption><a href="http://www.flickr.com/photos/fontfont/4937625727/" target="_blank">CC BY 2.0 FontFont</a></figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="slick-slider-item">
+                                        <figure> <img src="assets/demo-images/portfolio/5573291515.png" alt="" />
+                                            <figcaption><a href="http://www.flickr.com/photos/fontfont/5573291515/" target="_blank">CC BY 2.0 FontFont</a></figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="video-holder vimeo slick-slider-item"> 
+                                        <!-- change to youtube if youtube --> 
+                                        <!--IF there is a problem the api for vimeo and youtube your page will delay loading, the solution is the following html combined with the script in the jquery.main.js file --> 
+                                        <a class="video-trigger" href="65543364"> 
+                                        <!-- id of video either at youtube or vimeo --> 
+                                        <i class="fa fa-youtube-play"> 
+                                        <!-- this icon for all sources of videos--> 
+                                        </i> <img src="http://b.vimeocdn.com/ts/436/594/436594814_640.jpg" alt=""/> </a> </div>
+                                    <!--/.video-holder slick-slider-item --> 
+                                </div>
+                                <!-- _____________ END blog-slider SLIDER _________ --> 
+                            </div>
+                            <!-- ./entry-visual -->
+                            
+                            <div class="col-md-6 col-lg-5 entry-content">
+                                <p>Bootstrap Side Navigation practically invented the term "bloatware". We pride ourselves not only on our feature set, but our user-proof administration and non-complex configuration. What does the buzzword "customer-defined" really mean? We think that most leading-edge entry pages use far too much XSLT, and not enough AJAX...</p>
+                                <p><a class="btn btn-inverse" href="blog-single.html">Read More</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- / .entry-content /.row -->
+                        
+                        <div class="entry-fancy-date">
+                            <div>
+                                <span class="day">
+                                    12
+                                </span>
+                                <span class="month">
+                                    jan
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- _____________ END 'blog-entry-summary' MIXED CONTENT SLIDER _________ --> 
+                    
+                    <!-- _____________ BEGIN 'entry-post' REGULAR IMAGE _________ -->
+                    <article class="entry-summary">
+                        <header class="entry-header">
+                            <h3 class="entry-title"> <a href="blog-single.html">Just an Image</a> </h3>
+                            <ul class="entry-meta list-inline">
+                                <li>
+                                    <span class="ti ti-pencil-alt">
+                                    </span>
+                                    by Nameof Author</li>
+                                <li><a href="blog-single.html#view-comments">
+                                    <span class="ti ti-comments">
+                                    </span>
+                                    5 Comments</a></li>
+                                <li>
+                                    <span class="ti ti-calendar">
+                                    </span>
+                                    February 28, 2015</li>
+                            </ul>
+                            <ul class="entry-tags hidden-xs">
+                                <!-- these are too tiny and not important for small screens-->
+                                <li><a href="#">image</a></li>
+                                <li><a href="#">css3</a></li>
+                                <li><a href="#">off-canvas</a></li>
+                            </ul>
+                        </header>
+                        
+                        <!--/ entry-header -->
+                        <div class="row sixteen-gutter">
+                            <div class="col-md-6 col-lg-7 entry-visual">
+                                <figure> <a href="blog-single.html"><img src="assets/demo-images/portfolio/4830134044.jpg" class="img-responsive" alt=""></a>
+                                    <figcaption><a href="http://www.flickr.com/photos/fontfont/4830134044/">CC BY 2.0 FontFont</a></figcaption>
+                                </figure>
+                            </div>
+                            <!-- ./entry-visual -->
+                            
+                            <div class="col-md-6 col-lg-5 entry-content">
+                                <p>Bootstrap Side Navigation practically invented the term "bloatware". We pride ourselves not only on our feature set, but our user-proof administration and non-complex configuration. What does the buzzword "customer-defined" really mean? We think that most leading-edge entry pages use far too much XSLT, and not enough AJAX...</p>
+                                <p><a class="btn btn-inverse" href="blog-single.html">Read More</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- / .entry-content /.row -->
+                        
+                        <div class="entry-fancy-date">
+                            <div>
+                                <span class="day">
+                                    28
+                                </span>
+                                <span class="month">
+                                    feb
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- _____________ END 'entry-post' REGULAR IMAGE _________ --> 
+                    
+                    <!-- _____________ BEGIN 'entry-post' NO IMAGE _________ -->
+                    <article class="entry-summary">
+                        <header class="entry-header">
+                            <h3 class="entry-title"> <a href="blog-single.html">There's No Image</a> </h3>
+                            <ul class="entry-meta list-inline">
+                                <li>
+                                    <span class="ti ti-pencil-alt">
+                                    </span>
+                                    by Nameof Author</li>
+                                <li><a href="blog-single.html#view-comments">
+                                    <span class="ti ti-comments">
+                                    </span>
+                                    5 Comments</a></li>
+                                <li>
+                                    <span class="ti ti-calendar">
+                                    </span>
+                                    March 3, 2015</li>
+                            </ul>
+                            <ul class="entry-tags hidden-xs">
+                                <!-- these are too tiny and not important for small screens-->
+                                <li><a href="#">sans-image</a></li>
+                                <li><a href="#">css3</a></li>
+                                <li><a href="#">off-canvas</a></li>
+                            </ul>
+                        </header>
+                        
+                        <!--/ entry-header -->
+                        <div class="row sixteen-gutter">
+                            <div class="col-sm-12 entry-content">
+                                <p>Bootstrap Side Navigation practically invented the term "bloatware". We pride ourselves not only on our feature set, but our user-proof administration and non-complex configuration. What does the buzzword "customer-defined" really mean? We think that most leading-edge entry pages use far too much XSLT, and not enough AJAX...</p>
+                                <p><a class="btn btn-inverse" href="blog-single.html">Read More</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- / .entry-content /.row -->
+                        
+                        <div class="entry-fancy-date">
+                            <div>
+                                <span class="day">
+                                    3
+                                </span>
+                                <span class="month">
+                                    mar
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- _____________ END 'entry-post' NO IMAGE _________ --> 
+                    
+                    <!-- ____ PAGINATION GOES HERE ____ -->
+                    <div class="text-center">
+                        <span class="new-pagination-toggle">
+                            Pagination
+                        </span>
+                        <ul class="new-pagination pagination pagination-lg clearfix">
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="disabled">
+                                <span>
+                                    ...
+                                </span>
+                            </li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.text-center holding .pagination --> 
+                    <!-- vertical spacer visible at xs viewport size -->
+                    <hr class="vertical-spacer vertical-spacer-sm  visible-xs">
+                </div>
+                <!-- _________ END /.col-*-* :: containing primary content ______ --> 
+                
+                <!-- ____ SECONDARY COLUMN GOES HERE ____ -->
+                <div class="col-sm-pull-8 col-md-pull-9 col-sm-4 col-md-3 hidden-print" id="sidebar" role="complementary">
+                    <div class="blog-summary-sidebar"><!-- for sticking --> 
+                        
+                        
+                        <!-- _____________ WIDGET _________ -->
+                        <aside class="widget">
+                            <h5 class="widget-title">Blog</h5>
+                            <!--begin tabs going in narrow content -->
+                            <ul class="nav nav-tabs sidebar-tabs" id="unique-id" role="tablist">
+                                
+                                <!-- Important: limit tabs to no more than three short items or you will need to change the 
+                 grid classes used on this page (all of them) to make this column wider OR adjust the tab collapse 
+                 breakpoints in the css OR just use the collapse component and forget about tabs here -->
+                                
+                                <li class="active" role="presentation"><a href="#tab-1" role="tab" data-toggle="tab">Popular</a></li>
+                                <li role="presentation"><a href="#tab-2" role="tab" data-toggle="tab">About</a></li>
+                                <li role="presentation"><a href="#tab-3" role="tab" data-toggle="tab">Tags</a></li>
+                            </ul>
+                            <!--/.nav-tabs.sidebar-tabs --> 
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab-1">
+                                    <ul class="list-unstyled media-list">
+                                        <li> <a href="#">
+                                            <div class="media-list-visual"><img src="assets/demo-images/img-widget/1.jpg" alt="" /></div>
+                                            <!-- if this goes in a side bar, the text must be truncated using a plugin for this -->
+                                            <div class="media-list-content">
+                                                <p>Our virally-distributed feature set is second to none, but our cross-media impactful, customer-directed re-sizing and non-complex.</p>
+                                            </div>
+                                            </a> </li>
+                                        <li> <a href="#">
+                                            <div class="media-list-visual"><img src="assets/demo-images/img-widget/2.jpg" alt="" /></div>
+                                            <div class="media-list-content">
+                                                <p> We realize that if you evolve virally then you may also orchestrate interactively</p>
+                                            </div>
+                                            </a> </li>
+                                        <li> <a href="#">
+                                            <div class="media-list-visual"><img src="assets/demo-images/img-widget/3.jpg" alt="" /></div>
+                                            <div class="media-list-content">
+                                                <p> If you brand proactively, you may have to morph seamlessly</p>
+                                            </div>
+                                            </a> </li>
+                                        <li> <a href="#">
+                                            <div class="media-list-visual"><img src="assets/demo-images/img-widget/4.jpg" alt="" /></div>
+                                            <div class="media-list-content">
+                                                <p>Is it more important for something to be customer-directed, intuitive, synergistic or to be wireless</p>
+                                            </div>
+                                            </a> </li>
+                                        <li> <a href="#">
+                                            <div class="media-list-visual"><img src="assets/demo-images/img-widget/5.jpg" alt="" /></div>
+                                            <div class="media-list-content">
+                                                <p> We pride ourselves not only on our feature set, but our user-proof administration and easy operation</p>
+                                            </div>
+                                            </a> </li>
+                                    </ul>
+                                </div>
+                                <!--/.tab-pane -->
+                                <div class="tab-pane" id="tab-2">
+                                    <p class="margin-bottom-10px"><a href="contact.html"><img class="img-responsive" src="http://placehold.it/400x150/000000/FFFFFF&amp;text=hello" alt="" /></a></p>
+                                    <p>According to Wikipedia: a paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea.</p>
+                                </div>
+                                <!--/.tab-pane -->
+                                <div class="tab-pane" id="tab-3">
+                                    <ul class="entry-tags">
+                                        <!-- these are too tiny and not important for small screens-->
+                                        <li><a href="#">video</a></li>
+                                        <li><a href="#">css3</a></li>
+                                        <li><a href="#">theme</a></li>
+                                        <li><a href="#">video</a></li>
+                                        <li><a href="#">css3</a></li>
+                                        <li><a href="#">theme</a></li>
+                                        <li><a href="#">video</a></li>
+                                        <li><a href="#">css3</a></li>
+                                        <li><a href="#">theme</a></li>
+                                    </ul>
+                                </div>
+                                <!--/.tab-pane --> 
+                            </div>
+                            <!--/.tab-content --> 
+                        </aside>
+                        <!-- /widget --> 
+                        
+                        <!-- _____________ WIDGET _________ -->
+                        <aside class="widget">
+                            <h5 class="widget-title">Blog Categories</h5>
+                            <ul class="list-unstyled icon-list arrow-right">
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">CSS3</a></li>
+                                <li><a href="#">Typography</a></li>
+                                <li><a href="#">Food</a></li>
+                                <li><a href="#">Thinking</a></li>
+                                <li><a href="#">Silly</a></li>
+                            </ul>
+                        </aside>
+                        <!-- /widget --> 
+                        
+                        <!-- _____________ WIDGET _________ -->
+                        <aside class="widget">
+                            <h5 class="widget-title">Recent Images</h5>
+                            <!-- you might want to bump up the original size of the images to 100 px square -->
+                            <ul class="img-widget fade-hover-img">
+                                <li><a href="#"><img src="assets/demo-images/img-widget/1.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/2.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/3.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/4.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/5.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/6.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/7.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/8.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/9.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="assets/demo-images/img-widget/10.jpg" alt="" /></a></li>
+                            </ul>
+                        </aside>
+                        <!--/ widget --> 
+                        
+                        <!-- _____________ WIDGET _________ -->
+                        <aside class="widget">
+                            <h5 class="widget-title">Another Widget</h5>
+                            <p> According to Wikipedia: a paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. </p>
+                        </aside>
+                        <!-- /widget --> 
+                    </div>
+                    <!-- /.blog-summary-sidebar --> 
+                </div>
+                <!--/sidebar--> 
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!-- /.page-content role=main --> 
+    <!--=========== END CONTENT FOR THE PAGE ============================================================ --> 
+</div>
+<!-- ================== END #page ================= --> 
+<!-- ================== FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-column-wrapper">
+        <div class="container">
+            <div class="row footer-row equal-height-col">
+                <div class="col-sm-5 col-md-3 footer-col">
+                    <h4 class="footer-title">Socialfy</h4>
+                    <ul class="social-icon-list">
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <!-- /.col-sm-5 .col-md-3 footer-col -->
+                <div class="col-sm-7 col-md-9 footer-col">
+                    <h4 class="footer-title">About Us</h4>
+                    <p>Adventure travel community. Travel guides, photos, videos, reviews and articles from around the world. North America, Central America, South America, Europe, North Africa & Middle-East, Africa, Asia, Oceania and Polar Regions.</p>
+                </div>
+                <!-- /.col-sm-7 col-md-9 footer-col--> 
+            </div>
+            <!--/.row .footer-row-->
+            <div class="row footer-row equal-height-col"> 
+                
+                <div class="col-sm-12 footer-col">
+                    <ol class="breadcrumb">
+                        	<li><a href="index.html">Home</a></li>
+                            <li><a href="north-america.html">North America</a></li>
+                            <li><a href="central-america.html">Central America</a></li>
+                            <li><a href="south-america.html">South America</a></li>
+                            <li><a href="europe.html">Europe</a></li>
+                            <li><a href="north-africa-middle-east.html">North Africa & Middle-East</a></li>
+                            <li><a href="africa.html">Africa</a></li>
+                            <li><a href="asia.html">Asia</a></li>
+                            <li><a href="oceania.html">Oceania</a></li>
+                            <li><a href="polar-regions.html">Polar Regions</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact / Advertise with Us</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="sign-up.html">Sign Up</a></li>
+                            <li><a href="site-map.html">Site Map</a></li>
+                    </ol>
+                    <!--/.img-widget--> 
+                </div>
+                <!-- /.col-sm-8 footer-col--> 
+            </div>
+            <!--/.row .footer-row --> 
+        </div>
+        <!--/.container --> 
+    </div>
+    <!--/.footer-column-wrapper -->
+    <div class="footer-copyright">
+        <div class="container">
+            <p class="no-margin">© Copyright 2015 adventureHop! 
+                All rights reserved. 
+                 <a href="mailto:eugene.murray@outlook.com" class="link-underline">Email Us</a> | <a class="link-underline" href="site-map.html">Site Map</a> </p>
+        </div>
+    </div>
+    <!--/.footer-copyright--> 
+</footer>
+<!-- ================== /.END footer ================= --> 
+<!-- _________ GO TO TOP ___________ --> 
+<a id="go-to-top" href="#top" title="up"> <i class="ti ti-arrow-up"></i> </a> 
 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.js"></script>
+<!-- _________ FOOTER SCRIPTS  ________ --> 
+<script src="assets/js/jquery.touch-swipe.js"></script> <!-- adds touch swipe to the theme's bootstrap carousel --> 
+<script src="assets/js/bootstrap.min.js"></script> <!-- bootstrap's js --> 
+<script src="assets/js/jquery.bootstrap.addon.js"></script><!-- initializations and custom scripts for bootstrap --> 
+<script src="assets/js/jquery.magnific-popup.js"></script><!-- image popups, video, modals, etc., contains the initializations --> 
+<script src="assets/js/jquery.slick-slider.min.js"></script> <!-- base carousel/slider SLICK SLIDER --> 
+<script src="assets/js/jquery.isotope.masonry.js"></script> <!-- Isotope w/Masonry also contains the initializations --> 
+
+<script src="assets/js/jquery.main.js"></script> <!-- CORE scripts and initializations -->
+
 </body>
 </html>

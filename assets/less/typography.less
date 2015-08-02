@@ -1,0 +1,358 @@
+/* Font Family/Size Declarations Global / Shared
+-------------------------------------------------------------------------------------------------------------------------------------*/
+body {
+    font-family: @body-font-family;
+    font-weight: @base-font-weight;
+    font-size: @base-font-size;
+    line-height:@base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.info-tag,
+.nav-tabs li,
+.multi-menu .has-children > a {
+    font-family: @h1-h6-font-family;
+    font-weight: @h1-h6-font-weight;
+}
+.btn {
+    font-family: @btn-font-family;
+    font-weight: @btn-font-weight;
+}
+#nav {
+    font-family: @nav-font-family;
+    font-weight: @nav-font-weight;
+}
+
+/*  Font Awesome Shared
+-------------------------------------------------------------------------------------------------------------------------------------*/
+#nav .has-children > a:before,
+a.external:after {
+    font-family: "FontAwesome"
+}
+
+/*  Themify Font Shared
+-------------------------------------------------------------------------------------------------------------------------------------*/
+#nav .has-children > a:before,
+.new-pagination-toggle:after,
+.filter-title:after,
+.icon-list li:before,
+.panel-group .panel-heading a:after,
+.resp-arrow,
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'themify';
+}
+
+/* responsive h6-h6 and their respective classes  
+-------------------------------------------------------------------------------------------------------------------------------------*/
+h1,
+.h1 {
+    font-size: @font-size-h1;
+    line-height: 1.3;
+}
+h2,
+.h2 {
+    font-size: @font-size-h2;
+    line-height: 1.3;
+}
+h3,
+.h3 {
+    font-size: @font-size-h3;
+    line-height: 1.3;
+}
+h4,
+.h4 {
+    font-size: @font-size-h4;
+    line-height: 1.3;
+}
+h5,
+.h5 {
+    font-size: @font-size-h5;
+    line-height: 1.3;
+}
+h6,
+.h6 {
+    font-size: @font-size-h6;
+    line-height: 1.2;
+}
+@media (min-width:@screen-md-min) { 
+	h1,
+	.h1 {
+	    font-size: @lv-font-size-h1
+	}
+	h2,
+	.h2 {
+	    font-size: @lv-font-size-h2
+	}
+	h3,
+	.h3 {
+	    font-size: @lv-font-size-h3
+	}
+	h4,
+	.h4 {
+	    font-size: @lv-font-size-h4
+	}
+	h5,
+	.h5 {
+	    font-size: @lv-font-size-h5
+	}
+	h6,
+	.h6 {
+	    font-size: @lv-font-size-h6
+	}
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small {
+  color: inherit;
+}
+
+
+/* vertical rhythm improvement  
+-------------------------------------------------------------------------------------------------------------------------------------*/
+p,
+.lead {
+    margin-bottom: 20px
+}
+@media (min-width:768px) { 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6,
+	ul,
+	ol,
+	form,
+	table {
+	    margin-bottom: 20px;
+	    margin-top: 0;
+	}
+}
+
+
+.lead {
+  font-size: 16px;
+}
+@media (min-width: 992px) {
+  .lead {
+    font-size: 21px;
+  }
+}
+
+
+/* font-weights
+-------------------------------------------------------------------------------------------------------------------------------------*/
+b, strong {font-weight:bold}
+.bold {font-weight:bold}
+.normal {font-weight:normal}
+.thin {font-weight:300}
+
+
+/* .headline-inline :: side by side with some link or content on the right OR NOT
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.headline-inline {
+    margin-bottom: 10px;
+    clear: both;
+    width: 100%;
+    border-top: @headline-inline-top-brdr-width solid @headline-inline-brdr-clr;
+    border-bottom: @headline-inline-btm-brdr-width solid @headline-inline-brdr-clr;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.headline-inline .headline {
+    color:@headline-inline-clr;
+    margin: 0
+}
+.headline-link {
+    color: @headline-inline-clr;
+    margin-top: 10px;
+}
+
+@media (min-width:@screen-sm-min) { 
+	.headline-inline {
+	    display: table;
+	    margin-bottom: 20px;
+	    text-align: left;
+	}
+
+	.headline-inline .headline-link {
+	    display: table-cell;
+	    text-align: right;
+	    font-size: 18px;
+	    margin: 0;
+	    vertical-align: middle;
+	}
+
+	.headline-inline .headline {
+	    display: table-cell;
+	    margin: 0;
+	    vertical-align: middle;
+	    font-size: 30px;
+	}
+}
+
+@media (min-width:@screen-sm-min) and (min-height:868px) { 
+	.headline-inline .headline {
+	    font-size: 45px;
+	    letter-spacing:-2px;
+	}
+
+	.headline-inline .headline-link {
+	    font-size: 20px
+	}
+}
+
+/* .title
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.title {
+    .title-mixin;
+}
+.title span {
+    .title-span-mixin;
+}
+
+/* .info-text-box
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.info-text-box > span {
+    background:@lightest;
+}
+
+
+/* .dropcap 
+-------------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width:480px) {
+  .dropcap {
+      .dropcap-min-width;
+  }
+}
+
+/* .curly blockquote
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.curly {
+  border:0;
+  position:relative;
+  padding-left:50px;
+}
+.curly:before {
+  content: "\201C";
+  font-size:80px;
+  line-height:1;
+  font-family:georgia, serif;
+  position:absolute;
+  height:45px;
+  left:0;
+}
+.curly.text-center {
+  padding-top:45px;
+  padding-left:0;
+}
+.curly.text-center:before {
+  left:0;
+  right:0;
+  top:5px;
+  height:45px;
+}
+
+/* .center-list
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.center-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.center-list li {
+    display: inline-block
+}
+
+/* .icon-list
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.icon-list li {
+  padding: 0 0 5px 20px;
+  display: block;
+  position: relative;
+}
+.icon-list li:before {
+  position: absolute;
+  left: 0px;
+  top:3px;
+  font-size:80%
+}
+.arrow-right li:before {
+ content: '\e649';
+}
+
+.checkmark li:before {
+ content: '\e64c';
+}
+
+/* .social-icon-list
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.social-icon-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    left:-4px;
+}
+.social-icon-list li {
+    display: inline-block;
+    margin:0 0 4px 0;
+}
+.social-icon-list > li > a {
+    color: @social-icon-list-color;
+    display:block;
+    line-height:40px;
+}
+.social-icon-list > li > a:hover {
+    opacity:.6;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+/* .click-slide
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.click-slide {
+    position: relative;
+    overflow: hidden;
+    display:none; /* hide on load */
+}
+.click-slide * {
+    transition: all .5s ease-in-out;
+}
+.click-slide a {
+    color:@click-slide-a;
+    display:inline-block;
+    padding:0 5px;
+    font-size: 40px;
+}
+.click-slide a:hover, 
+.click-slide a:focus {
+	filter: alpha(opacity=50);
+    opacity:.5;
+    color:@lightest;
+}
+.click-slide:hover img {
+    overflow:hidden;
+}
+.click-slide > div {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:-100%;
+}
+.open.click-slide > div {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: @click-slide-bg-fallback;
+    background: @click-slide-bg; 
+}
+.click-slide > div > span {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+}
+.click-slide.click-top > div {
+	height:80px;
+}
+.click-slide.click-top > div > span {
+    transform: none;
+    -webkit-transform: none;
+    top:15px;
+}
+.no-csstransforms .click-slide > div > span {
+    margin-top: -30px
+}
+.no-csstransforms .click-slide.click-top > div > span {
+    margin-top: 0
+}

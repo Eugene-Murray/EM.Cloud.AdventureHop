@@ -1,0 +1,37 @@
+/* // stop the fucking shifting
+.mfp-open {
+    margin-right:0!important;
+}
+.mfp-open.modal-scroll-fix {
+    overflow-y: scroll!important;
+}
+.mfp-open.modal-scroll-fix body {
+    overflow: hidden
+}
+//.mfp-open.modal-scroll-fix body {
+//    position: fixed;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//}
+//.mfp-open .header, 
+//.mfp-open #go-to-top {
+//    position: absolute;
+//}
+
+
+*/
+
+
+/* .mfp-open.modal-scroll-fix {
+    overflow-y: scroll!important;
+}
+.mfp-open.modal-scroll-fix body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow:visible!important;
+}*/

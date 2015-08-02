@@ -1,0 +1,41 @@
+/* .equal-height-content-box
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.equal-height-inner {
+    background: @equal-height-bg;
+    margin-bottom: 10px;
+}
+.equal-height-inner img {
+    width: 100%
+}
+@media (min-width:992px) { 
+	.equal-height-inner {
+	    margin-bottom: 0
+	}
+}
+.equal-height-content {
+    padding: 10px 10px 0 10px
+}
+.equal-height-btn {
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+.equal-height-btn .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.equal-height-title {
+    margin: 0 0 10px
+}
+@media (min-width:992px) { 
+	.equal-height-inner .equal-height-text {
+	    font-size: 13px
+	}
+	.equal-height-title {
+	    font-size: 16px
+	}
+}
+/* bigger font size on touch devices so only make no-touch style */
+.no-touch .equal-height-content-box .credit {
+    font-size: 11px
+}

@@ -1,0 +1,20 @@
+/* #page .page-content .container
+-------------------------------------------------------------------------------------------------------------------------------------*/
+#page {
+    #page-mixin;
+}
+
+.container {
+    width: @container-width;
+    max-width: @container-max-width;
+}
+
+.page-content {
+    padding: 15px 0
+}
+
+@media (min-width:@screen-sm-min) { 
+	.page-content {
+	    padding: 40px 0
+	}
+}

@@ -1,0 +1,284 @@
+/* .blog and .blog.summary :: not the masonry version 
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.entry-summary {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid @darkest;
+}
+@media (min-width:600px) { 
+	.entry-summary,
+	.entry-full-post {
+	    position: relative;
+	    padding-left: 95px;
+	}
+}
+
+.entry-visual {
+    margin-bottom: 15px
+}
+.entry-title {
+    margin: 0
+}
+.entry-header a {
+    color: inherit
+}
+.entry-header {
+    margin-bottom: 3%
+}
+.entry-meta {
+    margin: 10px 0
+}
+.entry-meta {
+    font-size: 0px
+}
+.entry-meta li {
+    font-size: 12px;
+    padding: 2px 10px;
+}
+.entry-header .entry-meta {
+    margin-left: -10px
+}
+@media (min-width:@screen-md-min) { 
+	.entry-header h1 {
+	    font-size: 28px
+	}
+}
+
+
+/*  entry-tags used in blog summary, widget, and blog detail page
+ -------------------------------------------------------------------------------------------- */
+.entry-tags {
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+.entry-tags li {
+    display: inline-block;
+    font-size: 12px;
+}
+.entry-tags a {
+    .entry-tags-a; 
+}
+.entry-tags a:hover {
+    .entry-tags-a-hover; 
+}
+.entry-tags li:first-child {
+    padding-right: 0;
+    margin-right: 3px;
+}
+
+
+/* fancy blog date
+ -------------------------------------------------------------------------------------------- */
+.entry-fancy-date {
+    display: none
+}
+@media (min-width:600px) { 
+	.entry-fancy-date {
+	    background: @darkest;
+	    color: @lightest;
+	    height: 75px;
+	    width: 75px;
+	    text-align: center;
+	    text-transform: uppercase;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    display: table;
+	}
+	.entry-fancy-date .month {
+	    line-height: 1.2;
+	    font-size: 12px;
+	}
+	.entry-fancy-date .year {
+	    line-height: 1.2;
+	    font-size: 11px;
+	}
+	.entry-fancy-date span {
+	    display: block
+	}
+	.entry-fancy-date .day {
+	    font-size: 28px;
+	    letter-spacing: -1px;
+	    line-height: 1;
+	}
+	.entry-fancy-date div {
+	    display: table-cell;
+	    vertical-align: middle;
+	}
+}
+
+
+
+/* blog comments
+ -------------------------------------------------------------------------------------------- */
+#view-comments a {
+    text-decoration: underline;
+    color: inherit;
+}
+#view-comments a:hover {
+    text-decoration: none
+}
+.comment-thread {
+    margin-bottom: 5%
+}
+.comment-thread,
+.comment-thread ol {
+    padding: 0;
+    list-style: none;
+}
+.comment-thread ol {
+    margin-left: 5%
+}
+.comment-thread .comment {
+    margin: 0 0 15px 0
+}
+.comment .comment-header {
+    margin-bottom: 10px
+}
+.comment-thread .avatar {
+    float: left;
+    margin-right: -70px;
+    width: 70px;
+    position: relative;
+    overflow: visible;
+}
+.comment-thread .avatar:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    bottom: -100%;
+    .comment-thread-avatar-after;
+}
+.comment-thread .avatar img {
+    .comment-thread-avatar-img;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 3;
+}
+.comment-meta {
+    padding: 0 0 0 80px;
+    list-style: none;
+    margin: 15px 0 20px -5px;
+    float: left;
+}
+.comment-meta > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.comment-meta > li:first-child {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.comment-meta > li:first-child a {
+    text-decoration: none
+}
+.comment-thread .comment-text *:last-child {
+    margin-bottom: 0
+}
+.comment-thread .comment-text > div {
+    .comment-thread-comment-text-div;
+    padding: 10px;
+    position: relative;
+    z-index: 3;
+}
+.comment-thread .comment-text > div a {
+    text-decoration: underline
+}
+.comment-thread .comment.moderator .avatar img,
+.comment-thread .comment.moderator .avatar:after,
+.comment-thread .comment.moderator .comment-text div,
+.comment-thread .comment.moderator .comment-text > div:before {
+    .moderator-avatar-img; 
+}
+.comment-thread .comment.moderator .comment-text > div {
+    .moderator-comment-text-div; 
+}
+.comment-thread .comment.moderator .comment-text > div a {
+    .moderator-comment-text-div-a; 
+}
+
+
+@media (min-width:700px) { 
+	.comment-thread .comment-text {
+	    float: left;
+	    padding-left: 80px;
+	}
+	.comment .comment-header {
+	    overflow: visible;
+	    margin-bottom: 0;
+	}
+	.comment-thread .comment-text > div:before {
+	    content: '';
+	    position: absolute;
+	    top: 8px;
+	    .comment-thread-comment-text-div-before;
+	}
+	.comment-thread .avatar:after {
+	    height: 10px;
+	    bottom: -10px;
+	}
+}
+
+
+/* addthis_toolbox
+ -------------------------------------------------------------------------------------------- */
+.addthis_toolbox {
+    clear: both;
+    margin: 10px 0 0 -5px;
+}
+[class*="addthis_button"] {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+[class*="addthis_button"] .fa {
+    color: @darkest;
+    font-size: 25px;
+    height: 25px;
+    line-height: 25px;
+    width: 25px;
+}
+@media (min-width:600px) { 
+	.addthis_toolbox {
+	    position: absolute;
+	    top: 100px;
+	    left: 0;
+	    width: 75px;
+	    text-align: center;
+	    margin: 0;
+	}
+	.addthis_toolbox:before,
+	.addthis_toolbox:after {
+	    display: table;
+	    content: "";
+	    text-align: center;
+	}
+	.addthis_toolbox:after {
+	    clear: both
+	}
+	[class*="addthis_button"] {
+	    display: block;
+	    margin: 0 auto 10px 0;
+	}
+	[class*="addthis_button"] .fa {
+	    font-size: 35px;
+	    height: 35px;
+	    line-height: 35px;
+	    width: 35px;
+	    text-align: center;
+	}
+	[class*="addthis_button"]:hover .fa {
+	    color: @pg-bg-clr-2-shade-darker;
+	}
+}
+
+@media (min-width:600px) { 
+	.sticky-addthis {
+	    position: fixed
+	}
+}

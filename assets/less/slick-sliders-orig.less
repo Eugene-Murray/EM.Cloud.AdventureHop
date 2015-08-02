@@ -1,0 +1,602 @@
+/* slick slider base styles 
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
+.slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
+.slick-list:focus { outline: none; }
+.slick-loading .slick-list { background: #fff url("../images/loader.gif") center center no-repeat; }
+.slick-list.dragging { cursor: pointer; cursor: hand; }
+.slick-slider .slick-track { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.slick-track { position: relative; left: 0; top: 0; display: block; }
+.slick-track:before, .slick-track:after { content: ""; display: table; }
+.slick-track:after { clear: both; }
+.slick-loading .slick-track { visibility: hidden; }
+
+.slick-slide { float: left; height: 100%; min-height: 1px; display: none; }
+[dir="rtl"] .slick-slide { float: right; }
+.slick-slide img { display: block; }
+.slick-slide.slick-loading img { display: none; }
+.slick-slide.dragging img { pointer-events: none; }
+.slick-initialized .slick-slide { display: block; }
+.slick-loading .slick-slide { visibility: hidden; }
+.slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
+
+/* Dots */
+.slick-dots { position: absolute; bottom: -45px; list-style: none; display: block; text-align: center; padding: 0; width: 100%; }
+.slick-dots li { position: relative; display: inline-block; height: 20px; width: 20px; margin: 0 5px; padding: 0; cursor: pointer; }
+.slick-dots li button { border: 0; background: transparent; display: block; height: 20px; width: 20px; outline: none; line-height: 0; font-size: 0; color: transparent; padding: 5px; cursor: pointer; }
+.slick-dots li button:hover, .slick-dots li button:focus { outline: none; }
+.slick-dots li button:hover:before, .slick-dots li button:focus:before { opacity: 1; }
+.slick-dots li.slick-active button:before { color: black; opacity: 0.75; }
+
+
+/* ------- hide the arrows for various sliders below 1230px --------- */
+@media (max-width:1230px) { 
+	.multi-item-slick.slick-slider.slick-initialized button.slick-prev,
+	.multi-item-slick.slick-slider.slick-initialized button.slick-next,
+	.multi-item-slick-mini.slick-slider.slick-initialized button.slick-prev,
+	.multi-item-slick-mini.slick-slider.slick-initialized button.slick-next,
+	.testimonial-slider.slick-slider.slick-initialized button.slick-prev,
+	.testimonial-slider.slick-slider.slick-initialized button.slick-next,
+	.eq-slider.slick-slider.slick-initialized button.slick-prev,
+	.eq-slider.slick-slider.slick-initialized button.slick-next,
+	.video-slider.slick-slider.slick-initialized button.slick-prev,
+	.video-slider.slick-slider.slick-initialized button.slick-next
+ {
+	    display: none!important;
+	    width: 0px;
+	    height: 0px;
+	    overflow: hidden;
+	    opacity: 0;
+	    visibility: hidden;
+	}
+}
+
+/* ----- .slick-prev & .slick-next ----- */
+.slick-prev,
+.slick-next {
+    background: transparent;
+    border: none;
+    color: @darkest;
+    cursor: pointer;
+    display: block;
+    font-size: 0px;
+    height: 40px;
+    line-height: 0;
+    margin-top: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    z-index: 5;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: @darkest;
+    font-size: 18px;
+    line-height: 1;
+    opacity: 1;
+}
+.slick-next:before {
+    content: "\e628"
+}
+.slick-prev:before {
+    content: "\e629"
+}
+.slick-disabled {
+    cursor: default;
+    opacity: .30;
+}
+
+/* ---- .slick-dots ----- */
+.slick-dots {
+    bottom: auto;
+    display: block;
+    line-height: 0;
+    margin: 10px 0 0 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: 0;
+}
+.slick-dots li {
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin: 5px;
+    padding: 0;
+    position: relative;
+    width: 20px;
+}
+.slick-dots li button {
+    background: @lightest;
+    border: 0;
+    border: 1px solid @pg-bg-clr-2-shade-darker;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 100%;
+    line-height: 0;
+    opacity: 1;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+.slick-dots li button:before {
+    display: none
+}
+.slick-dots li button:after {
+    background: @pg-bg-clr-2-shade-darker;
+    bottom: 3px;
+    content: '';
+    left: 3px;
+    opacity: 1;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+.slick-dots-right .slick-dots {
+    text-align: right
+}
+.slick-dots-right .slick-dots li {
+    margin: 5px 0 5px 10px
+}
+.slick-dots-left .slick-dots {
+    text-align: left
+}
+.slick-dots-left .slick-dots li {
+    margin: 5px 10px 5px 0
+}
+ul.slick-dots > li.slick-active > button {
+    background: @darkest;
+    border-color: @darkest;
+    cursor: default;
+}
+ul.slick-dots > li.slick-active > button:after {
+    background: @lightest
+}
+
+
+
+/* .featured-carousel // uses slick slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.featured-carousel {
+    margin: 0;
+    padding: 0;
+}
+.featured-carousel figcaption {
+    margin-top: 15px
+}
+.featured-carousel figure {
+    margin: 0;
+    padding: 0;
+}
+.featured-carousel .slick-prev,
+.featured-carousel .slick-next {
+    left: 0;
+    background: @lightest;
+}
+.featured-carousel .slick-next {
+    left: 40px
+}
+@media (min-width:1231px) { 
+	.featured-carousel .slick-prev,
+	.featured-carousel .slick-next {
+	    left: -40px;
+	    margin: 0;
+	    background: transparent;
+	}
+	.featured-carousel .slick-next {
+	    top: 40px
+	}
+}
+
+
+/* .multi-item-slick carousel // uses slick slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.multi-item-slick {
+    margin: 0 -4px;
+    padding: 0;
+}
+.multi-item-slick .slick-slide {
+    margin: 0 5px
+}
+@media (min-width:1231px) { 
+	.multi-item-slick .slick-prev,
+	.multi-item-slick .slick-next {
+	    right: -40px;
+	    top: 0;
+	    margin: 0;
+	    display: block;
+	}
+	.multi-item-slick .slick-next {
+	    top: 40px
+	}
+}
+/* these dots via jquery are moved to the top on small viewports */
+.multi-item-slick .slick-dots {
+    margin: 20px 0 10px
+}
+.multi-item-slick.slick-dots-left .slick-dots {
+    padding-left: 5px
+}
+.multi-item-slick.slick-dots-right .slick-dots {
+    padding-right: 5px
+}
+.multi-item-slick figcaption {
+    margin-top: 10px
+}
+.multi-item-slick figcaption h3 {
+    margin: 0 0 10px 0
+}
+@media (min-width:768px) { 
+	.multi-item-slick figcaption {
+	    padding-right: 5px
+	}
+}
+/* --- .multi-item-slick content ----- */
+.multi-item-slick h3 {
+    font-size: 20px;
+    margin: 0;
+}
+.multi-item-slick figure p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.multi-item-slick a figure {
+    text-decoration: none;
+    color: @body-base-color;
+}
+.multi-item-slick a:hover {
+    text-decoration: none
+}
+.multi-item-slick .credit {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* images for all carousels
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.slick-slider img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+/* blog-slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.blog-slider {
+    width: 100.5%
+}
+/* helps disguise rounding errors */
+
+
+
+/* video-slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.video-slider {
+    margin: 0 -4px 10px;
+    padding: 0;
+}
+.video-slider .slick-slide {
+    margin: 0 5px
+}
+@media (min-width:1231px) { 
+	.video-slider .slick-prev,
+	.video-slider .slick-next {
+	    left: -40px;
+	    top: 50%;
+	    margin: -40px 0 0 0;
+	    display: block;
+	}
+	.video-slider .slick-next {
+	    right: -40px;
+	    left: auto;
+	}
+}
+.video-slider .slick-slider-item {
+    opacity: .5
+}
+.video-slider .slick-slider-item.active {
+    opacity: 1
+}
+
+
+
+/* .portfolio-item-slider .portfolio-thumb-slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.portfolio-thumb-slider {
+    margin: 0 0 6px 0
+}
+.portfolio-thumb-slider .slick-slide {
+    margin: 0 6px 0 0
+}
+.portfolio-thumb-slider .slick-prev,
+.portfolio-thumb-slider .slick-next {
+    left: 0;
+    top: 50%;
+    margin: -20px 0 0 0;
+    background: @darkest;
+    color: @lightest;
+}
+.portfolio-thumb-slider .slick-next {
+    right: 0;
+    left: auto;
+}
+.portfolio-thumb-slider .slick-prev:before,
+.portfolio-thumb-slider .slick-next:before {
+    position: relative;
+    top: 1px;
+    color: @lightest;
+}
+.portfolio-thumb-slider .slick-slide {
+    background: fade(@darkest, 50%);
+}
+.portfolio-thumb-slider  img {
+    opacity: .30
+}
+.portfolio-thumb-slider .slick-center img {
+    opacity: 1.0
+}
+.portfolio-item-slider {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* testimonial-slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.testimonial-slider {
+    position: relative;
+    margin: 0;
+}
+/* these on small viewports */
+.testimonial-slider .slick-dots {
+    margin: 20px 0 10px
+}
+@media (min-width:768px) { 
+	/* these on small viewports */
+	.testimonial-slider .slick-dots {
+	    position: absolute;
+	    bottom: 20px;
+	    top: auto;
+	    margin: 0;
+	    text-align: right;
+	    left: auto;
+	    right: -10px;
+	    z-index:3;
+	}
+}
+@media (min-width:768px) { 
+	.testimonial-slider .slick-prev,
+	.testimonial-slider .slick-next {
+	    right: -40px;
+	    top: 0;
+	    margin: 0;
+	}
+	.testimonial-slider .slick-next {
+	    top: 40px
+	}
+}
+.testimonial-slider .testimonial {
+    background-color: @testimonial-slider-quote-box-bg;
+    color: @testimonial-slider-color;
+}
+.testimonial-slider .testimonial a {
+    color: @testimonial-slider-color;
+    text-decoration: underline;
+}
+@media (min-width:@screen-md-min) { 
+	.testimonial-slider .testimonial blockquote {
+	    font-size: 30px;
+	    line-height: 1.2;
+	}
+	.testimonial-slider .testimonial {
+	    padding: 30px 50px
+	}
+}
+.boxshadow .testimonial-slider .author-wrapper .arrow {
+    margin-left: 40px;
+    border-top: 40px solid transparent;
+    border-top: 40px solid @testimonial-slider-arrow-shadow;
+    border-left: 40px solid transparent;
+    border-right: 0px solid transparent;
+}
+.testimonial-slider .author-wrapper .arrow:before {
+    margin-left: -38px;
+    border-top: 40px solid @testimonial-slider-quote-box-bg;
+    border-left: 40px solid transparent;
+    border-right: 0px solid transparent;
+}
+.testimonial-slider .author-wrapper .cite {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* .eq-slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width:1231px) { 
+	.eq-slider .slick-prev,
+	.eq-slider .slick-next {
+	    left: -40px;
+	    top: 0;
+	    margin: 0;
+	    background: transparent;
+	}
+	.eq-slider .slick-next {
+	    top: 40px
+	}
+}
+
+.eq-slider {margin:0;}
+
+.eq-slider-visual {
+    background-color: @darkest
+}
+.eq-slider-caption {
+    background: @darkest;
+    padding: 20px;
+    color: @lightest;
+}
+.eq-slider-caption a:not(.btn) {
+    color: @lightest;
+    text-decoration: underline;
+}
+@media (min-width:768px) { 
+	.eq-slider .slick-slider-item {
+	    display: table;
+	    width: 100%;
+	}
+	.eq-slider-caption,
+	.eq-slider-visual,
+	.eq-slider-divider {
+	    display: table-cell;
+	    vertical-align: middle;
+	}
+	.eq-slider-visual {
+	    width: 57.5%
+	}
+	.eq-slider-divider {
+	    width: 1%
+	}
+	.eq-slider-caption {
+	    width: 40.5%;
+	    vertical-align: top;
+	    padding-bottom: 35px;
+	}
+}
+@media (min-width:992px) { 
+	.eq-slider-visual {
+	    padding: 0
+	}
+}
+/* these on small viewports */
+.eq-slider .slick-dots {
+    margin: 10px 0
+}
+@media (min-width:768px) { 
+	/* these on small viewports */
+	.eq-slider .slick-dots {
+	    position: absolute;
+	    bottom: 5px;
+	    top: auto;
+	    margin: 0;
+	    text-align: right;
+	    left: auto;
+	    right: 0;
+	    z-index: 10;
+	}
+}
+
+
+
+/* .variable-width-slider 
+// https://github.com/kenwheeler/slick/issues/779
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.variable-width-slider {
+    margin: 0;
+    position: relative;
+}
+
+
+.variable-width-slider.loading-slick {visibility:hidden;opacity:0;}
+
+
+
+.variable-width-slider .slick-slide {
+    background: @lightest;
+    margin: 0 2px;
+    float:left;
+}
+.variable-width-slider {
+    margin: 0 -1px
+}
+@media (min-width:768px) { 
+	.variable-width-slider {
+	    margin-top: -20px
+	}
+}
+
+@media (min-width:601px) { 
+	.variable-width-slider .slick-center.slick-slide img {
+	    opacity: 1.0
+	}
+	.variable-width-slider .slick-slide img {
+	    opacity: .60
+	}
+}
+
+@media (min-width:1231px) { 
+	.variable-width-slider .slick-prev,
+	.variable-width-slider .slick-next {
+	    display: block;
+	    left: -40px;
+	    margin: -40px 0 0 0;
+	    top: 50%;
+	}
+	.variable-width-slider .slick-next {
+	    left: auto;
+	    right: -40px;
+	}
+}
+@media (max-width:1230px) {  
+	.variable-width-slider {
+	    margin: 0
+	}
+	.variable-width-slider .slick-slide {
+	    margin: 0
+	}
+	.variable-width-slider .slick-prev,
+	.variable-width-slider .slick-next {
+	    background: @lightest;
+	    left: 0;
+	    top: 0;
+	}
+	.variable-width-slider .slick-next {
+	    left: auto;
+	    right: 0;
+	}
+	
+	
+}
+
+
+/* .multi-item-slick-mini carousel // uses slick slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.multi-item-slick-mini {
+    margin: 0 -4px;
+    padding: 0;
+}
+.multi-item-slick-mini .slick-slide {
+    margin: 0 5px
+}
+@media (min-width:1231px) { 
+	.multi-item-slick-mini .slick-prev,
+	.multi-item-slick-mini .slick-next {
+	    right: -40px;
+	    top: 0;
+	    margin: 0;
+	    display: block;
+	}
+	.multi-item-slick-mini .slick-next {
+	    top: 40px
+	}
+}
+/* these dots via jquery are moved to the top on small viewports */
+.multi-item-slick-mini .slick-dots {
+    margin: 20px 0 10px
+}
+.multi-item-slick-mini.slick-dots-left .slick-dots {
+    padding-left: 5px
+}
+.multi-item-slick-mini.slick-dots-right .slick-dots {
+    padding-right: 5px
+}
+

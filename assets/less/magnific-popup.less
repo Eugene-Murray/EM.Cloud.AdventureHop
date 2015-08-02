@@ -1,0 +1,84 @@
+/*------------------------------------------------------------------------------------------------------------------------------------
+  maginific-popup styles for ajax, inline, etc.
+ -------------------------------------------------------------------------------------------- */
+.mfp-bg, .my-mfp-slidein.mfp-ready.mfp-bg {
+    background:@mfp-bg;
+    opacity: 0.8
+}
+.my-mfp-slidein .mfp-modal {
+    opacity: 0;
+    transition: all 0.2s ease-out;
+    top: -100%;
+}
+.my-mfp-slidein.mfp-ready .mfp-modal {
+    opacity: 1;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+}
+.my-mfp-slidein.mfp-removing .mfp-modal {
+    opacity: 0;
+    transition: all 0.2s ease-out;
+    top: -100%;
+}
+.my-mfp-slidein.mfp-bg {
+    opacity: 0.01;
+    transition: opacity 0.3s ease-out;
+}
+.my-mfp-slidein.mfp-removing.mfp-bg {
+    opacity: 0
+}
+.mfp-modal {
+    width: 95%;
+    max-width: 1200px;
+    position: relative;
+    background: @mfp-modal-bg;
+    padding: 50px 20px 20px 20px;
+    margin: 20px auto;
+    transition: all 1s ease-out;
+    .mfp-modal-bxshadow;
+}
+.mfp-modal .panel-group {
+    margin-bottom: 0
+}
+.extra-small-dialog {
+    max-width: 400px
+}
+.small-dialog {
+    max-width: 600px
+}
+.medium-dialog {
+    max-width: 900px
+}
+.large-dialog {
+    max-width: 1200px
+}
+.mfp-iframe-scaler .mfp-title {
+    position: absolute;
+    bottom: -20px;
+}
+.mfp-modal-footer p {
+    margin-bottom: 0
+}
+.mfp-modal-body {
+    padding: 0 0 20px 0
+}
+.mfp-close {
+    color: @lightest
+}
+.mfp-modal .mfp-close {
+    color: @mfp-close
+}
+.mfp-figure:after {
+    .mfp-modal-bxshadow;
+    border: none;
+    background: transparent;
+    bottom: 50px;
+}
+.mfp-iframe-scaler iframe {
+    box-shadow: none
+}
+.mfp-counter {
+    color: @lightest
+}
+
+.mfp-open body {overflow-x: visible; }

@@ -1,0 +1,84 @@
+/* image alignment
+ -------------------------------------------------------------------------------------------- */
+.img-left,
+.img-right {
+    margin: 1em auto;
+    display: block;
+}
+figure.figure-left,
+figure.figure-right,
+figure.figure-center {
+    text-align: center;
+    border-bottom: @base-border-width solid @darkest;
+}
+figure.figure-center {
+    clear:both;
+    padding:15px 0 0 0;
+    margin-bottom:15px;
+}
+figure.figure-left img,
+figure.figure-right img {
+    margin: 1em auto;
+}
+figure.figure-center img {
+    margin: 1em auto 5px;
+}
+
+@media (min-width:600px) { 
+	.img-left, .figure-left {
+	    margin: .5em 15px 0 0;
+	    float: left;
+	}
+	.img-right, .figure-right {
+	    margin: .5em 0 0 15px;
+	    float: right;
+	}
+	
+	.widget .img-left {
+	    margin: .5em 10px 0 0;
+	}
+	.widget .img-right{
+	    margin: .5em 0 0 10px;
+	}
+	
+	figure.figure-left,
+	figure.figure-right {
+	    text-align: left;
+	    margin-bottom: 10px;
+	}
+	figure.figure-left img,
+	figure.figure-right img {
+	    margin: 0
+	}
+}
+.img-full-width,
+.img-fullwidth {
+    width: 100%;
+    height: auto;
+}
+/* this image is a little bigger than the box it's inside so that rounding errors in the browser don't show up */
+.img-full-width-tight {
+    width: 100.8%;
+    height: auto;
+}
+
+
+
+/* figures
+ -------------------------------------------------------------------------------------------- */
+figcaption {
+    margin: 10px 0;
+    font-size: 90%;
+    line-height:1.5;
+}
+
+
+/* .fade-hover-img goes on the parent
+ -------------------------------------------------------------------------------------------- */
+.fade-hover-img a:hover img {
+    opacity: .6;
+    transition: opacity 0.3s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0px,0px,0px);
+}
+

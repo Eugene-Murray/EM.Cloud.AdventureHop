@@ -1,0 +1,80 @@
+/* .social-user treatment in login and signup panels
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.social-user a:hover {
+    text-decoration: none;
+    opacity: .5;
+}
+.social-user a,
+.social-user a:hover {
+    color: @lightest
+}
+.social-user a:not(:hover) {
+    text-decoration: none
+}
+.social-user .facebook {
+    background: #174079
+}
+.social-user .fa-facebook {
+    background: #3a64a0
+}
+.social-user .google {
+    background: #a62b1f
+}
+.social-user .fa-google-plus {
+    background: #d34537
+}
+.social-user .wordpress {
+    background: #222
+}
+.social-user .fa-wordpress {
+    background: #333
+}
+.social-user .twitter {
+    background: #158bb8
+}
+.social-user .fa-twitter {
+    background: #1eb3ec
+}
+.social-user i {
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,.075);
+}
+.social-user a {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(255,255,255,.30);
+}
+.social-user a span {
+    padding: 5px 10px;
+    display: block;
+    text-align: center;
+}
+
+@media (min-width:500px) { 
+	.social-user a {
+	    margin-bottom: 5px;
+	    display:table;
+	    width:100%;
+	    height:46px;
+	}
+	.social-user a span {
+	    padding: 0 10px;
+	    display: table-cell;
+	    vertical-align:middle;
+	    text-align:left;
+	}
+	.social-user i {
+	    display:table-cell;
+	    vertical-align:middle;
+	    padding: 0;
+	    font-size: 20px;
+	    width: 46px;
+	    text-align: center;
+	    border-right: 1px solid rgba(255,255,255,.20);
+	    border-bottom: 0px;
+	}
+}

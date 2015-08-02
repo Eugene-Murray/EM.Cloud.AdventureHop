@@ -1,0 +1,296 @@
+/* 20 - 1 :: .big-text-banner
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.big-text-banner {
+    text-align: center;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0;
+    visibility: hidden;
+    color: @darkest;
+}
+.big-text-banner-wrapper {
+    margin: 10px 0 20px 0
+}
+
+@media (min-width:768px) { 
+	.big-text-banner {
+	    line-height: .9
+	}
+	.big-text-banner.big-text-main-headline {
+	    margin-top: -15px
+	}
+	.big-text-banner-wrapper {
+	    margin: 0 0 40px 0 
+	}
+}
+
+/* 20 - 2 :: sticky-sidebar for scrollspy and other sidebars
+-------------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width:768px) { 
+	.sticky-spy-bar, 
+	.sticky-sidebar {
+	    position: fixed
+	}
+}
+
+/* 20 - 3 ::  .site-map-list
+-------------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width:768px) { 
+    .site-map-list {
+      -webkit-columns: 2;
+         -moz-columns: 2;
+              columns: 2;
+      -webkit-column-gap: 2%;
+         -moz-column-gap: 2%;
+              column-gap: 2%;
+    }
+    .site-map-list ul li {
+        display:inline-block;
+        width:100%;
+    }    
+}
+
+/* 20 - 4 ::  .simple-gallery
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.simple-gallery:hover img {
+    transition: all .5s ease-in-out;
+    opacity: .5;
+}
+.simple-gallery img:hover {
+    opacity: 1.0
+}
+.simple-gallery .post {
+    padding: 0px;
+    border: 0px;
+}
+
+
+/* 20 - 5 ::  testimonial quote box
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.testimonial {
+    padding: 10px;
+    background-color: @testimonial-quote-box-bg;
+    float: left;
+    width: 100%;
+    font-family: @testimonial-font-family;
+}
+.testimonial blockquote {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+@media (min-width:480px) { 
+	.testimonial {
+	    padding: 20px 25px
+	}
+	.testimonial blockquote {
+	    font-size: 16px;
+	    line-height: 1.8;
+	}
+}
+
+.author-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+  float: left;
+}
+.boxshadow .author-wrapper .arrow {
+  float: left;
+  position: relative;
+  margin-left: 50px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-top: 30px solid @testimonial-arrow-shadow;
+  border-left: 30px solid transparent;
+  border-right: 0px solid transparent;
+}
+.author-wrapper .arrow:before {
+  position: absolute;
+  content: '';
+  z-index: 2;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 0;
+  margin-left: -28px;
+  border-top: 30px solid @testimonial-quote-box-bg;
+  border-left: 30px solid transparent;
+  border-right: 0px solid transparent;
+}
+.author-wrapper .cite {
+  float: left;
+  margin: 0px 8px 0px 8px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.author-wrapper .cite span {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+
+/* 20 - 6 ::  scrollspy and fixed sidebar
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.spying-sidebar.widget {
+    padding-left: 0;
+    padding-right: 0px;
+}
+.spying-sidebar .widget-title {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.spying-sidebar .nav {
+    margin-bottom: 0;
+    padding: 0;
+}
+.side-nav {
+    margin-top: 0;
+    margin-bottom: 30px;
+    clear: both;
+    background: @widget-bg;
+    padding: 10px 0;
+} 
+.spying-sidebar .nav>li>a {
+    display: block;
+    text-decoration: none;
+    padding: 5px 15px;
+    color: inherit;
+}
+.spying-sidebar .nav>li>a:hover,
+.spying-sidebar .nav>li>a:focus {
+    text-decoration: none;
+    background-color: @pg-bg-clr;
+    border-left: 1px solid @darkest;
+    padding-left: 14px;
+}
+.spying-sidebar .nav .nav>li>a:hover,
+.spying-sidebar .nav .nav>li>a:focus {
+    padding-left: 29px
+}
+.spying-sidebar .nav>.active>a,
+.spying-sidebar .nav>.active:hover>a,
+.spying-sidebar .nav>.active:focus>a {
+    font-weight: bold;
+    color: @darkest;
+    background-color: @pg-bg-clr; 
+    border-left: 1px solid @darkest;
+}
+.spying-sidebar .nav .nav {
+    display: none;
+    margin-bottom: 8px;
+}
+.spying-sidebar .nav .nav>li>a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    font-size: 90%;
+}
+@media screen and (min-width:768px) { 
+	.spying-sidebar .nav>.active>ul {
+	    display: block
+	}
+}
+
+/* 20 - 7 ::  about-us page
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.person .inner {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.person .image img {
+    .person-image-img;
+}
+@media (min-width:480px) { 
+	.person .inner {
+	    text-align: left
+	}
+	.person .image img {
+	    width: 100%;
+	    height: auto;
+	}
+	.person .image {
+	    float: left;
+	    width: 100px;
+	    margin-right: -100px;
+	}
+	.person .text {
+	    float: left;
+	    padding-left: 110px;
+	}
+}
+@media (min-width:700px) { 
+	.person .image {
+	    width: 128px;
+	    margin-right: -128px;
+	}
+	.person .text {
+	    padding-left: 148px
+	}
+}
+
+
+/* 20 - 8 ::  contact page
+ -------------------------------------------------------------------------------------------- */
+#map img  {
+    .map-img;
+}
+#map a, {
+    color: inherit
+}
+#map {
+    padding-bottom: 20px
+}
+@media (min-width:@screen-sm-min) { 
+	#map img {
+	    max-width: 100%;
+	}
+}
+
+/* 20 - 9 ::  contact form
+ -------------------------------------------------------------------------------------------- */
+#success,
+#error,
+#spinner {
+    display: none
+}
+#error {
+  color:@lightest;
+  background:@darkest;
+  padding:20px;
+  margin-bottom:20px;
+}
+#success {
+  color:@darkest;
+  background:@lightest;
+  border:@base-border-width solid @darkest;
+  padding:20px;
+  margin-bottom:20px;
+}
+#success h2, #error h2 {margin:0;}
+.required,
+label.error {
+    color: @brand-primary;
+}
+.error.form-control {
+    border: 1px dashed @brand-primary;
+}
+#spinner {
+    width: 100%;
+    padding:20px;
+}
+#spinner img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+

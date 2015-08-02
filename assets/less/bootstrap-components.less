@@ -1,0 +1,1096 @@
+/* 26 - 1 :: .page-header
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.page-header {
+    padding-bottom: 0;
+    margin: 0 0 15px;
+    border-bottom: 2px solid @darkest;
+}
+.page-header h1,
+.page-header h2,
+.page-header h3,
+.page-header h4 {
+    margin: 0;
+    text-transform: @page-header-case;
+    padding-bottom:10px;
+}
+
+/* 26 - 2 :: grid columns and row adjustments
+-------------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width:@screen-sm-min) { 
+	.row.sixteen-gutter {
+	    margin-left: -8px;
+	    margin-right: -8px;
+	}
+	.row.sixteen-gutter [class*="col-"] {
+	    padding-left: 8px;
+	    padding-right: 8px;
+	}
+	.row.ten-gutter {
+	    margin-left: -5px;
+	    margin-right: -5px;
+	}
+	.row.ten-gutter [class*="col-"] {
+	    padding-left: 5px;
+	    padding-right: 5px;
+	}
+}
+
+.row.row-no-gutter {margin-left:0;margin-right:0;}
+	.row.row-no-gutter [class*="col-"] {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+
+
+/* 26 - 3 :: .glyphicon adjust like Font Awesome for Consistency
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.glyphicon {
+    speak: none;
+    font-size: inherit;
+}
+.glyphicon-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+.glyphicon-2x {
+    font-size: 2em
+}
+.glyphicon-3x {
+    font-size: 3em
+}
+.glyphicon-4x {
+    font-size: 4em
+}
+.glyphicon-5x {
+    font-size: 5em
+}
+.glyphicon-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+.glyphicon-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+}
+.glyphicon-ul>li {
+    position: relative
+}
+.glyphicon-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: .14285714em;
+    text-align: center;
+}
+.glyphicon-li.fa-lg {
+    left: -1.85714286em
+}
+.glyphicon.pull-left {
+    margin-right: .3em
+}
+.glyphicon.pull-right {
+    margin-left: .3em
+}
+
+/* 26 - 4 :: .btn-* 
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.btn {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.btn:active,
+.btn.active,
+.open > .dropdown-toggle.btn {
+    background-image: none
+}
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info {
+    border-width: @base-border-width
+}
+.open > .dropdown-toggle.btn-default,
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus {
+    color: @btn-default-text-hover;
+    border-color: @btn-default-border-hover;
+    background: @btn-default-bg-hover;
+}
+
+/* ----- .btn-default -------- */
+.btn-default {
+    color: @btn-default-text;
+    border-color: @btn-default-border;
+    background: @btn-default-bg;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-primary,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    color: @btn-default-text;
+    border-color: @btn-default-border;
+    background: @btn-default-bg;
+}
+
+/* ----- .btn-primary -------- */
+.btn-primary {
+    color: @btn-primary-text;
+    border-color: @btn-primary-border;
+    background-color: @btn-primary-bg;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color: @btn-primary-text;
+    border-color: @btn-primary-bg;
+    background-color: @btn-primary-border;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    color: @btn-primary-text;
+    border-color: @btn-primary-bg;
+    background-color: @btn-primary-border;
+}
+
+/* ----- .btn-inverse -------- */
+.btn-inverse {
+  color: @btn-inverse-text;
+  border-color: @btn-inverse-border;
+  background-color: @btn-inverse-bg;
+}
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active {
+  color: @btn-inverse-bg;
+  border-color: @btn-inverse-bg;
+  background-color: @btn-inverse-text;
+}
+
+
+/* ----- .btn-link -------- */
+.btn-link {
+    font-weight: normal;
+    cursor: pointer;
+    color: @primary-text;
+}
+@media (max-width:700px) { 
+	.btn {
+	    white-space: normal
+	}
+	.input-group .btn {
+	    white-space: nowrap
+	}
+}
+
+/* 26 - 5 :: .input-group-primary support
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.input-group-primary .form-control {
+    border-color: @btn-primary-border
+}
+
+/* 26 - 6 ::  .btn-primary .badge
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.btn-primary .badge {
+    color: @btn-primary-bg;
+    background-color: @btn-primary-text;
+}
+
+/* 26 - 7 ::  .tooltip
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.tooltip.in {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.tooltip-inner {
+    border-radius: 0px;
+    padding: 10px;
+    font-weight:normal;
+}
+.tooltip-inner {
+    font-weight: bold;
+    font-size: 14px;
+    color: @popover-text;
+    background-color: @popover-bg; 
+}
+.tooltip.top .tooltip-arrow,
+.tooltip.top-left .tooltip-arrow,
+.tooltip.top-right .tooltip-arrow {
+    border-top-color: @popover-bg; 
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: @popover-bg;
+}
+.tooltip.left .tooltip-arrow {
+    border-left-color: @popover-bg; 
+}
+.tooltip.bottom .tooltip-arrow,
+.tooltip.bottom-left .tooltip-arrow,
+.tooltip.bottom-right .tooltip-arrow {
+    border-bottom-color: @popover-bg;
+}
+
+/* 26 - 8 ::  .popover
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.popover {
+    background-color: @popover-bg;
+    border: 0px;
+    border-radius: 0;
+    color: @popover-text;
+    .popover;
+}
+.popover-title {
+	.popover-title;
+	 background-color: @popover-bg;
+}
+.popover.top > .arrow {
+    border-top-color: @popover-bg
+}
+.popover.top > .arrow:after {
+    border-top-color: @popover-bg
+}
+.popover.right > .arrow {
+    border-right-color: @popover-bg
+}
+.popover.right > .arrow:after {
+    border-right-color: @popover-bg
+}
+.popover.bottom > .arrow {
+    border-bottom-color: @popover-bg
+}
+.popover.bottom > .arrow:after {
+    border-bottom-color: @popover-bg
+}
+.popover.left > .arrow {
+    border-left-color:@popover-bg
+}
+.popover.left > .arrow:after {
+    border-left-color: @popover-bg
+}
+
+/* 26 - 9 ::  form classes and tweaks
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.form-control-lg {
+  min-height: 46px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+.radio,
+.checkbox,
+.radio-inline,
+.checkbox-inline,
+.badge {
+    line-height: 14px
+}
+.badge {
+    line-height: normal;
+    border-radius: 3px;
+    padding: 1px 3px 3px;
+}
+.radio input,
+.checkbox input {
+    margin-top: 0
+}
+.form-inline .radio input,
+.form-inline .checkbox input {
+    position: relative;
+    top: -1px;
+}
+.form-inline .radio,
+.form-inline .checkbox {
+    padding: 0 3px
+}
+.form-control:focus {
+    outline: 0
+}
+.form-control,
+.input-group span,
+.input-group .btn {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.form-control::-moz-placeholder {
+    opacity: 1;
+    color: @placeholder
+}
+.form-control:-ms-input-placeholder {
+    color: @placeholder
+}
+.form-control::-webkit-input-placeholder {
+    color: @placeholder
+}
+.form-control:focus {
+    border-color: @btn-default-border;
+    border-style: dashed;   
+   -webkit-box-shadow: none;
+    box-shadow: none;   
+}
+
+/* 26 - 10 :: .form horizontal tweaks
+ -------------------------------------------------------------------------------------------- */
+.form-horizontal .form-group [class*="col-"] .row [class*="col-"] {
+    padding-left: .5%;
+    padding-right: .5%;
+}
+.form-horizontal .form-group [class*="col-"] .row {
+    margin-left: -.5%;
+    margin-right: -.5%;
+}
+.form-horizontal .form-group [class*="col-"] .row [class*="col-"]:not(:last-child) { margin-bottom: 10px }
+@media (min-width:1200px) { 
+	.form-horizontal .form-group [class*="col-"] .row [class*="col-"]:not(:last-child) { margin-bottom: 0 }
+}
+
+
+/* 26 - 11 :: .input-group and forms
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.input-group,
+.form-control,
+.input-group-addon {
+    border-color: @btn-default-border;
+    border-width: @base-border-width;
+}
+
+.form-control {
+  background-color:@form-control-bg;
+}
+
+.input-group > .form-control,
+.input-group > .input-group-addon,
+.input-group > .input-group-btn > .btn {
+    height: 34px
+}
+select.input-group > .form-control,
+select.input-group > .input-group-addon,
+select.input-group > .input-group-btn > .btn {
+    height: 34px;
+    line-height: 34px;
+}
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+    height: 48px
+}
+select.input-group-lg > .form-control,
+select.input-group-lg > .input-group-addon,
+select.input-group-lg > .input-group-btn > .btn {
+    height: 48px;
+    line-height: 48px;
+}
+.input-group-addon {
+    .input--group--addon;  
+}
+.input-group-btn > .btn + .btn {
+    margin-left: -@base-border-width;
+}
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group {
+    margin-right: -@base-border-width;
+}
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+    margin-left: -@base-border-width;
+}
+
+
+/* 26 - 12 ::  misc bootstrap over-rides shared
+-------------------------------------------------------------------------------------------------------------------------------------*/
+hr {
+    .hr;
+}
+.panel-default,
+.panel-default .panel-heading,
+.panel-default .panel-footer,
+.list-group,
+.list-group .list-group-item,
+pre,
+code {
+    .general();
+}
+
+.panel-default,
+.panel-primary,
+.panel-success,
+.panel-warning,
+.panel-info,
+.panel-danger,
+.well,
+.jumbotron,
+.list-group,
+.list-group .list-group-item,
+pre,
+code {
+    .no-box-shadow();
+}
+.container .jumbotron {
+    border-radius: 0
+}
+.well,
+.jumbotron {
+    .well-jumbotron;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+  .jumbotron {
+    .well-jumbotron;
+  }
+  .container .jumbotron,
+  .container-fluid .jumbotron {
+    .well-jumbotron;
+  }
+}
+ 
+.lead,
+.jumbotron,
+.jumbotron * {
+    line-height: inherit
+}
+blockquote, blockquote.pull-right {
+    .blockquote();
+}
+blockquote footer,
+blockquote cite,
+blockquote small {
+    color: inherit
+}
+.text-primary {
+    color: @primary-text
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+    border-color: @primary-text
+}
+.alert {
+   .alert-mixin;
+}
+
+
+/* 26 - 13 ::  .label
+-------------------------------------------------------------------------------------------------------------------------------------*/
+h1 .label,
+h2 .label,
+h3 .label,
+h4 .label,
+h5 .label,
+h6 .label,
+p .label {
+    padding: 2px 10px;
+    font-weight: normal;
+}
+p .label {
+    font-weight: bold
+}
+.label {
+    border-radius: @base-border-radius
+}
+.label-primary {
+    background-color: @brand-primary;
+}
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+    background-color: @primary-text;
+}
+
+/* 26 - 14 ::  .list-group 
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    color: @lightest;
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+}
+.list-group-item.active .list-group-item-text,
+.list-group-item.active:hover .list-group-item-text,
+.list-group-item.active:focus .list-group-item-text {
+  color: @lightest;
+}
+.list-group-item.active a {
+    color: @lightest;
+}
+.list-group-item {
+    border-width: @base-border-width;;
+    margin-bottom: -@base-border-width;;
+}
+.list-group-item-text{
+    color: inherit;
+}
+a.list-group-item-default:hover,
+a.list-group-item-default:focus {
+  text-decoration: none;
+  color: @darkest;
+  background-color: @pg-bg-clr;
+}
+a.list-group-item {
+    padding-right: 20px;
+    position: relative; 
+}
+a.list-group-item:after {
+    font-family: "FontAwesome";
+    content: "\f0c1";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* 26 - 15 ::  .progress
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.progress-bar-primary.progress-bar {
+    background-color: @brand-primary;
+}
+.progress {
+    .progress-mixin;
+}
+.progress-bar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+/* 26 - 16 :: .table
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.table {
+    .table;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    border-top: @base-border-width solid @btn-default-border
+}
+.table > thead > tr > th {
+    border-bottom: @base-border-width solid @btn-default-border
+}
+.table > tbody + tbody {
+    border-top: @base-border-width solid @btn-default-border
+}
+.table-bordered {
+    border: @base-border-width solid @btn-default-border
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border-color: @btn-default-border;
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: @table-odd-bg;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th,
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th,
+.table-hover > tbody > tr > td.active:hover,
+.table-hover > tbody > tr > th.active:hover,
+.table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr:hover > .active,
+.table-hover > tbody > tr.active:hover > th {
+    .table-hover-active;
+}
+
+/* 26 - 17 ::  .pager
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.pager li > a,
+.pager li > span {
+    .pager;
+}
+.pager li {
+    background: inherit
+}
+.pager .ti {
+    font-size: 80%
+}
+.text-right.pager {
+    text-align: right
+}
+.text-left.pager {
+    text-align: left
+}
+.pager li > a:hover,
+.pager li > a:focus {
+    .pager-hover;
+}
+
+/* 26 - 18 ::  .pagination
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.pagination {
+    border-radius: @base-border-radius
+}
+.pagination > li > a,
+.pagination > li > span {
+    .pagination-base;
+}
+.pagination > li > a,
+.pagination > li > span,
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    border-radius: @base-border-radius
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+   .pagination-hover-focus;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    .pagination-active;
+    cursor: default;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+    .pagination-disabled;
+    cursor: not-allowed;
+}
+@media (max-width:900px) { 
+	.new-pagination-toggle {
+       .new-pagination-toggle;
+	}
+	.new-pagination-toggle:hover,
+	.new-pagination-toggle.active {
+	    .pagination-active;
+	}
+	.new-pagination-toggle:after {
+	    position: relative;
+	    left: 10px;
+	    content: "\e61a";
+	}
+	.new-pagination-toggle.active:after {
+	    content: "\e622"
+	}
+	.new-pagination {
+	    display: none
+	}
+	.new-pagination {
+	    width: 99%;
+	    margin-top: 0;
+	}
+	.new-pagination > li > a,
+	.new-pagination > li > span {
+	    width: 100%;
+	    margin: 0;
+	    height: 43px;
+	}
+	.new-pagination > li {
+	    float: left;
+	    width: 25%;
+	    padding: 1px;
+	}
+}
+@media (min-width:901px) { 
+	.new-pagination-toggle {
+	    display: none
+	}
+	.new-pagination {
+	    display: inline-block!important;
+	    margin: 0;
+	}
+	.text-right .pagination > li > a,
+	.text-right .pagination > li > span {
+	    margin-left: 2px
+	}
+	.text-center .pagination > li > a,
+	.text-center .pagination > li > span {
+	    margin: 0 1px
+	}
+	.text-left .pagination > li > a,
+	.text-left .pagination > li > span {
+	    margin-right: 2px
+	}
+}
+
+/* 26 - 19 ::  .panel (not panel-group)
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.panel-default .panel-heading {
+    .panel-default-panel-heading;
+}
+.panel {
+    border-width: @base-border-width
+}
+.panel-heading {
+    border-bottom-width: @base-border-width
+}
+.panel-footer {
+    border-top-width: @base-border-width
+}
+.panel > .list-group .list-group-item {
+    border-width: @base-border-width
+}
+.panel-primary {
+    border-color: @brand-primary;
+}
+.panel-primary > .panel-heading {
+    color: @lightest;
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+}
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: @brand-primary
+}
+.panel-primary > .panel-heading .badge {
+    color: @brand-primary;
+    background-color: @lightest;
+}
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: @brand-primary
+}
+
+/* 26 - 20 ::  .panel-group (accordion / collapse)
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+    .panel-group-panel-body;
+}
+
+.panel-group,
+.panel-group .panel,
+.panel-group .panel-heading,
+.panel-group .panel-heading a,
+.panel-group .panel-title,
+.panel-group .panel-title a,
+.panel-group .panel-body,
+.panel-group .panel-group .panel-heading + .panel-collapse > .panel-body {
+    border-radius: @base-border-radius;
+    border: 0;
+}
+.panel-group .panel-heading {
+    padding: 0
+}
+.panel-group .panel-heading a {
+   .panel-group-panel-heading-a;
+   padding-right:30px;
+}
+.panel-group .panel-heading a.collapsed {
+    .panel-group-panel-heading-collapsed;
+}
+.panel-group .panel-heading a:after {
+    content: "\e622";
+    position: absolute;
+    right: 15px;
+    top:15px;
+}
+.panel-group .panel-heading a.collapsed:after {
+    content: '\e61a'
+}
+.panel-group .panel-collapse {
+    margin-top: 5px!important
+}
+.panel-group .panel {
+    background-color: transparent
+}
+.panel-group .panel-body p:last-child,
+.panel-group .panel-body  ul:last-child,
+.panel-group .panel-body  ol:last-child {
+    margin-bottom: 0
+}
+
+/* --- nested panel-group --- */
+.panel-group .panel-heading + .panel-collapse > .panel-body .panel-body {
+    .nested-panel-group;
+}
+.panel-body .panel-heading a.collapsed {
+   .nested-panel-group-panel-heading-collapsed;
+}
+
+
+
+/* 26 - 21 ::  .dropdown-menu
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.dropdown-menu {
+    .dropdown-menu;
+}
+.dropup .dropdown-menu {
+  .dropup-dropdown-menu;
+}
+.dropdown-menu > li > a {
+    .dropdown-menu-a;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    .dropdown-menu-hover-focus;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    .dropdown-menu-active;
+}
+.dropdown-menu .divider {
+    .dropdown-menu-divider;
+}
+
+
+/* 26 - 22 ::  .nav-tabs
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.nav.nav-tabs > li > a {
+    .nav-tabs-a;
+}
+.nav.nav-tabs > li.active > a,
+.nav.nav-tabs > li > a:hover,
+.nav.nav-tabs > li.active > a:hover,
+.nav.nav-tabs > li.active > a:active,
+.nav.nav-tabs > li.active > a:focus {
+    .nav-tabs-a-hover-active;
+}
+.nav.nav-tabs {
+    border: 0px;
+    margin-bottom: 5px;
+}
+.tab-pane {
+    .tab-pane;
+}
+.tab-pane p:last-child,
+.tab-pane ul:last-child,
+.tab-pane  ol:last-child {
+    margin-bottom: 0
+}
+
+
+/* ---- nested nav tabs ---- */
+.tab-pane .tab-pane {
+    .nested-tab-pane;
+}
+
+.tab-pane .nav.nav-tabs > li > a {
+    .nested-nav-tabs-a;
+}
+.tab-pane .nav.nav-tabs > li.active > a,
+.tab-pane .nav.nav-tabs > li > a:hover,
+.tab-pane .nav.nav-tabs > li.active > a:hover,
+.tab-pane .nav.nav-tabs > li.active > a:active,
+.tab-pane .nav.nav-tabs > li.active > a:focus {
+    .nested-nav-tabs-a-hover-active;
+}
+
+/* 26 - 23 ::  .nav and .nav-pills and list-group .badge
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+    .nav-open-a;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    .nav-pills-active;
+}
+a.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+    .badge-active;
+}
+
+
+/* 26 - 24 ::  .mini-carousel used in masonry posts and elsewhere
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.mini-carousel {
+    width: 100%;
+    height: auto;
+}
+.post .mini-carousel {
+    .post-mini-carousel;
+}
+.mini-carousel img {
+    width: 100%;
+    height: auto;
+}
+.mini-carousel .carousel-control.left,
+.mini-carousel .carousel-control.right {
+    background-image: none;
+    filter: none;
+}
+.mini-carousel > .carousel-control {
+    .mini-carousel-carousel-control;
+}
+.mini-carousel > .carousel-control:hover {
+    opacity: 1
+}
+.mini-carousel .carousel-control.right {
+    left: auto;
+    right: 0;
+}
+.mini-carousel .carousel-indicators {
+    position: relative;
+    clear: both;
+    bottom: auto;
+    width: 100%;
+    text-align: center;
+    left: auto;
+    right: auto;
+    margin: 0;
+    font-size: 0px;
+}
+.mini-carousel .carousel-indicators li {
+    .mini-carousel-carousel-indicators-li;
+}
+.mini-carousel .carousel-indicators .active {
+    .mini-carousel-carousel-indicators-active;
+}
+.carousel-inner.mouseDown {
+    cursor: url(../images/grabbing.png), auto
+}
+
+/* 26 - 25 ::  .cross-fade for .carousel
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.cross-fade .item {
+    left: 0;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+.cross-fade .active.item {
+    opacity: 1
+}
+.cross-fade .active.left,
+.cross-fade .active.right {
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+.cross-fade .next,
+.cross-fade .prev {
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+}
+.cross-fade .carousel-control {
+    z-index: 3
+}
+
+
+/* 26 - 26 ::code / pre
+-------------------------------------------------------------------------------------------------------------------------------------*/
+code, pre {
+  .code-pre;
+} 
+
+
+/* 26 - 27 :: tabcollapse breakpoints for sidebar content
+-------------------------------------------------------------------------------------------------------------------------------------*/
+
+ @media (max-width: 1199px) { 
+	.sidebar-tabcollapse-visible-xl {
+	    display: none
+	}
+}
+@media (min-width: 1200px) { 
+	.sidebar-tabcollapse-visible-xl {
+	    display: block !important
+	}
+}
+@media (min-width: 1199px) { 
+	.sidebar-tabcollapse-hidden-xl {
+	    display: none !important
+	}
+} 
+
+
+/* 26 - 28 ::  tabcollapse breakpoints for narrow content
+-------------------------------------------------------------------------------------------------------------------------------------*/
+
+ @media (max-width: 1199px) { 
+	.narrow-tabcollapse-visible-xl {
+	    display: none
+	}
+}
+@media (min-width: 1200px) { 
+	.narrow-tabcollapse-visible-xl {
+	    display: block !important
+	}
+}
+@media (min-width: 1199px) { 
+	.narrow-tabcollapse-hidden-xl {
+	    display: none !important
+	}
+} 
+
+/* 26 - 29 :: tabcollapse breakpoints for main content (regular width not narrow)
+-------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: @screen-xs-max) { 
+	.content-tabcollapse-visible-xl {
+	    display: none
+	}
+}
+@media (min-width: @screen-sm-min) { 
+	.content-tabcollapse-visible-xl {
+	    display: block !important
+	}
+}
+@media (min-width: @screen-xs-max) { 
+	.content-tabcollapse-hidden-xl {
+	    display: none !important
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

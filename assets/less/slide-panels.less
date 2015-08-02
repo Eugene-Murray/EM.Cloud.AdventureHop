@@ -1,0 +1,276 @@
+/* when html has class .slide-active */
+.slide-active body {
+    overflow: hidden
+}
+.slide-active .body-scroll-fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+.slide-panel {
+    position: fixed;
+    padding: 20px 0;
+    color: @slide-panel-text;
+    .slide-panel-bg;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    right: -100%;
+    z-index: 1000;
+    transition: all .5s ease-in-out;
+    overflow: auto;
+    box-shadow: inset 0px 0px 0px 2px @slide-panel-inset-border;
+    border: 3px solid @slide-panel-border;
+}
+.slide-panel.open {
+    right: 0
+}
+.ie9 .slide-panel {
+    box-sizing: content-box;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+.slide-panel > .container {
+    clear: both
+}
+@media (min-width:@screen-sm-min) and (min-height:868px) { 
+	.slide-panel > .container {
+	    padding-top: 40px
+	}
+}
+.slide-panel a {
+    color: @slide-panel-link
+}
+.slide-panel a:hover,
+.slide-panel a:focus {
+    color: @slide-panel-link
+}
+.open.slide-panel:after {
+    left: auto;
+    right: 50px;
+}
+@media (min-width:@screen-sm-min) { 
+	.slide-panel {
+	    top: 104px;
+	    padding: 0;
+	}
+	.slide-panel.open {
+	    right: 0
+	}
+	.open.slide-panel:before,
+	.open.slide-panel:after {
+	    left: 0;
+	    top: 104px;
+	}
+	.open.slide-panel:after {
+	    left: auto;
+	    right: 0;
+	}
+	.open.slide-panel {
+	    padding: 30px
+	}
+}
+
+
+
+/* .slide-panel headlines
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.slide-panel h1,
+.slide-panel h2,
+.slide-panel h3,
+.slide-panel h4,
+.slide-panel h5,
+.slide-panel h6,
+.slide-panel .h1,
+.slide-panel .h2,
+.slide-panel .h3,
+.slide-panel .h4,
+.slide-panel .h5,
+.slide-panel .h6 {
+    color: @slide-panel-headline-color;
+}
+
+.slide-panel-title {
+    text-align: center;
+    clear:both;
+    margin-bottom:10px;
+}
+
+@media (min-width:600px){ 
+	.slide-panel-title {
+	    padding-bottom:20px;
+	}
+}
+
+@media (min-width:@screen-sm-min) and (min-height:868px) { 
+	.slide-panel-title {
+	    font-size: 60px;
+	    padding-bottom:40px;
+	    letter-spacing: -2px;
+	}
+}
+
+
+/* close button in .slide-panels
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.slide-panel .close {
+    float: right;
+    opacity: 1;
+    text-shadow: none;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    color:@slide-close-color;
+    position:relative;
+    top:-8px;
+    right:5px;
+}
+
+.slide-panel .close:hover {
+    color: @slide-close-hover;
+    opacity: .50;
+}
+
+@media (min-width:@screen-sm-min) and (min-height:868px) { 
+	.slide-panel .close {
+	    position: absolute;
+	    right: 20px;
+	    top: 20px;
+	    font-size: 40px;
+	    width: 40px;
+	    height: 40px;
+	}
+}
+
+/* .form-control and forms inside .slide-panel
+-------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width:600px) { 
+	.input-group-slide-panel {
+	    display: block;
+	    width: 100%;
+	}
+	.input-group-slide-panel .form-control {
+	    display: block;
+	    float: none;
+	    text-align: center;
+	}
+	.input-group-slide-panel .input-group-btn {
+	    display: block;
+	    margin: 0 auto;
+	    width: auto;
+	}
+	.input-group-slide-panel .input-group-btn .btn {
+	    display: block;
+	    left: auto;
+	    margin: 0;
+	    width: 100%;
+	    white-space: normal;
+	}
+	.input-group-lg.input-group-slide-panel > .form-control,
+	.input-group-lg.input-group-slide-panel > .input-group-addon,
+	.input-group-lg.input-group-slide-panel > .input-group-btn > .btn {
+	    height: auto;
+	    font-size: 16px;
+	}
+	.input-group-slide-panel .input-group-btn:last-child > .btn,
+	.input-group-slide-panel .input-group-btn:last-child > .btn-group {
+	    margin-left: 0;
+	    margin-top: -1px;
+	}
+	.input-group-slide-panel .input-group-btn:first-child > .btn,
+	.input-group-slide-panel .input-group-btn:first-child > .btn-group {
+	    margin-right: 0;
+	    margin-top: -1px;
+	}
+}
+
+.input-group-slide-panel .form-control {
+   border-color:@lightest;
+   color:@lightest;
+   background:transparent;
+}
+.input-group-slide-panel .form-control::-moz-placeholder {
+    opacity: 1;
+    color: @lightest
+}
+.input-group-slide-panel .form-control:-ms-input-placeholder {
+    color: @lightest
+}
+.input-group-slide-panel .form-control::-webkit-input-placeholder {
+    color: @lightest
+}
+
+.slide-panel .form-control:focus {
+   border-color:@darkest;
+}
+
+.input-group-slide-panel .form-control:focus {
+   border-color:@lightest;
+}
+
+
+/*  #search-panel  .slide-panel
+-------------------------------------------------------------------------------------------------------------------------------------*/
+#search-panel .form-group {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#search-panel .form-control {
+    padding: 10px;
+    background: transparent;
+    color: @slide-panel-text;
+    border: 0px;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 0px;
+    border-bottom: 2px solid @slide-panel-text;
+    padding-left: 0;
+    min-height: 60px;
+}
+
+#search-panel .form-control:focus {
+    border-color: @slide-panel-text;
+    border-style:dashed;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+@media (min-width: @screen-sm-min) { 
+	#search-panel .form-control {
+	    font-size: 28px;
+	}
+}
+
+#search-panel .form-control::-moz-placeholder {
+    color: @slide-panel-text
+}
+
+#search-panel .form-control:-ms-input-placeholder {
+    color: @slide-panel-text
+}
+
+#search-panel .form-control::-webkit-input-placeholder {
+    color: @slide-panel-text
+}
+
+
+/* ----- .btn-slide-panel -------- */
+.btn-slide-panel {
+  color: @slide-panel-text;
+  border-color: @slide-panel-text;
+  background-color: @slide-panel-bg;
+}
+.btn-slide-panel:hover,
+.btn-slide-panel:focus,
+.btn-slide-panel:active,
+.btn-slide-panel.active {
+  color: @slide-panel-bg;
+  border-color: @slide-panel-text;
+  background-color: @slide-panel-text;
+}

@@ -1,0 +1,309 @@
+/* isotope-masonry base css
+ -------------------------------------------------------------------------------------------- */
+.isotope .post {
+    transition-property: transform, opacity;
+}
+.row-masonry {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    margin-right: -1%;
+}
+.row-masonry img {
+    width: 100%; 
+    height: auto; 
+}
+
+/*  isotope-masonry .sort / filter
+ -------------------------------------------------------------------------------------------- */
+.sort .active a,
+.sort a:hover,
+.sort a:active,
+.filter-title:hover,
+.filter-title.active,
+.filter-clone .filter .active,
+.filter-clone .filter-title:hover {
+    .sort-filter-hover-active;
+}
+.sort a {
+    font-size: 16px;
+    text-decoration: none;
+    display: block;    
+    .sort-filter-a;
+}
+@media (max-width: 900px) { 
+	.filter {
+	    display: block
+	}
+	.filter .sort {
+	    display: none
+	}
+	.filter-title:after {
+	    position: relative;
+	    left: 10px;
+	    content: "\e61a";
+	}
+	.filter-title {
+	    .filter-title;
+	}
+	.sort a {
+	    margin-bottom: 2px
+	}
+	.filter-clone .sort {
+	    display: none
+	}
+	.sort {
+	    margin: -8px 0 10px 0;
+	    padding: 0;
+	}
+	.sort li {
+	    list-style: none;
+	    display: block;
+	    padding: 0;
+	    margin: 0;
+	}
+	.sort .active a {
+	    cursor: default
+	}
+}
+@media (min-width: 901px) { 
+	.filter-clone,
+	.filter-title {
+	    display: none
+	}
+	.sort {
+	    .sort;
+	}
+	.sort li {
+	    list-style: none;
+	    display: inline-block;
+	}
+	.sort a {
+	    margin: 0 2px 4px
+	}
+	.sort .active a {
+	    cursor: default
+	}
+}
+
+/* blog summary masonry
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.msnry-blog-entry {
+    background: @lightest
+}
+
+.msnry-blog-entry-text {
+    padding: 10px
+}
+
+.msnry-blog-entry-text .h5 {
+    margin-top:0;
+}
+
+.msnry-blog-entry-text .h5 a {
+    color:inherit
+}
+
+.msnry-blog-entry-text p a:not(:hover),
+.msnry-blog-entry-meta a:not(:hover) {
+    border-bottom:1px dotted @darkest;
+    color:inherit
+}
+
+.msnry-blog-entry-text p a:hover,
+.msnry-blog-entry-meta a:hover {
+    border-bottom:1px dotted @brand-primary;
+    text-decoration:none;
+}
+
+.msnry-blog-entry-meta {
+    text-align: center
+}
+
+@media (min-width: @screen-md-min) { 
+	.msnry-blog-entry-text p {
+	    font-size: 14px;
+	    line-height: 1.5;
+	}
+
+	.msnry-blog-entry-meta {
+	    font-size: 12px
+	}
+}
+
+.msnry-blog-entry-text .curly {
+    padding: 45px 5% 5% 5%;
+    margin: 0;
+    border: 0;
+    font-family: @testimonial-font-family;
+}
+
+.msnry-blog-entry-text .curly p {
+    font-size: 20px
+}
+
+.msnry-blog-entry-text .curly footer {
+    font-size: 12px
+}
+
+.quotes .msnry-blog-entry-text a,
+.quote .msnry-blog-entry-text a,
+.quotes .msnry-blog-entry-text,
+.quote .msnry-blog-entry-text {
+    text-decoration: none;
+    color: @lightest;
+    background: @darkest;
+}
+
+.quotes .msnry-blog-entry-text a:hover,
+.quote .msnry-blog-entry-text a:hover {
+    opacity: .5
+}
+
+
+/* portfolio summary masonry
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.msnry-port-entry {
+    background: @lightest
+}
+.msnry-port-entry-text .h5 {
+    margin: 1px 0 0 0;
+    padding: 5px 10px;
+    color: @darkest;
+    background: @lightest;
+}
+.msnry-port-entry-text p {
+    padding: 0px 10px 5px;
+    margin-bottom: 0;
+}
+.msnry-port-entry-text .h5 a {
+    color: inherit
+}
+.msnry-port-entry-text p a:not(:hover),
+.msnry-port-entry-text .credit a:not(:hover) {
+    color: inherit;
+    text-decoration: underline;
+}
+.msnry-port-entry-text .credit {
+    padding: 5px 0;
+    background: @pg-bg-clr;
+    display: block;
+    text-align:right;
+}
+@media (min-width: @screen-md-min) { 
+	.msnry-port-entry-text p {
+	    font-size: 14px;
+	    line-height: 1.5;
+	}
+	.msnry-port-entry-text .credit {
+	    font-size: 11px;
+	    line-height: 1.5;
+	}
+}
+
+//.msnry-port-entry-text {
+ //   padding:0;
+//}
+
+
+/* all masonry grid sizing
+-------------------------------------------------------------------------------------------------------------------------------------*/
+/* ---- .row-masonry :: .grid-sizer and .post  */
+
+.row-masonry .grid-sizer,
+.row-masonry .post {
+    width: 99%
+}
+
+.row-masonry .post {
+    margin-bottom: 2%
+}
+
+
+@media (min-width: 600px) { 
+	.filter-masonry .gutter-sizer,
+	.row-masonry .gutter-sizer {
+	    width: 2%
+	}
+	
+	.row-masonry {margin-right:-2%;}
+	
+}
+
+@media (min-width: 600px) { 
+	.row-masonry .grid-sizer,
+	.row-masonry .post {
+	    width: 48%;
+	    float: left;
+	}
+}
+
+@media (min-width: 980px) { 
+	.row-masonry .grid-sizer,
+	.row-masonry .post {
+	    width: 31.3%
+	}
+}
+
+@media (min-width: 1200px) { 
+	.row-masonry .grid-sizer,
+	.row-masonry .post {
+	    width: 23%
+	}
+}
+
+/* .about-us grid
+-------------------------------------------------------------------------------------------------------------------------------------*/
+
+.about-page .grid-sizer,
+.about-page .post {
+    width: 99%
+}
+
+.about-page .post {
+    padding: 0 15px 15px
+}
+
+@media (min-width: @screen-md-min) { 
+	.about-page .gutter-sizer {
+	    width: 2%
+	}
+
+	.about-page .grid-sizer,
+	.about-page .post {
+	    width: 48%;
+	    float: left;
+	}
+}
+
+
+
+/* .testimonial-page grid
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.testimonial-page .gutter-sizer {
+    width: 1%
+}
+
+.testimonial-page .grid-sizer,
+.testimonial-page .post {
+    width: 99%
+}
+
+.testimonial-page .post {
+    padding: 0 5px 10px
+}
+
+@media (min-width: @screen-sm-min) { 
+	.testimonial-page .grid-sizer,
+	.testimonial-page .post {
+	    width: 49%;
+	    float: left;
+	}
+}
+
+@media (min-width: @screen-md-min) { 
+	.testimonial-page .grid-sizer,
+	.testimonial-page .post {
+	    width: 32.33%
+	}
+}

@@ -1,0 +1,134 @@
+/* #nav - links and styles on menu itself
+ -------------------------------------------------------------------------------------------- */
+#nav {
+    clear:both;
+}
+@media (min-width:@screen-sm-min) { 
+    #nav {
+        padding-bottom: 20px;
+    }
+}
+#nav li a {
+    display: block;
+    padding: 10px 20px;
+    position: relative;
+    color: @nav-a;
+}
+@media (min-width: @screen-md-min) { 
+	#nav li a {
+	    padding: 15px
+	}
+	#nav ul ul a {
+	    padding-left: 30px
+	}
+	#nav ul ul ul a {
+	    padding-left: 50px
+	}
+	#nav ul ul ul ul a {
+	    padding-left: 75px
+	}
+}
+#nav ul,
+#nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#nav li {
+    border-bottom: 1px solid @nav-li-brdr-clr
+}
+#nav li ul li:last-child {
+    border-bottom: none
+}
+#nav .has-children > a {
+    padding-right: 40px
+}
+#nav .has-children > a:before {
+    content: "\e64b";
+    position: absolute;
+    right: 20px;
+}
+#nav .has-children.parent-li > a.parent.current:before {
+    content: "\e648"
+}
+#nav ul ul {
+    background: transparent
+}
+#nav .active > a,
+#nav a:hover,
+#nav a:active,
+#nav a:focus {
+    background: @nav-a-hover-bg;
+    color: @nav-a-hover;
+}
+#nav .current,
+#nav .current-parent,
+#nav a.current.parent {
+    background: @nav-a-current-bg;
+    color: @nav-a-current;
+}
+@media (min-width:@screen-md-min) and (min-height:1000px) { 
+	#nav {
+	    font-size: 18px
+	}
+}
+
+/* #nav.multi-menu
+ -------------------------------------------------------------------------------------------- */
+
+@media (min-width:@screen-sm-min) { 
+	#nav.multi-menu ul {
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	}
+	#nav.multi-menu ul ul {
+	    display: inline-block!important
+	}
+	#nav.multi-menu {
+	    -moz-column-count: 2;
+	    -webkit-column-count: 2;
+	    column-count: 2;
+	    -moz-column-gap: 1%;
+	    -webkit-column-gap: 1%;
+	    column-gap: 1%;
+	}
+	#nav.multi-menu li {
+	    display: inline-block;
+	    margin: 0;
+	    padding: 5px 0;
+	    border: none;
+	    width: 100%;
+	    float: none;
+	}
+	#nav.multi-menu ul ul {
+	    border-left: 1px solid @nav-li-brdr-clr;
+	    margin-bottom: 10px;
+	}
+	#nav.multi-menu ul ul a {
+	    padding-left: 15px
+	}
+	#nav.multi-menu .has-children > a {
+	    pointer-events: none;
+	    font-size: 22px;
+	    border-left: 2px solid @nav-multi-col-brdr-left-clr;
+	    margin-bottom: 5px;
+	    padding: 0 0 0 5px;
+	}
+	#nav.multi-menu .has-children a:before {
+	    display: none
+	}
+	#nav.multi-menu a {
+	    padding: 2px
+	}
+}
+@media (min-width:@screen-lg-min) { 
+	#nav.multi-menu {
+	    -moz-column-count: 4;
+	    -webkit-column-count: 4;
+	    column-count: 4;
+	    -moz-column-gap: 2%;
+	    -webkit-column-gap: 2%;
+	    column-gap: 2%;
+	}
+}

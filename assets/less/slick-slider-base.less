@@ -1,0 +1,129 @@
+/* slick slider base styles 
+-------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* .hide the arrows */
+@media (max-width:1230px) { 
+	.multi-item-slick.slick-slider.slick-initialized button.slick-prev,
+	.multi-item-slick.slick-slider.slick-initialized button.slick-next,
+	.testimonial-slider.slick-slider.slick-initialized button.slick-prev,
+	.testimonial-slider.slick-slider.slick-initialized button.slick-next,
+	.eq-slider.slick-slider.slick-initialized button.slick-prev,
+	.eq-slider.slick-slider.slick-initialized button.slick-next,
+	.video-slider.slick-slider.slick-initialized button.slick-prev,
+	.video-slider.slick-slider.slick-initialized button.slick-next
+ {
+	    display: none!important;
+	    width: 0px;
+	    height: 0px;
+	    overflow: hidden;
+	    opacity: 0;
+	    visibility: hidden;
+	}
+}
+
+/* ---- .slick-prev & .slick-next ----- */
+.slick-prev,
+.slick-next {
+    background: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: 0px;
+    height: 40px;
+    line-height: 0;
+    margin-top: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    z-index: 5;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+    font-size: 18px;
+    line-height: 1;
+    opacity: 1;
+}
+.slick-next:before {
+    content: "\e628"
+}
+.slick-prev:before {
+    content: "\e629"
+}
+.slick-disabled {
+    cursor: default;
+    opacity: .30;
+}
+
+/* ---- .slick-dots ----- */
+.slick-dots {
+    bottom: auto;
+    display: block;
+    line-height: 0;
+    margin: 10px 0 0 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: 0;
+}
+.slick-dots li {
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin: 5px;
+    padding: 0;
+    position: relative;
+    width: 20px;
+}
+.slick-dots li button {
+    background: @lightest;
+    border: 0;
+    border: 1px solid #ccc;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 100%;
+    line-height: 0;
+    opacity: 1;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+.slick-dots li button:before {
+    display: none
+}
+.slick-dots li button:after {
+    background: #ccc;
+    bottom: 3px;
+    content: '';
+    left: 3px;
+    opacity: 1;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+.slick-dots-right .slick-dots {
+    text-align: right
+}
+.slick-dots-right .slick-dots li {
+    margin: 5px 0 5px 10px
+}
+.slick-dots-left .slick-dots {
+    text-align: left
+}
+.slick-dots-left .slick-dots li {
+    margin: 5px 10px 5px 0
+}
+ul.slick-dots > li.slick-active > button {
+    background: @darkest;
+    border-color: @darkest;
+    cursor: default;
+}
+ul.slick-dots > li.slick-active > button:after {
+    background: @lightest
+}
+

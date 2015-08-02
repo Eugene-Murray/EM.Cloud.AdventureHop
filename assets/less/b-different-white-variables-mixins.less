@@ -1,0 +1,959 @@
+/* Google Fonts import BEFORE ALL ============================================== */
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,900,900italic,300,300italic');
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+//@import url('http://fonts.googleapis.com/css?family=Montserrat+Alternates');
+//<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+// font-family: 'Montserrat Alternates', sans-serif;
+
+/*! 
+==============
+
+B-DIFFERENT WHITE
+
+================ */
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Break Points
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@screen-sm-min:                 768px;
+@screen-md-min:                 992px;
+@screen-lg-min:                 1200px;
+@screen-xs-max:                 (@screen-sm-min - 1);
+@screen-sm-max:                 (@screen-md-min - 1);
+@screen-md-max:                 (@screen-lg-min - 1);
+
+@header-sm-min:                 500px;
+@header-tagline-default-min:    1100px;
+@header-tagline-tall-logo-min:  925px;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Font Families / Weights / Colors
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@body-font-family:          'Roboto', sans-serif;
+@base-font-weight:           300;
+@base-font-size:             16px;
+@base-line-height:           1.6;
+@alternate-font-family:     'Montserrat', sans-serif;
+@h1-h6-font-family:          @alternate-font-family;
+@h1-h6-font-weight:          400;
+@nav-font-family:            @body-font-family;
+@nav-font-weight:            normal;
+@btn-font-family:            @alternate-font-family;
+@btn-font-weight:            400;
+
+
+// -- base font sizes BEFORE media queries
+@font-size-h1:               26px;
+@font-size-h2:               24px;
+@font-size-h3:               22px;
+@font-size-h4:               18px;
+@font-size-h5:               16px;
+@font-size-h6:               14px;
+
+// -- large font-sizes after 980
+@lv-font-size-h1:            34px;
+@lv-font-size-h2:            30px;
+@lv-font-size-h3:            24px;
+@lv-font-size-h4:            20px;
+@lv-font-size-h5:            16px;
+@lv-font-size-h6:            14px;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Global .container(s) #page and other wrappers
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@container-max-width:        1150px;
+@container-width:            100%;
+@gutter-padding:             15px;
+
+// #page mixin
+#page-mixin () {
+    clear:both;
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Theme Colors
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@body-base-color:                  #555; // color of the text global
+@pg-bg-clr:                        #fff;
+@pg-bg-clr-1-shade-darker:         #eee;
+@pg-bg-clr-2-shade-darker:         #ddd;
+@pg-bg-clr-3-shade-darker:         #ccc;
+@lightest:                         #f7f7f7;
+@lightest-1-shade-darker:          #eee;
+@darkest:                          #777;
+@darkest-1-shade-lighter:          #666;
+@darkest-2-shade-lighter:          #999;
+@brand-primary:                    #e46203;
+@bg-primary:                       @brand-primary;
+@primary-text:                     #555;
+@base-link-color:                  @brand-primary;
+@base-link-color-hover:            #555;
+@body-html-brdr-clr:               @darkest; // -- border color surrounding the document (the site)
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .header & .footer shared
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@header-footer-border-width:   1px;
+@header-footer-border-color:   #ddd;
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .header
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@header-bg:              #fff;
+@header-border-width:    @header-footer-border-width;
+@header-border-color:    @header-footer-border-color;
+@header-height-default:  50px;
+@header-height-sm-min:   70px; 
+@header-height-lg-min:   100px;
+@menu-toggle-width-sm:   50px;
+@menu-toggle-width-lg:   95px;
+@tagline-border-width:   2px;
+@tagline-border-color:   @darkest;
+
+@veggie-burger-lines:          @darkest;
+@veggie-burger-lines-active:   @header-bg;
+@header-btn-hover-active-bg:   @darkest;
+@header-btn-bg:                @menu-toggle-bg;
+@header-btn-bx-shadow:         @header-bg;
+@header-btn-text:              @darkest;
+@menu-toggle-text:             @darkest;
+@menu-toggle-bg:               #fff;
+
+
+@logo-text-color:              @darkest;
+@header-text-color:            inherit;
+@header-tagline-color:         inherit;
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .footer
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@footer-bg:                     @header-bg;
+@footer-col-wrapper-bg:         @footer-bg;
+@footer-text:                   @darkest; 
+@footer-border-width:           @header-footer-border-width;
+@footer-border-color:           @header-footer-border-color;
+@footer-copyright-bg:           @pg-bg-clr;
+@footer-copyright-link:         @darkest;
+@footer-copyright-text:         @darkest;
+@footer-form-border-color:      @header-footer-border-color;
+
+@footer-btn-bg:                 transparent; 
+@footer-btn-border:             @footer-border-color; 
+@footer-btn-text:               inherit; 
+
+@footer-btn-hover-bg:           @footer-col-wrapper-bg; 
+@footer-btn-hover-border:       @footer-border-color; 
+@footer-btn-hover-text:         @lightest; 
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// #go-to-top
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@go-to-top-color:   @lightest;
+@go-to-top-bg:      @darkest;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .slide-panel
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@slide-panel-bg:              @darkest;
+@slide-panel-text:            @lightest;
+@slide-panel-form-focus:      @brand-primary;
+@slide-panel-link:            @slide-panel-text;
+@slide-panel-headline-color:  @header-bg; // headline color 
+@slide-close-color:           @lightest;
+@slide-close-hover:           @lightest;
+@slide-panel-border:          @darkest;
+@slide-panel-inset-border:    @lightest;
+
+.slide-panel-bg () {
+    background: @slide-panel-bg;
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// navigation
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@nav-a:                         @lightest;
+@nav-a-hover:                   @darkest;
+@nav-a-hover-bg:                @lightest;
+@nav-a-current:                 @lightest;
+@nav-a-current-bg:              @darkest-1-shade-lighter;
+@nav-li-brdr-clr:               @darkest-2-shade-lighter;
+@nav-multi-col-brdr-left-clr:   @nav-a;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .headline-inline
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@headline-inline-brdr-clr:          #ddd;
+@headline-inline-top-brdr-width:    1px;
+@headline-inline-btm-brdr-width:    5px;
+@headline-inline-clr:               @darkest;
+ 
+
+//
+// ------- Borders ---------------------------------------------------------------------- //
+//
+
+@base-border-color:                @darkest;
+@base-border-width:                1px;
+@base-border-radius:               0px;
+@middle-v-rule-border-width:       @base-border-width;
+@middle-v-rule-border-color:       @darkest; 
+
+
+
+//
+// ------- Retina Image Mixin ---------------------------------------------------------------------- //
+//
+//https://gist.github.com/brandonb927/3874012
+.retina-img(@image, @width, @height, @repeat: no-repeat, @attachment) {
+    @filename : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[1]`;
+    @extension : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[2]`;
+    background-image: ~`"url(@{filename}.@{extension})"`;
+    background-repeat: @repeat;
+    background-attachment: @attachment;
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and ( min--moz-device-pixel-ratio: 2),
+    only screen and ( -o-min-device-pixel-ratio: 2/1),
+    only screen and ( min-device-pixel-ratio: 2),
+    only screen and ( min-resolution: 192dpi),
+    only screen and ( min-resolution: 2dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: ~`"url(@{filename}_@2x.@{extension})"`;
+    background-size: @width @height;
+  }
+} 
+
+ 
+//
+// ------- btn-default ---------------------------------------------------------------------- //
+//
+@btn-default-text:             @darkest;
+@btn-default-bg:               @lightest;
+@btn-default-border:           @pg-bg-clr-2-shade-darker;
+@btn-default-text-hover:       @lightest;
+@btn-default-bg-hover:         @darkest;
+@btn-default-border-hover:     @lightest;
+
+//
+// ------- btn-primary ---------------------------------------------------------------------- //
+//
+@btn-primary-text:      @lightest;
+@btn-primary-bg:        @brand-primary;
+@btn-primary-border:    #c25403; // this is the hover/focus/active
+
+//
+// ------- btn-inverse ---------------------------------------------------------------------- //
+//
+@btn-inverse-text:      @lightest;
+@btn-inverse-bg:        @darkest;
+@btn-inverse-border:    @darkest;
+
+//
+// ------- btn-featured ---------------------------------------------------------------------- //
+//
+@btn-featured-text:      @lightest; 
+@btn-featured-bg:        @darkest;
+@btn-featured-border:    @lightest;
+
+//
+// ------- column-featured // column-inner ---------------------------------------------------------------------- //
+//
+@col-inner-default-bg:    @lightest;
+@col-featured-bg:         @darkest;
+@col-featured-text:       @lightest;
+
+//
+// ------- form-control ---------------------------------------------------------------------- //
+//
+@form-control-bg:                   #fff;
+@placeholder:                       @darkest-2-shade-lighter;
+@slide-panel-form-control-focus:    @lightest;
+@focus:                             @brand-primary;
+
+
+//
+// ------- Misc RGBA ---------------------------------------------------------------------- //
+//
+@60p:                 rgba(0,0,0,0.6);
+@20p:                 rgba(0,0,0,0.2);
+@90p-white:           rgba(255,255,255,.90);
+@50p-white:           rgba(255,255,255,.50);
+@20p-white:           rgba(255,255,255,.20);
+@80p-darkest-bg:      fade(@darkest, 80%);
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .social-icon-list
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@social-icon-list-color:                   inherit;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .widget
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@widget-bg:             #fff;
+@widget-border:         #ddd;
+@widget-border-width:   @base-border-width;
+
+.widget-mixin() {
+    margin: 0 0 10px 0;
+    background:  @widget-bg;
+    border:@base-border-width solid @widget-border;
+    padding: 15px;
+    line-height: 1.5
+}
+
+
+
+//
+// ------- .img-widget img border ---------------------------------------------------------------------- //
+//
+.img-widget-img-border () {
+  border: 1px solid @pg-bg-clr;
+}
+
+//
+// ------- .footer img-widget img ---------------------------------------------------------------------- //
+//
+.footer-img-widget-img-border () {
+  border: 1px solid @header-footer-border-color;
+}
+
+//
+// ------- .slide-panel img-widget img ---------------------------------------------------------------------- //
+//
+.slide-panel-img-widget-img-border () {
+   border: 1px solid @darkest-1-shade-lighter;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Equal Height Boxes
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@equal-height-bg:    @lightest;
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Magnfic Popup
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@mfp-bg:                             @darkest;
+@mfp-modal-bg:                       @lightest;
+.mfp-modal-bxshadow () {
+    box-shadow: 0 0 0 1px @50p-white;
+}
+@mfp-close:                          @darkest;
+@mfp-close-accent-primary:           @darkest;
+@mfp-close-accent-secondary:         @darkest;
+
+ 
+ 
+ 
+ 
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Page Header
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ------- .page-header-primary NOT BOOTSTRAP ---------------------------------------------------------------------- //
+
+@page-header-text:                 @darkest;
+@page-header-breadcrumb-text:      @darkest;
+@page-header-bg:                   #f7f7f7;
+@page-header-case:                 uppercase;
+@page-header-font-weight:          400;
+@page-header-style:                normal;
+
+.page-header-primary-mixin() {
+    margin: 2px 0 0 0;
+    background: @page-header-bg;
+    padding:20px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.page-header-primary-mixin-lvp() {
+    padding:30px 0;
+}
+ 
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Click Slide
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@click-slide-a:              @lightest;
+@click-slide-bg:             @80p-darkest-bg;
+@click-slide-bg-fallback:    @brand-primary;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Masonry
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.entry-bg() {
+    background:@lightest;
+    //border:@base-border-width solid @pg-background-color;
+}
+
+.sort-filter-a() {
+    padding: 10px 15px;
+    background: @lightest;
+    border-radius:@base-border-radius;
+    color:@darkest;
+    border: @base-border-width solid #ddd;
+}
+.sort-filter-hover-active() { // hover version
+    background: @darkest;
+    color: @lightest;
+}
+
+.filter-title() {
+    display: block;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 10px;
+    .sort-filter-a;
+} 
+.sort(){
+    margin: 0;
+    padding: 0 0 3% 0;
+    text-align: center;
+    font-size: 0;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// pricing column
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.inner-price-mixin() {
+    background: @lightest;
+    text-align: center;
+    position: relative;
+    border: 1px solid @darkest;
+}
+.best-seller-inner-price() {
+    box-shadow: 0 0 0 2px @best-seller;
+    border-color: @best-seller;
+}
+.the-price() {
+    color: @darkest; 
+    background: @lightest;
+    border:2px solid @darkest;
+}
+.the-price-after() {
+    width: 2px;
+    border-right: 2px solid @darkest;
+}
+
+@best-seller:                 @darkest;
+
+@best-seller-bg-text:         @lightest;
+@best-seller-bg:              @best-seller; // best seller color
+@best-seller-color:           @best-seller; // best seller color
+@best-seller-bg-text-hover:   @best-seller; // best seller color
+@best-seller-bg-hover:        @lightest;
+
+//Has Details
+@has-details-bg-hover:        @darkest;
+@has-details-text-hover:      @lightest;
+
+// Regular Button Not Best Seller
+@btn-price-text:              @darkest;
+@btn-price-bg:                @lightest;
+@btn-price-text-hover:        @lightest;
+@btn-price-bg-hover:          @darkest;
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// slide to sidebar
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.slide-sidebar() {
+    background: @pg-bg-clr-2-shade-darker;
+    color: @darkest;
+    //border-top:@base-border-width solid @pg-background-color;
+}
+.slide-sidebar-hover() {
+    background:@lightest;
+    color: @darkest;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// testimonial quote box
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@testimonial-quote-box-bg: @lightest; 
+@testimonial-arrow-shadow: @pg-bg-clr-2-shade-darker;
+@testimonial-font-family:  Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+@testimonial-slider-quote-box-bg: @call-to-action-bg;
+@testimonial-slider-arrow-shadow: @pg-bg-clr-3-shade-darker;
+@testimonial-slider-color:        @darkest;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// call to action
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//
+@call-to-action-bg:                    #f7f7f7;
+@call-to-action-text:                  @darkest; 
+@call-to-action-link:                  @darkest;
+@call-to-action-link-hover:            @darkest;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .pager
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.pager() {
+    border-radius: @base-border-radius;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: @base-border-width solid #ddd;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    background:@lightest;
+    color:@darkest;
+}
+.pager-hover() {
+    background-color: @darkest;
+    color:@lightest;
+    border-color:@darkest;
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .pagination 
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.pagination-base () {
+    color: inherit;
+    border: @base-border-width solid #ddd;
+    padding-top: 0;
+    line-height: 40px;
+    padding-bottom: 0;
+    min-width: 43px;
+    background:@lightest;
+}
+.new-pagination-toggle () {
+     text-decoration: none;
+     display: block;
+     background: @lightest;
+     font-size: 18px;
+     cursor: pointer;
+     padding: 10px;
+     margin: 0 0 5px;
+     border: @base-border-width solid #ddd;
+
+}
+.pagination-hover-focus () {
+    color: @lightest;
+    background: @darkest;
+    //border-color:@brand-primary;
+}
+.pagination-active () {
+    color: @lightest;
+    background-color: @darkest;
+   // border-color: @brand-primary;
+}
+.pagination-disabled () {
+    color: @pg-bg-clr-2-shade-darker;
+    background-color: @lightest;
+  //  border-color: @btn-default-border;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .panel and .panel-group
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.panel-group-panel-body () {
+    border:none;
+    border-radius: @base-border-radius;
+    background: @lightest;
+    padding: 15px;
+    border-left:2px solid @darkest;    
+}
+.widget-panel-group-panel-body () {
+    padding: 5px;
+    background:@pg-bg-clr;
+    border:none;
+}
+.panel-group-panel-heading-a () {
+    display: block;
+    background: @darkest;
+    color: @lightest;
+    padding: 15px;
+    text-decoration: none;
+    position: relative;
+}
+.widget-panel-group-panel-heading-a () {
+    padding: 10px;
+    border:none;
+}
+.panel-group-panel-heading-collapsed() {
+    background: @lightest;
+    color: inherit;
+    border:none;
+    border-left:2px solid @darkest;    
+}
+.widget-panel-group-panel-heading-collapsed() {
+    background:@pg-bg-clr;
+    border:none;
+}
+
+.panel-default-panel-heading () {
+    background: @lightest;
+}
+
+// ----- NESTED PANEL GROUP ----- */
+.nested-panel-group () {
+   background: @lightest-1-shade-darker;
+}
+.nested-panel-group-panel-heading-collapsed () {
+   background: @lightest-1-shade-darker;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .nav-tabs / .nav-pills  / .nav in general 
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.nav-tabs-a () {
+    padding: 15px;
+    color: inherit;
+    border: none;
+    border-radius: @base-border-radius;
+    background: @lightest;
+    border: 0px;
+    margin-right: 5px;
+}
+.nav-tabs-a-hover-active() {
+    outline: none;
+    border: none;
+    background: @darkest;
+    color: @lightest;
+} 
+.tab-pane() {
+    background: @lightest;
+    border: 0px;
+    padding: 20px;
+    border-radius: @base-border-radius;
+}
+
+
+// --- WIDGET TABS
+.widget-tab-pane() {
+    padding: 5px;
+    background:@pg-bg-clr;
+}
+
+.widget-nav-tabs-a () {
+    padding: 8px;
+    background: @pg-bg-clr;
+}
+.widget-nav-tabs-a-hover-active() {
+    background: @darkest;
+    color: @lightest;
+}
+
+
+// --- NESTED TABS
+.nested-tab-pane () {
+   background: @lightest-1-shade-darker;
+}
+
+.nested-nav-tabs-a () {
+    padding: 10px 15px;
+    background: @lightest-1-shade-darker;
+    border: 0px;
+    margin-right: 5px;
+}
+.nested-nav-tabs-a-hover-active() {
+    outline: none;
+    border: none;
+    background: @darkest;
+    color: @lightest;
+} 
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .nav
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.nav-open-a(){
+    background-color: @darkest;
+    color:@lightest;
+}
+.nav-pills-active() {
+    color: @lightest;
+    background-color: @darkest;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .badge
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.badge-active(){
+    color: @brand-primary;
+    background-color: @lightest;
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .carousel -- bootstrap's
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.post-mini-carousel() {
+    background: @lightest;
+}
+
+.mini-carousel-carousel-control() {
+    position: absolute;
+    height: 40px;
+    top: 50%;
+    margin-top: -30px;
+    filter: none;
+    font-size: 25px;
+    line-height: 44px;
+    width: 40px;
+    color: @darkest;
+    background-color: @lightest;
+    opacity: .7;
+    text-align: center;
+    text-shadow: none;
+}
+
+.mini-carousel-carousel-indicators-li() {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 5px 2px;
+    text-indent: -999px;
+    border: 2px solid @darkest;
+    border-radius: 0px;
+    cursor: pointer;
+    background: @lightest;
+}
+.mini-carousel-carousel-indicators-active() {
+    background-color: @darkest;
+    cursor:default;
+    pointer-events:none;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// base component style
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.hr() {
+    border-color: @darkest;
+    border-width: @base-border-width;
+}
+
+.general () {
+    border-radius: 0px;
+    border-color: #ddd;
+}
+
+.no-box-shadow () {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.well-jumbotron() {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.blockquote() {
+    border-color: @darkest
+}
+.alert-mixin() {
+    border-width: 1px;
+    -webkit-box-shadow: 0 0 0 3px @lightest;
+    box-shadow: 0 0 0 3px @lightest;
+}
+.progress-mixin() {
+    background: @lightest;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border:none;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .table 
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.table() {
+    background: @lightest;
+}
+
+@table-odd-bg:    @lightest-1-shade-darker;
+
+.table-hover-active () {
+    background-color: @btn-default-border;
+    border-color: @lightest;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .popover & .tooltip
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.popover () {
+    -webkit-box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+    box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+}
+.popover-title () {
+    border-bottom: 1px solid rgba(255,255,255,.20);
+}
+
+@popover-bg: @base-link-color;
+@popover-text: @lightest;
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .dropdown-menu
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.dropdown-menu() {
+    border: 0px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left:1px;
+    border:1px solid @btn-default-border;
+    background:@lightest;
+}
+.dropup-dropdown-menu() {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left:2px;
+}
+.dropdown-menu-hover-focus() {
+    color: @lightest;
+    background-color: @darkest;
+}
+.dropdown-menu-active() {
+    color: @lightest;
+    text-decoration: none;
+    outline: 0;
+    background-color: @darkest;
+}
+.dropdown-menu-divider() {
+    background-color: @btn-default-border;
+    height: @base-border-width;
+}
+.dropdown-menu-a() {
+    color: @darkest;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .title
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.title-mixin() {
+    border-bottom: 1px solid @darkest;
+}
+.title-span-mixin() {
+    display: inline-block;
+    border-bottom: 2px solid @darkest;
+    padding: 0 0 5px 0;
+}
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// .dropcap
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.dropcap-min-width () {
+    font-size: 4em;
+    line-height: 65px;
+    background: @darkest;
+    color: @lightest;
+    float: left;
+    display: inline-block;
+    margin: 7px 10px 0px 0px;
+    text-transform: uppercase;
+    padding:0 10px;
+    text-align: center;
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// code / pre
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.code-pre() {
+  font-size: 100%;
+  color: @darkest;
+  background-color: @lightest;
+  border:0px;
+}
+ 
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// blog
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.entry-tags-a() {
+    display: block;
+    padding: 2px 5px;
+    font-size: 14px;
+    color:@darkest;
+    background:@lightest;
+    margin:0 5px 5px 0;
+    text-decoration:none;
+   // border: @base-border-width solid @darkest
+}
+.entry-tags-a-hover() {
+    text-decoration:none;
+    background:@darkest;
+    color:@lightest;
+}
+.comment-thread-avatar-after() {
+    width: 2px;
+    border-right: 2px solid #ddd;
+}
+.comment-thread-avatar-img() {
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+.comment-thread-comment-text-div(){
+    background: @lightest;
+    border: 2px solid #ddd;
+} 
+.comment-thread-comment-text-div-before() {
+   height: 2px;
+   border-top: 2px solid #ddd;
+   width: 47px;
+   left: -47px;
+}
+.moderator-avatar-img() {
+    //
+}
+.moderator-comment-text-div() {
+    background: #ddd;
+    color:@darkest;
+}
+.moderator-comment-text-div-a() {
+  color:@lightest;
+  text-decoration:underline;
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// misc
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+.input--group--addon() {
+    background-color: @lightest;
+}
+
+ .person-image-img() {
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius:50%;
+}
+.map-img() {
+    border: 1px solid #ddd;
+    max-width: 300px;
+}
+
+ 

@@ -1,0 +1,45 @@
+/* .column-inner & .featured-column goes with the featured-slider
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.column-inner {
+    background: @col-inner-default-bg;
+    padding: 20px;
+    position: relative;
+}
+.column-featured {
+    color: @col-featured-text;
+    background: @col-featured-bg;
+}
+.column-featured a:not(.btn-featured) {
+    color: @col-featured-text
+}
+@media (min-width:@screen-sm-min) { 
+	.column-bg-fake {
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    z-index: -1;
+	    right: 0;
+	    left: 0;
+	    background: @col-inner-default-bg;
+	}
+	.column-featured .column-bg-fake {
+	    background: @col-featured-bg
+	}
+}
+.column-featured-headline {
+    margin-top: 0
+}
+/* ----- .btn-featured -------- */
+.btn-featured {
+    color: @btn-featured-text;
+    border-color: @btn-featured-border;
+    background-color: @btn-featured-bg;
+}
+.btn-featured:hover,
+.btn-featured:focus,
+.btn-featured:active,
+.btn-featured.active {
+    color: @btn-featured-bg;
+    border-color: @btn-featured-bg;
+    background-color: @btn-featured-border;
+}

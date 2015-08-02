@@ -1,0 +1,63 @@
+/* .call-to-action // styled for one line only -- if two lines of text it centers
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.call-to-action {
+    text-align: center;
+    color: @call-to-action-text;
+    background: @call-to-action-bg;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.call-to-action-text {
+    margin: 10px 5px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.call-to-action .btn {
+    margin: 10px 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.call-to-action-text a {
+    color: @call-to-action-text;
+    text-decoration: underline;
+}
+
+.call-to-action-text a:hover,
+.call-to-action-text a:focus,
+.call-to-action-text a:active {
+    color: @call-to-action-link-hover;
+    text-decoration: none;
+}
+
+/* ----- .btn-call-to-action -------- */
+.btn-call-to-action {
+  color: @call-to-action-text;
+  border-color: @call-to-action-text;
+  background-color: @call-to-action-bg;
+}
+.btn-call-to-action:hover,
+.btn-call-to-action:focus,
+.btn-call-to-action:active,
+.btn-call-to-action.active {
+  color: @call-to-action-bg;
+  border-color: @call-to-action-text;
+  background-color: @call-to-action-text;
+}
+
+
+@media (min-width:768px) { 
+	.call-to-action {
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	}
+
+	.call-to-action-text {
+	    font-size: 36px;
+	    margin: 0 3% 0 0;
+	}
+
+	.call-to-action .btn-call-to-action {
+	    margin: 0 0 0 3%
+	}
+}

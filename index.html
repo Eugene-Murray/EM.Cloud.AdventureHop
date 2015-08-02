@@ -1,150 +1,448 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if lte IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Social viral community site for amazing adventure holidays and travel photos, videos, reviews and articles from around the world. North America, Central America, South America, Europe, North Africa & Middle-East, Africa, Asia, Oceania and Polar Regions.">
-		<meta name="keywords" content="Social, viral, community, amazing, adventure, holidays, travel, photos, videos, reviews, articles, world, North America, Central America, South America, Europe, North Africa & Middle-East, Africa, Asia, Oceania and Polar Regions.">
-<title>adventureHop - Adventure and travel from around the world...</title>
-
-<!-- Favicon -->
-<link rel="shortcut icon" href="content/site/adventureHop2.png">
-        
-
-<!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/phone-default.css">
-<link rel="stylesheet" type="text/css" href="css/tablet.css">
-<link rel="stylesheet" type="text/css" href="css/desktop.css">
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>adventureHop! - Home</title>
+  <meta name="description" content="Adventure travel community. Travel guides, photos, videos, reviews and articles from around the world. North America, Central America, South America, Europe, North Africa & Middle-East, Africa, Asia, Oceania and Polar Regions.">
+    
+    <!-- BASE CSS ============================================== -->
+    <!-- custom build of latest bootstrap see json or follow the link in the file ============================================== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- ASSET CSS (if you are on a secure server remove the http: but not the // it won't work local but will work for both http and httpS ============================================== -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/theme-assets.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- LOGO FONT, replace with your own ============================================== -->
+    <link href="assets/css/logo-font.css" rel="stylesheet" type="text/css">
+    
+    <!-- THEME CSS (unminified TOC version w/purchase) ============================================== -->
+    <link href="assets/css/b-different-bw.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- SCRIPTS IN HEAD ============================================== -->
+    <script src="assets/js/modernizr.2.8.3.js"></script>
+    
+    <!--[if lt IE 9]>
+   <script src="assets/js/respond.min.js"></script>
+   <![endif]-->
+    
+    <!-- +++++++ jQuery library ============================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+   if (!window.jQuery) {
+       document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>');
+   }
+   </script>
+    
+    <!-- WINDOWS 8 Phones BUG FIX -->
+    <script src="assets/js/windows-fix.js"></script>
 </head>
 <body>
 
-<!-- navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-
-<div class="container-fluid ">
-
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-      <i class="fa fa-globe" style="color:#017FF4"></i>
-      </a>
-    </div>
-
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav ">
-        <li><a href="../north-america.html">North America</a></li>
-        <li><a href="../central-america.html">Central America</a></li>
-        <li><a href="../south-america.html">South America</a></li>
-        <li><a href="../europe.html">Europe</a></li>
-        <li><a href="../north-africa-middle-east.html">North Africa & Middle-East</a></li>
-      	<li><a href="../africa.html">Africa</a></li>
-        <li><a href="../asia.html">Asia</a></li>
-        <li><a href="../oceania.html">Oceania</a></li>
-        <li><a href="../polar-regions.html">Polar Regions</a></li>
-      </ul>
-      
-
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-plane"></i></a></li>
+<!-- +++++ No Script Fallback notice +++++ -->
+<noscript>
+<div>Turn on your JavaScript!</div>
+</noscript>
+<!-- accessibility skip to nav skip content -->
+<ul class="sr-only" id="top">
+    <li><a href="#nav" title="Skip to navigation" accesskey="n">Skip to Navigation</a></li>
+    <li><a href="#page" title="Skip to content" accesskey="c">Skip to Content</a></li>
+</ul>
+<!--  /.sr-only accessibility--> 
+<!-- =============== HEADER ==============================-->
+<header class="header">
+    <div class="header-inner"> 
+        <!-- :: info :: .header-inner acts like container --> 
+        <!-- #### logo font  -->
+        <div class="logo-brand logo-font"> <a href="index.html">
+            <span class="logo-brand-inner">
+                <h1>adventureHop!</h1>
+            </span>
+            </a> 
+        </div>
+        <!-- /.logo-brand-->
         
-      </ul>
-      
-    </div><!-- /.navbar-collapse -->
-    
-    
-  </div><!-- /.container-fluid -->
-
-</nav>
-<!-- ./ navbar -->
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3" >
-      <p class="text-center title">adventure<span style="color: #C31013">hop!</span></p>
+        <div class="header-btn-bar"> 
+            <!-- .menu-toggle --> 
+            <a href="#" class="menu-toggle" data-slide="slide" data-target="#navigation-panel"> 
+            <!-- this above data-slide toggles the #navigation-panel .slide-panel -->
+            <div class="menu-toggle-inner">
+                <span class="veggieburger">
+                    <span class="lines">
+                    </span>
+                </span>
+                <!--/.veggieburger-->
+                <span class="menu-toggle-text">
+                    M<i class="fa fa-bars"></i>NU
+                </span>
+            </div>
+            </a> 
+            <!-- /.menu-toggle-->
+            <div class="header-btn-wrapper clearfix"> 
+                <!-- .header-btn-row-->
+                <div class="header-btn-row half-row"> 
+                    <!-- BEGIN 1st .header-btn .header-btn-xl in first row --> 
+                    <a href="#" class="login-toggle header-btn header-btn-xl" data-slide="slide" data-target="#login-panel"> <i class="fa fa-sign-in header-icon"></i>
+                    <span class="header-btn-text">
+                        Login
+                    </span>
+                    </a> 
+                    <!-- this above data-slide toggles the #login-panel .slide-panel example --> 
+                    <!-- /END 1st .header-btn .header-btn-xl in first row --> 
+                    <!-- BEGIN 2nd.header-btn .header-btn-xl in first row --> 
+                    <a href="#" class="signin-toggle header-btn header-btn-xl" data-slide="slide" data-target="#signup-panel"> <i class="fa fa-pencil header-icon"></i>
+                    <span class="header-btn-text">
+                        Sign Up
+                    </span>
+                    </a> 
+                    <!-- this above data-slide toggles the #signup-panel .slide-panel example --> 
+                    <!-- /END 2nd .header-btn .header-btn-xl in first row --> 
+                </div>
+                <!-- /.header-btn-row-->
+                <div class="header-btn-row half-row"> 
+                    <!-- BEGIN 3rd .header-btn .header-btn-lg in second row --> 
+                    <a href="#" class="anchor header-btn header-btn-lg" data-slide="slide" data-target="#contact-panel"> <i class="fa fa-at header-icon"></i>
+                    <span class="header-btn-text">
+                        Contact
+                    </span>
+                    </a> 
+                    <!-- this above data-slide toggles the #contact-panel .slide-panel example --> 
+                    <!-- /END 3rd .header-btn .header-btn-lg in second row --> 
+                    <!-- BEGIN 4th .header-btn .header-btn-sm in second row--> 
+                    <a href="#" class="header-btn header-btn-sm search-toggle" data-slide="slide" data-target="#search-panel"  data-hover="tooltip" data-placement="left" title="search"> <i class="fa fa-search header-icon"></i> </a> 
+                    <!-- this above data-slide toggles the #search-panel .slide-panel example --> 
+                    <!-- /END 4th .header-btn .header-btn-sm in second row --> 
+                    <!-- BEGIN 5th .header-btn .header-btn-sm in second row--> 
+                    <a href="#" class="header-btn header-btn-sm" data-hover="tooltip" data-placement="left" title="follow us on twitter"> <i class="fa fa-twitter header-icon"></i> </a> 
+                    <!-- this link above links to your twitter page --> 
+                    <!-- /END 5th .header-btn .header-btn-sm in second row --> 
+                    <!-- BEGIN 6th .header-btn .header-btn-sm in second row--> 
+                    <a href="#" class="header-btn header-btn-sm" data-hover="tooltip" data-placement="left" title="like us on facebook"> <i class="fa fa-facebook header-icon"></i> </a> 
+                    <!-- this link above links to your facebook page --> 
+                    <!-- /END 6th .header-btn .header-btn-sm in second row --> 
+                    <!-- BEGIN 7th .header-btn .header-btn-sm in second row --> 
+                    <a href="#" class="header-btn header-btn-sm" data-hover="tooltip" data-placement="left" title="subscribe to our RSS"> <i class="fa fa-rss header-icon"></i> </a> 
+                    <!-- this link above links to your google+ page --> 
+                    <!-- /END 7th .header-btn .header-btn-sm in second row --> 
+                </div>
+                <!-- /END .header-btn-row--> 
+            </div>
+            <!-- /END .header-btn-wrapper--> 
+        </div>
+        <!-- /END .header-btn-bar --> 
+        
     </div>
-    
-  </div>
-  <hr>
+    <!-- /END .header-inner --> 
+</header>
+<!-- =============== END HEADER ==============================--> 
+
+<!-- ================== BEGIN SLIDE OUT PANELS  ================= -->
+<div class="slide-panel-parent"> 
+    <!-- .slide-panel-parent goes around all the panels --> 
+    <!-- _____________ NAVIGATION PANEL _______ -->
+    <div class="slide-panel" id="navigation-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-8"> <!-- _________ BEGIN NAVIGATION ___________ -->
+                    <nav id="nav" role="navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="north-america.html">North America</a></li>
+                            <li><a href="central-america.html">Central America</a></li>
+                            <li><a href="south-america.html">South America</a></li>
+                            <li><a href="europe.html">Europe</a></li>
+                            <li><a href="north-africa-middle-east.html">North Africa & Middle-East</a></li>
+                            <li><a href="africa.html">Africa</a></li>
+                            <li><a href="asia.html">Asia</a></li>
+                            <li><a href="oceania.html">Oceania</a></li>
+                            <li><a href="polar-regions.html">Polar Regions</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact / Advertise with Us</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="sign-up.html">Sign Up</a></li>
+                            <li><a href="site-map.html">Site Map</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--/.col-md-6 col-lg-8 -->
+                <div class="col-md-6 col-lg-4">
+                    <h4 class="h2">Latest News</h4>
+                    <ul>
+                        <li><a href="your-link-goes-here.html">We will amplify our power to benchmark...</a></li>
+                        <li><a href="your-link-goes-here.html">We have revolutionized the conceptualization...</a></li>
+                        <li><a href="your-link-goes-here.html">Everything is relative; relatively speaking.</a></li>
+                        <li><a href="your-link-goes-here.html">My other body is an immortal robot body.</a></li>
+                        <li><a href="your-link-goes-here.html">I don't know who they are but they're...</a></li>
+                        <li><a href="your-link-goes-here.html">For those about to rock, we salute you </a> </li>
+                    </ul>
+                    <h4 class="h2">Latest Work</h4>
+                    <ul class="img-widget fade-hover-img">
+                        <li><a href="#"><img src="assets/demo-images/img-widget/1.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/2.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/3.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/4.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/5.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/6.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/7.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/8.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/9.jpg" alt="" /></a></li>
+                        <li><a href="#"><img src="assets/demo-images/img-widget/10.jpg" alt="" /></a></li>
+                    </ul>
+                    <!--/.img-widget--> 
+                </div>
+                <!--/.col-md-6 col-lg-4 --> </div>
+            <!--/.row --> </div>
+        <!--/.container inside #navigation-panel --> 
+    </div>
+    <!--/.slide-panel #navigation-panel --> 
+    <!-- _________ SEARCH PANEL #search-panel___________ -->
+    <div class="slide-panel search" id="search-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h3 class="slide-panel-title">Search</h3>
+            <form role="form">
+                <div class="form-group">
+                    <input type="search" placeholder="Enter search term and press enter" class="form-control">
+                </div>
+                <!--/.form-group -->
+            </form>
+        </div>
+        <!--/.container --> 
+    </div>
+    <!--/.slide-panel #search-panel --> 
+    <!-- _________ CONTACT PANEL ___________ -->
+    <div class="slide-panel" id="contact-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h2 class="slide-panel-title text-center-md-view text-center-md-view">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 text-right-md-view text-right-lg-view">
+                    <h3>Organized Organization</h3>
+                    <p class="lead"> 1255 Nowhere Street<br>
+                        Tampa, FL 33655<br>
+                        <strong>phone:</strong> <a href="tel:8135551234">813.555.1234</a><br>
+                        <strong>fax:</strong> 813.555.1235<br>
+                        <span class="overflow">
+                            <strong>email:</strong> <a class="link-underline" href="mailto:email@domain.com">email@companydomain.com</a>
+                        </span>
+                    </p>
+                </div>
+                <!-- /.col-md-6 -->
+                
+                <div class="col-md-6">
+                    <h3>Find Us On...</h3>
+                    <ul class="social-icon-list">
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <!-- /.col-md-6 --> 
+                
+            </div>
+            <!--/.row --> 
+        </div>
+        <!--/.container --> 
+    </div>
+    <!--/.slide-panel #contact-panel --> 
+    <!-- _________ LOGIN PANEL #login-panel ___________ -->
+    <div class="slide-panel" id="login-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h2 class="slide-panel-title">Login</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="no-margin-top">Social Login</h4>
+                    <ul class="list-unstyled social-user">
+                        <li><a href="#" title="Login with Facebook" class="facebook"><i class="fa fa-facebook"></i>
+                            <span>
+                                Login with Facebook
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Login with Google Plus" class="google"><i class="fa fa-google-plus"></i>
+                            <span>
+                                Login with Google
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Login with Twitter" class="twitter"><i class="fa fa-twitter"></i>
+                            <span>
+                                Login with Twitter
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Login with Wordpress" class="wordpress"><i class="fa fa-wordpress"></i>
+                            <span>
+                                Login with Wordpress
+                            </span>
+                            </a></li>
+                    </ul>
+                    <!-- /.social-user --> 
+                </div>
+                <!-- /.col-*-6 -->
+                <div class="col-md-6">
+                    <h4 class="no-margin-top">Sign In</h4>
+                    <form role="form" action="your-script.php">
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control  form-control-lg" placeholder="Password">
+                        </div>
+                        <div class="form-group checkbox small">
+                            <label>
+                                <input type="checkbox">
+                                Remember Me </label>
+                        </div>
+                        <p class="text-center">
+                            <button class="btn btn-slide-panel btn-lg btn-block" type="submit"><i class="ti ti-lock"></i> Sign in</button>
+                        </p>
+                    </form>
+                    <p class="text-center clear"><a href="#" data-slide="slide" data-target="#forgot-password-panel" class="link-underline">Forgot your password?</a> <br>
+                        Don't have an account yet? <a class="link-underline signin-toggle" href="#" data-slide="slide" data-target="#signup-panel">Sign up</a> </p>
+                </div>
+                <!-- /.col-*-6 --> 
+            </div>
+            <!-- /.row --> 
+        </div>
+        <!-- /.container --> 
+    </div>
+    <!--/.slide-panel #login-panel --> 
+    <!-- _________ SIGNUP PANEL #signup-panel ___________ -->
+    <div class="slide-panel" id="signup-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h2 class="slide-panel-title">Sign In</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="no-margin-top">Sign Up with...</h4>
+                    <ul class="list-unstyled social-user">
+                        <li><a href="#" title="Signup with Facebook" class="facebook"><i class="fa fa-facebook"></i>
+                            <span>
+                                Signup with Facebook
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Signup with Google Plus" class="google"><i class="fa fa-google-plus"></i>
+                            <span>
+                                Signup with Google
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Signup with Twitter" class="twitter"><i class="fa fa-twitter"></i>
+                            <span>
+                                Signup with Twitter
+                            </span>
+                            </a></li>
+                        <li><a href="#" title="Signup with Wordpress" class="wordpress"><i class="fa fa-wordpress"></i>
+                            <span>
+                                Signup with Wordpress
+                            </span>
+                            </a></li>
+                    </ul>
+                    <!-- /.social-user --> 
+                </div>
+                <!-- /.col-*-6 -->
+                <div class="col-md-6">
+                    <h4 class="no-margin-top">Sign Up</h4>
+                    <form role="form" action="your-script.php">
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-lg" placeholder="Password">
+                        </div>
+                        <p class="text-center">
+                            <button class="btn btn-slide-panel btn-lg btn-block" type="submit"><i class="ti ti-lock"></i> Register</button>
+                        </p>
+                    </form>
+                    <p class="text-center clear">Already have an account? <a class="link-underline login-toggle" href="#" data-slide="slide" data-target="#login-panel">Login</a></p>
+                </div>
+                <!-- /.col-*-6 --> 
+            </div>
+            <!-- /.row --> 
+        </div>
+        <!-- /.container --> 
+    </div>
+    <!--/.slide-panel #signup-panel --> 
+    <!-- _________ FORGOT PASSWORD #forgot-password-panel ___________ -->
+    <div class="slide-panel" id="forgot-password-panel"> <a href="#" class="close ti ti-close"> 
+        <!--themify icon font--> 
+        </a>
+        <div class="container">
+            <h3 class="slide-panel-title">Forgot Password</h3>
+            <form role="form" action="your-script.php">
+                <div class="input-group input-group-lg input-group-slide-panel">
+                    <input class="form-control" placeholder="Your@EmailAddress.com" type="email">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-slide-panel btn-lg">Reset Password</button>
+                    </span>
+                    <!--/.input-group-btn--> 
+                </div>
+            </form>
+            <hr class="vertical-spacer height-20px">
+            <p class="text-center"><a href="#" data-slide="slide" data-target="#login-panel" class="link-underline login-toggle">Remembered your Password?</a></p>
+        </div>
+        <!-- /.container --> 
+    </div>
+    <!--/.slide-panel #forgot-password-panel --> 
 </div>
-<div class="container-fluid">
-  <div class="row text-center" style="background-color: white;">
-    
-    <div class="col-md-9">
-    
-    <!-- Carousel -->
-    
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="content/countries/UK/Cornwall_1.jpg" alt=""/>
-      <div class="carousel-caption">
-        Cornwall
-      </div>
+<!-- END .slide-down-parent --> 
+<!-- ================== END SLIDE OUT PANELS  ================= --> 
+<!-- =============== BEGIN #page ==============================-->
+<div id="page"> 
+    <!-- =========== PAGE HEADER ON ALL BUT INDEX PAGES =========================================================================== --> 
+    <!-- _________ Page Header ___________ -->
+    <div class="page-header-primary">
+        <div class="container">
+            <h2>photos &middot; videos &middot; reviews &middot; travel guides &middot; tips</h2>
+        </div>
+        <!-- /.container (for page-header-primary) --> 
     </div>
-    <div class="item">
-      <img src="content/countries/Tenerife/Tenerife_2.jpg" alt=""/>
-      <div class="carousel-caption">
-        Tenerife
-      </div>
-    </div>
-    
-    <div class="item">
-       <img src="content/countries/France/France_11.jpg" alt=""/>
-      <div class="carousel-caption">
-        France
-      </div>
-    </div>
-    
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<!-- ../ Carousel -->
-    
-    </div>
-    
-    
-    <div class="col-md-3" style="padding: 5px">
-    
-    
-    <!-- Square Google Ad -->
+    <!-- /.page-header-primary --> 
+    <!-- =========== BEGIN CONTENT FOR THE PAGE =========================================================================== -->
+    <div class="page-content" role="main">
+        <div class="container">
+            <div class="filter">
+                <span class="filter-title">
+                    Choose Filter
+                </span>
+                <ul class="sort">
+                    <li><a class="active" href="#" data-filter="*">All</a></li>
+                    <li><a href="#" data-filter=".india">Photos</a></li>
+                    <li><a href="#" data-filter=".video">Videos</a></li>
+                    <li><a href="#" data-filter=".design">Reviews</a></li>
+                    <li><a href="#" data-filter=".sound">Sound</a></li>
+                    <li><a href="#" data-filter=".video">Travel Guides</a></li>
+                </ul>
+            </div>
+            <div class="filter-clone"><!-- this is where the clone of the filter goes--></div>
+            
+            <!-- _________ MASONRY WITH ISOTOPE ___________ -->
+            
+            <ul class="row row-masonry filter-masonry">
+                <li class="grid-sizer"></li>
+                <!-- required for fluid masonry layout -->
+                <li class="gutter-sizer"></li>
+                <!-- required for fluid masonry layout --> 
+                
+                <!-- AD -->
+                <li class="post msnry-blog-entry india">
+                
+                    <div class="msnry-blog-entry-text">
+                        
+                            <!-- Square Google Ad -->
     
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- HomePage-RightSquare -->
@@ -160,242 +458,265 @@
 
     
     <!-- ./ Square Google Ad -->
-    <ul class="list-group">
-    <li class="list-group-item">
-  
-
-  <img src="content/countries/Tenerife/lavatrax.png" width="325" alt="lavatrax"/>
-  <br />
-  <a href="http://www.lavatrax.com" target="_blank">lavatrax - Tenerife Mountain Biking Holidays</a>
-  </li>
-  
-  
- <li class="list-group-item">
-          <iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=emcco-21&o=2&p=12&l=bn1&mode=sports-uk&browse=116189031&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
- </li>
-  
-  </ul>
-    
+                        
+                    </div>
+                </li>
+                <!--/ AD --> 
+                
+                
+                
+                <!-- SOUND POST -->
+                <li class="post msnry-blog-entry sound">
+                    
+                    <iframe width="100%" src="https://www.youtube.com/embed/PQB65uQaT0U" frameborder="0" allowfullscreen></iframe>
+                    
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- VIDEO HOLDER POST -->
+                <li class="post msnry-blog-entry video">
+                    <div class="video-holder vimeo"> 
+                        <!-- change to youtube if youtube --> 
+                        <!--IF there is a problem the api for vimeo and youtube your page will delay loading, the solution is the following html combined with the script in the jquery.main.js file --> 
+                        <a class="video-trigger" href="65543364"> 
+                        <!-- id of video either at youtube or vimeo --> 
+                        <i class="fa fa-youtube-play"> 
+                        <!-- this icon for all sources of videos--> 
+                        </i> <img src="http://b.vimeocdn.com/ts/436/594/436594814_640.jpg" alt=""/> </a> </div>
+                    <!--/.video-holder-->
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="blog-single.html">Professionally cultivate one-to-one customer service with robust ideas</a></h4>
+                        <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products...</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- TEXT POST -->
+                <li class="post msnry-blog-entry design">
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="europe.html#tenerife">
+                        	<img src="https://farm8.staticflickr.com/7604/17086946075_c4e7a8d7b2_k.jpg" width="100%" alt="Tenerife Mountain Biking">
+                        </a></h4>
+                        <p>Mountain Biking in Tenerife</p>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- SOUND POST -->
+                <li class="post msnry-blog-entry sound">
+                    <div class="soundcloud-wrapper" id="60229275"><!-- this loads the iframe without blocking --></div>
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="blog-single.html">Overhead the albatross hangs motionless upon the air</a></h4>
+                        <p>And deep beneath the rolling waves in labyrinths of coral caves the echo of a distant tide omes willowing across the sand and everything is green and submarine ...</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- QUOTE POST -->
+                <li class="post msnry-blog-entry quotes">
+                    <div class="msnry-blog-entry-text"> <a href="blog-single.html">
+                        <blockquote class="curly text-center">
+                            <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
+                            <footer>Corporate Jingoist</footer>
+                        </blockquote>
+                        </a> </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- IMAGE SLIDER -->
+                <li class="post msnry-blog-entry india">
+                    <div class="carousel slide mini-carousel theme-carousel" id="post-id-123" data-interval="false"> 
+                        <!-- unique id that matches the data target in both the indicators and the controls --> 
+                        <!-- 'theme-carousel' is target that makes it slide :: 'min-carousel' is the style -->
+                        <div class="carousel-inner">
+                            <div class="item active"> 
+                            	<img src="https://farm9.staticflickr.com/8646/16175970590_e836b435b7.jpg" alt="USA"><!-- images MUST be the same height for use in a Masonry layout --> 
+                            </div>
+                            <div class="item"><!--/ .item--> 
+                                <img src="https://farm9.staticflickr.com/8676/16177265869_0497a4c7cc.jpg" alt="USA"> </div>
+                            <div class="item"><!--/ .item--> 
+                                <img src="https://farm9.staticflickr.com/8646/16175970590_e836b435b7.jpg" alt="USA"> </div>
+                            <!--/ .item--> 
+                        </div>
+                        <!--/ .carousel-inner-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#post-id-123" data-slide-to="0" class="active"></li>
+                            <li data-target="#post-id-123" data-slide-to="1"></li>
+                            <li data-target="#post-id-123" data-slide-to="2"></li>
+                        </ol>
+                        <a class="carousel-control left" href="#" data-target="#post-id-123" data-slide="prev">
+                        <span class="ti ti-arrow-left">
+                        </span>
+                        </a> <a class="carousel-control right" href="#" data-target="#post-id-123" data-slide="next">
+                        <span class="ti ti-arrow-right">
+                        </span>
+                        </a> </div>
+                    <!--/ .carousel slide mini-carousel-->
+                    
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="north-america.html">USA - NATIONAL PARKS & BRIGHT LIGHTS</a></h4>
+                        <p>From the Golden Gate Bridge to glowing canyon walls at sunset, this trip captures the beauty of the cities and wilderness of the Western US. It’s perfect for the traveller looking to breathe in the scent of the sequoias of Yosemite by day but wanting the comforts of a hotel at night. Prepare yourself for otherworldly ‘hoodoos’ in Bryce Canyon National Park and the desert scenery in Death Valley—the lowest spot on the continent—before taking an optional helicopter ride above the incomparable Grand Canyon. You won’t just visit the West Coast—you’ll live it.</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li><a href="https://www.gadventures.co.uk/trips/national-parks-and-bright-lights/NUNP/2015/">
+                                <span class="ti ti-comments"></span>G adventures</a></li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- VIDEO POPUP POST -->
+                <li class="post msnry-blog-entry video">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Cj6ho1-G6tw" frameborder="0" allowfullscreen></iframe>
+                </li>
+                <!--/ .post .msnry-blog-entry -->
+                
+                <!-- AD -->
+                <li class="post msnry-blog-entry quotes">
+                    <div class="msnry-blog-entry-text"> 
+                    
+<script type="text/javascript"><!--
+amazon_ad_tag = "emcco-21"; amazon_ad_width = "180"; amazon_ad_height = "150"; amazon_ad_link_target = "new";//--></script>
+<script type="text/javascript" src="http://ir-uk.amazon-adsystem.com/s/ads.js"></script>
+                    
+                    </div>
+                </li>
+                <!--/ AD --> 
+                
+            </ul>
+            <!--/ .row-masonry -->
+            
+            <div class="text-center">
+                <span class="new-pagination-toggle">
+                    Pagination
+                </span>
+                <ul class="new-pagination pagination pagination-lg clearfix">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="disabled">
+                        <span>
+                            ...
+                        </span>
+                    </li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+            <!-- /.text-center holding .pagination which shows at 992px and higher and is toggled otherwise --> 
+            
+        </div>
+        <!--/ .container--> 
     </div>
-  </div>
-
-  <hr>
-  <div class="row">
-    <div class="col-sm-3 text-center">
-      <p class="heading">NEW!</p>
-      
-      <ul class="list-group">
-  <li class="list-group-item">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/yYJeItqxHok" frameborder="0" allowfullscreen></iframe>
-  </li>
-  <li class="list-group-item">
-  
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/bnfwork/5089385272/in/photolist-8KJqVW-ukRUh-9JnjGG-6DCGku-4zo7bD-7zuEqg-9eazv7-7SCznu-6DCKYu-8KFmUP-2oPoWj-jqMMeL-kMGjxc-a45XAT-61cowk-ofHDUM-9tNrC8-5VpenL-dW6xZW-4EptuA-fjDdJt-8KJqDU-5rP47G-5r3sY6-8F5HTz-5VegYm-55Fhh9-6pW9Qd-8KFnPX-6Dywiz-8FsycH-EJcZD-o6QBss-5m9QUX-a5r52-tkKa7g-oB5NYj-guvL9-a7Q8gm-aqqDMq-9wSkGL-ggJ4Ah-fjTj7W-paYfip-dTiRfa-ovJFUQ-fjTnzE-a2CN5k-6dPRmh-6DCBmb" title="Mountain Bike C"><img src="https://farm5.staticflickr.com/4149/5089385272_5092631533_b.jpg" width="325"  alt="Mountain Bike C"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-  
-  </li>
-  <li class="list-group-item">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/pBRYKEgGiJc" frameborder="0" allowfullscreen></iframe>
-  </li>
-  <li class="list-group-item">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/Zpls83SbLWs" frameborder="0" allowfullscreen></iframe>
-  </li>
-</ul>
-      
+    <!-- /.page-content role=main --> 
+    <!--=========== END CONTENT FOR THE PAGE ============================================================ --> 
+</div>
+<!-- ================== END #page ================= --> 
+<!-- ================== FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-column-wrapper">
+        <div class="container">
+            <div class="row footer-row equal-height-col">
+                <div class="col-sm-5 col-md-3 footer-col">
+                    <h4 class="footer-title">Socialfy</h4>
+                    <ul class="social-icon-list">
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-2x fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <!-- /.col-sm-5 .col-md-3 footer-col -->
+                <div class="col-sm-7 col-md-9 footer-col">
+                    <h4 class="footer-title">About Us</h4>
+                    <p>Adventure travel community. Travel guides, photos, videos, reviews and articles from around the world. North America, Central America, South America, Europe, North Africa & Middle-East, Africa, Asia, Oceania and Polar Regions.</p>
+                </div>
+                <!-- /.col-sm-7 col-md-9 footer-col--> 
+            </div>
+            <!--/.row .footer-row-->
+            <div class="row footer-row equal-height-col"> 
+                
+                <div class="col-sm-12 footer-col">
+                    <ol class="breadcrumb">
+                        	<li ><a href="index.html">Home</a></li>
+                            <li><a href="north-america.html">North America</a></li>
+                            <li><a href="central-america.html">Central America</a></li>
+                            <li><a href="south-america.html">South America</a></li>
+                            <li><a href="europe.html">Europe</a></li>
+                            <li><a href="north-africa-middle-east.html">North Africa & Middle-East</a></li>
+                            <li><a href="africa.html">Africa</a></li>
+                            <li><a href="asia.html">Asia</a></li>
+                            <li><a href="oceania.html">Oceania</a></li>
+                            <li><a href="polar-regions.html">Polar Regions</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact / Advertise with Us</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="sign-up.html">Sign Up</a></li>
+                            <li><a href="site-map.html">Site Map</a></li>
+                    </ol>
+                    <!--/.img-widget--> 
+                </div>
+                <!-- /.col-sm-8 footer-col--> 
+            </div>
+            <!--/.row .footer-row --> 
+        </div>
+        <!--/.container --> 
     </div>
-
-<div class="col-sm-6 text-center">
-      <p class="heading">NEW ADVENTURES</p>
-  
-
-<!-- image grid row 1 -->
-      <div class="row">
-      <div class="col-md-12">
-      <h5 class="pull-left">California and Nevada</h5>
-      </div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-  <img src="https://farm8.staticflickr.com/7322/16397936025_74723e7c32_n.jpg"  alt="USA Trip 2015">
-</div>
-</div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm9.staticflickr.com/8646/16175970590_e836b435b7_n.jpg"   alt="USA Trip 2015">
-</div>
-</div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm9.staticflickr.com/8602/15736112694_dcf20f03fd_n.jpg"  alt="Las Vegas">
-</div>
-  </div>
-</div>
- <!-- ../ image grid row 1 --> 
- 
- 
- <!-- image grid row 2 -->
-      <div class="row">
-      <div class="col-md-12">
-      <h5 class="pull-left">Tenerife</h5>
-      </div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm4.staticflickr.com/3941/15666583441_bfd56c5a41_n.jpg"  alt="Tenerife">
-</div>
-</div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm6.staticflickr.com/5598/15483367817_1ee25a6e7d_n.jpg" alt="Tenerife">
-</div>
-</div>
-  <div class="col-md-4">
-<div class="thumbnail">
-<img src="https://farm8.staticflickr.com/7491/15669334765_8c75ae9c42_n.jpg"  alt="Tenerife">
-</div>
-
-  </div>
-</div>
- <!-- ../ image grid row 2 --> 
- 
- 
- <!-- image grid row 3 -->
-<!--      <div class="row">
-      <div class="col-md-12">
-      <h5 class="pull-left">Tenerife</h5>
-      </div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm4.staticflickr.com/3770/19095290595_23e3dc5324_n.jpg"  alt="Easter Tenerife">
-</div>
-</div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm8.staticflickr.com/7604/17086946075_526c03cc6b_n.jpg"  alt="Tenerife Mountain Biking">
-</div>
-</div>
-  <div class="col-md-4">
-<div class="thumbnail">
-<img src="https://farm1.staticflickr.com/427/18907614518_bf53f37094_n.jpg" alt="Easter Tenerife">
-</div>
-  </div>
-</div>-->
- <!-- ../ image grid row 3 --> 
- 
- 
-  <!-- image grid row 4 -->
-      <div class="row">
-      <div class="col-md-12">
-      <h5 class="pull-left">Mauritius</h5>
-      </div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm8.staticflickr.com/7337/11913191405_cee3237a80_z.jpg" alt="Mauritius">
-</div>
-</div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm6.staticflickr.com/5503/12002553266_044219ab62.jpg" alt="Mauritius">
-</div>
-</div>
-  <div class="col-md-4">
-<div class="thumbnail">
-<img src="https://farm4.staticflickr.com/3814/12002372596_de165f32e9.jpg" alt="Mauritius">
-</div>
-  </div>
-</div>
- <!-- ../ image grid row 4 --> 
- 
-   <!-- image grid row 5 -->
-      <div class="row">
-      <div class="col-md-12">
-      <h5 class="pull-left">French Alps</h5>
-      </div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm9.staticflickr.com/8016/7661162560_a9aa67e7e5.jpg" width="500" height="332" alt="French Apls">
-</div>
-</div>
-  <div class="col-md-4">
-  <div class="thumbnail">
-<img src="https://farm9.staticflickr.com/8024/7661230834_e04e24558a.jpg" width="500" height="332" alt="French Apls">
-</div>
-</div>
-  <div class="col-md-4">
-<div class="thumbnail">
-<img src="https://farm9.staticflickr.com/8027/7661345080_2d3520179f.jpg" width="500" height="332" alt="French Apls">
-</div>
-  </div>
-</div>
- <!-- ../ image grid row 5 --> 
-     
-      
+    <!--/.footer-column-wrapper -->
+    <div class="footer-copyright">
+        <div class="container">
+            <p class="no-margin">© Copyright 2015 adventureHop! 
+                All rights reserved. 
+                 <a href="mailto:eugene.murray@outlook.com" class="link-underline">Email Us</a> | <a class="link-underline" href="site-map.html">Site Map</a> </p>
+        </div>
     </div>
+    <!--/.footer-copyright--> 
+</footer>
+<!-- ================== /.END footer ================= --> 
+<!-- _________ GO TO TOP ___________ --> 
+<a id="go-to-top" href="#top" title="up"> <i class="ti ti-arrow-up"></i> </a> 
 
+<!-- _________ FOOTER SCRIPTS  ________ --> 
+<script src="assets/js/jquery.touch-swipe.js"></script> <!-- adds touch swipe to the theme's bootstrap carousel --> 
+<script src="assets/js/bootstrap.min.js"></script> <!-- bootstrap's js --> 
+<script src="assets/js/jquery.bootstrap.addon.js"></script><!-- initializations and custom scripts for bootstrap --> 
+<script src="assets/js/jquery.magnific-popup.js"></script><!-- image popups, video, modals, etc., contains the initializations --> 
+<script src="assets/js/jquery.slick-slider.min.js"></script> <!-- base carousel/slider SLICK SLIDER --> 
+<script src="assets/js/jquery.isotope.masonry.js"></script> <!-- Isotope w/Masonry also contains the initializations --> 
 
-    <div class="text-center col-sm-3">
-      <p class="heading">AMAZING</p>
-      <ul class="list-group">
-  <li class="list-group-item">
-  
-  
+<script src="assets/js/jquery.main.js"></script> <!-- CORE scripts and initializations -->
 
-<div class="text-center">
-
-
-<a href="http://www.bbc.com/earth/story/20150203-amazing-film-of-national-treasure" target="_blank" tabindex="0" rel="nofollow">
-
-
-<img width="100%" src="//lh3.googleusercontent.com/proxy/pmWWMMzyqKCTkYDPEh_SiEyGabx1ata134ce0IIYT7q8R9co38X8Q0CbJgeR05MfEWLoNoOeyOFJjTtdrYWI58NHsJL_Ar4xB8WaqtXDlMqpnMb1f6XuBl0psgc=w346-h194-p"  >
-
-<br />
-
-</a>
-<h5>
-
-bbc.com - Incredible short film of <br />
-the stunning Vermilion Cliffs National <br />
-Monument in Arizona 
-
-</h5>
-
-
-</div>
-  
-  
-  
-  </li>
-  <li class="list-group-item">
-  
- <div class="text-center">
-  
-<a data-flickr-embed="true" data-header="true" data-footer="true"  href="https://www.flickr.com/photos/nationalmaritimemuseum/19496907371/in/album-72157655152478919/" title="Aurora Panorama 3 © Jan R. Olsen"><img src="https://farm1.staticflickr.com/433/19496907371_900ea140e7.jpg" width="100%"  alt="Aurora Panorama 3 © Jan R. Olsen"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-  
-  
- 
- 
-   </div> 
-    
-  </li>
-  
-</ul>
-      
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="text-center col-md-6 col-md-offset-3">
-      <p>adventurehop! &copy; 2015 &middot; All Rights Reserved &middot;</p>
-    </div>
-  </div>
-  
-  
-
-  
-  
-  
-</div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.2.min.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.js"></script>
 </body>
 </html>

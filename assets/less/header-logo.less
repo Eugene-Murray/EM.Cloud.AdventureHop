@@ -1,0 +1,526 @@
+/* .header - base styles
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.header {
+    background: @header-bg;
+    border-bottom: @header-border-width solid @header-border-color;
+    top: 3px;
+    left: 0;
+    right: 3px;
+    z-index: 10;
+    color: @header-text-color;
+    position: absolute; /* jquery turns to fixed if the height of the window >= height of this and the icons */
+}
+.header a {
+    color: @header-text-color
+}
+.header > a:hover {
+    opacity:.7
+}
+.sticky-header {
+    position: fixed
+}
+@media (min-width:@screen-sm-min) { 
+    .header {
+        right: 0
+    }
+}
+/* all children of header have no margin */
+.header * {
+    margin: 0
+}
+.header-inner {
+    height: 100%;
+    max-width: @container-max-width;
+    width: @container-width;
+    padding: 0 @gutter-padding;
+}
+@media (min-width:@screen-sm-min) { 
+    .header .header-inner {
+        margin: 0 auto
+    }
+}
+
+/* .logo-brand with image :: the image is no more than 400px x 200px 
+and it is displayed half that size & is fixed by the max-height on the img
+when on larger widths
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.logo-brand {
+    text-align: center;
+    width: 100%;
+    float: left;
+    padding: 5px 45px 5px 0; /* right padding is width of the toggle */
+}
+.logo-brand img {
+    max-width: 100%;
+    height: auto;
+    max-height: 40px; /* navbar height 50px - 10px padding */
+}
+
+@media (min-width:@header-sm-min) { 
+	.logo-brand img {
+	    max-height: 60px; /* navbar height 80px - 20px padding */
+	}
+}
+@media (min-width:@screen-sm-min) { 
+	.logo-brand {
+	    padding: 10px 0 10px 0;
+	    float: left;
+	    width: auto;
+	}
+	
+	.logo-brand img {
+	    max-height: 80px; /* navbar height 100px - 20px padding */
+	}
+	
+}
+
+
+/* .logo-font // this is for the demo remove class .logo-font and the span .logo-b-different-logo on your site and use image instead
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.logo-font .logo-brand-inner {
+    font-size: 20px;
+    line-height: 40px;
+    position: relative;
+}
+.logo-font a,
+.logo-font a:hover,
+.logo-font a:focus {
+    color: @logo-text-color
+}
+.logo-font a:hover,
+.logo-font a:focus {
+    opacity: .7
+}
+@media (min-width:@header-sm-min) { 
+	.logo-font .logo-brand-inner {
+	    font-size: 40px;
+	    line-height: 60px;
+	    /* navbar height 80px - 20px padding */
+	}
+}
+@media (min-width:@screen-sm-min) { 
+	.logo-font .logo-brand-inner {
+	    font-size: 55px;
+	    line-height: 55px;
+	    top: 10px;
+	}
+}
+
+/* .header  .menu-toggle
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.menu-toggle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: @menu-toggle-width-sm;
+    text-align: center;
+    border-left: @header-border-width solid @header-border-color;
+    background: @menu-toggle-bg;
+}
+.menu-toggle-inner {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.menu-toggle-icon {
+    font-size: 35px
+}
+.menu-toggle .menu-toggle-text {
+    display: none
+}
+
+@media (min-width:@screen-sm-min) { 
+	.menu-toggle {
+	    position: relative;
+	    float: left;
+	    height: @header-height-lg-min;
+	    width: 95px;
+	    border-right: @header-border-width solid @header-border-color;
+	}
+	.menu-toggle-inner {
+	    position: absolute
+	}
+	.menu-toggle .menu-toggle-text,
+	.menu-toggle:focus .menu-toggle-text {
+	    display: block;
+	    margin-top: 10px;
+	    font-size: 13px;
+	    letter-spacing: 1px;
+	    font-weight: 400;
+	    color: @menu-toggle-text;
+	}
+	.menu-toggle:hover .menu-toggle-text,
+	.menu-toggle:active .menu-toggle-text,
+	.active-slide-btn.menu-toggle .menu-toggle-text {
+	    color: @veggie-burger-lines-active
+	}
+	.menu-toggle-icon {
+	    font-size: 45px
+	}
+}
+@media (min-width:@screen-lg-min) { 
+	.menu-toggle {
+	    width: 125px
+	}
+}
+
+
+
+
+/* .header .menu-toggle .veggieburger
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.veggieburger {
+    position: relative;
+    top: -5px;
+}
+@media (min-width:@screen-sm-min) { 
+	.veggieburger {
+	    top: auto
+	}
+}
+.veggieburger .lines {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: @veggie-burger-lines;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    transition: 0.3s;
+    position: relative;
+}
+.veggieburger .lines:before,
+.veggieburger .lines:after {
+    display: inline-block;
+    background: @veggie-burger-lines;
+    height: 3px;
+    transition: 0.3s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: '';
+    transform-origin: 0.28571rem center;
+    -webkit-transform-origin: 0.28571rem center;
+}
+.veggieburger .lines:before {
+    top: 10px
+}
+.veggieburger .lines:after {
+    top: -10px
+}
+@media (min-width:@screen-sm-min) { 
+	.veggieburger .lines {
+	    width: 45px
+	}
+}
+.menu-toggle:hover .veggieburger .lines,
+.menu-toggle:hover .veggieburger .lines:before,
+.menu-toggle:hover .veggieburger .lines:after {
+    background: @veggie-burger-lines-active
+}
+.veggieburger {
+    padding: 0;
+    transition: .3s;
+    cursor: pointer;
+    user-select: none;
+}
+.veggieburger:hover {
+    opacity: 1
+}
+.veggieburger:active {
+    transition: 0
+}
+.active-slide-btn.menu-toggle .veggieburger .lines {
+    transform: scale3d(0.8, 0.8, 0.8);
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+}
+.active-slide-btn.menu-toggle .veggieburger .lines {
+    background: transparent
+}
+.active-slide-btn.menu-toggle .veggieburger .lines:before,
+.active-slide-btn.menu-toggle .veggieburger .lines:after {
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    top: 0;
+    left: 0;
+    width: 30px;
+    background: @veggie-burger-lines-active;
+}
+@media (min-width:@screen-sm-min) { 
+	.active-slide-btn.menu-toggle .veggieburger .lines:before,
+	.active-slide-btn.menu-toggle .veggieburger .lines:after {
+	    width: 45px
+	}
+}
+.active-slide-btn.menu-toggle:hover .veggieburger .lines {
+    background: transparent
+}
+.active-slide-btn.menu-toggle .veggieburger .lines:before {
+    transform: rotate3d(0, 0, 1, 45deg);
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+}
+.active-slide-btn.menu-toggle .veggieburger .lines:after {
+    transform: rotate3d(0, 0, 1, -45deg);
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+}
+
+
+
+/* .header > .header-btn-wrapper and .header-btn
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.header-btn-wrapper {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    width: @menu-toggle-width-sm;
+    right: 0;
+    overflow: hidden;
+    border: @header-border-width solid @header-border-color;
+    border-bottom: 0px;
+    border-right: 0px;
+}
+
+/* === .header-btn-bar larger viewport width styles  === */
+
+@media (min-width:@screen-sm-min) { 
+	.header-btn-bar {
+	    float: right
+	}
+
+	.header-btn-wrapper {
+	    position: relative;
+	    float: left;
+	    width: auto;
+	    border: 0px;
+	    height: 100px;
+	}
+}
+
+/* .header-btn-bar & sizes
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.header-btn {
+    width: 100%;
+    border-bottom: @header-border-width solid @header-border-color;
+    display: block;
+    height: 50px;
+    text-align: center;
+    line-height: 48px; 
+    font-size: 20px;
+    color:@header-btn-text;
+    background: @header-btn-bg;
+}
+
+@media (min-width:@screen-sm-min) { 
+	.header-btn {
+	    width: auto;
+	    border-right: @header-border-width solid @header-border-color;
+	    border-bottom: 0px;
+	    float: left;
+	    text-align: center;
+	    min-width: 50px;
+	    padding: 0;
+	    line-height: 95px;
+	    height: 100px;
+	}
+	/* .header-btn sizes on larger viewports are all divisible by 50 the smallest is 50px */
+	.header-btn-lg {
+	    width: 100px
+	}
+	.header-btn-sm {
+	    width: 50px
+	}
+	.header-btn-xl {
+	    width: 150px
+	}
+	.header-btn-row {
+	    display: table;
+	    border-bottom: @header-border-width solid @header-border-color;
+	    width: 100%;
+	}
+	/* if there are two rows of buttons then use .half-row on the .header-btn-row*/
+	.half-row .header-btn {
+	    height: 50px;
+	    line-height: 48px;
+	}
+}
+
+@media (min-width:@screen-lg-min) { 
+	.header-btn-lg {
+	    width: 120px
+	}
+	.header-btn-sm {
+	    width: 60px
+	}
+	.header-btn-xl {
+	    width: 180px
+	}
+}
+
+
+/* .header-btn-bar a link styles
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.header-btn-bar a, 
+.header-btn-bar a:focus {
+    box-shadow: inset 0px 0px 0px 3px @header-btn-bx-shadow;
+    color:@header-btn-text;
+    transition: all .5s ease-in-out;
+}
+
+.header-btn-bar a:hover,
+.header-btn-bar a:active,
+.header-btn-bar a.active-slide-btn {
+    color: @veggie-burger-lines-active;
+    background: @header-btn-hover-active-bg;
+    text-decoration: none;
+}
+
+/* === hide the text inside the .header-btn on small device widths === */
+.header-btn-text {
+    display: none
+}
+
+@media (min-width:@screen-sm-min) { 
+	.header-btn-text {
+	    display: inline;
+	    font-size: 14px;
+	    position: relative;
+	    top: -3px;
+	}
+}
+
+/* tall logo option many styles are adjusted
+-------------------------------------------------------------------------------------------------------------------------------------*/
+/* adjust body padding top */
+body.has-tall-logo {
+    padding-top: 90px
+}
+
+/* body.has-tall-logo .tall-logo itself on small devices */
+body.has-tall-logo .tall-logo {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-right: 53px;
+}
+
+/* body.has-tall-logo .tall-logo IMG itself on small devices */
+body.has-tall-logo .tall-logo img {
+    max-width: 100%;
+    height: 90px;
+    background:@lightest;
+    border:1px solid @header-border-color;
+    border-top:none;
+    border-bottom:3px solid @darkest;
+    padding:10px;
+}
+
+/* body.has-tall-logo .header on small devices */
+body.has-tall-logo .header {
+    height: 50px
+}
+
+
+/* larger viewport adjustments to above */
+@media (min-width:@screen-sm-min) { 
+	body.has-tall-logo {
+	    padding-top: 150px
+	}
+
+	body.has-tall-logo	.tall-logo img {
+	    max-width: 100%;
+	    height: 170px;
+	}
+
+	body.has-tall-logo .tall-logo {
+	    position: absolute;
+	    top: 0;
+	    width: auto;
+	}
+
+	body.has-tall-logo .header {
+	    z-index:1001;
+	}
+
+	body.has-tall-logo .slide-panel {
+	    top:130px;
+	}
+	
+	body.has-tall-logo .header {
+	    height: 130px
+	}
+
+	body.has-tall-logo .header-btn-wrapper {
+	    height: 130px
+	}
+
+	body.has-tall-logo	.menu-toggle {
+	    height: 129px
+	}
+
+	body.has-tall-logo .header-btn {
+	    height: 130px;
+	    line-height: 125px;
+	}
+	body.has-tall-logo .half-row .header-btn {
+	    height: 64px;
+	    line-height: 60px;
+	}
+		
+}
+
+
+/* .has-tall-logo .header-tagline ONLY on Tall Logo Option
+-------------------------------------------------------------------------------------------------------------------------------------*/
+body.has-tall-logo .header-tagline {
+    display: none;
+    color: @header-tagline-color;
+}
+@media (min-width:@header-tagline-tall-logo-min) { 
+	body.has-tall-logo .header-tagline {
+	    float: left;
+	    display: table;
+	    width: 35%;
+	    height: 130px;
+	    padding-left: 15px;
+	    position: relative;
+	    left: 150px;
+	}
+	body.has-tall-logo .header-tagline p {
+	    display: table-cell;
+	    vertical-align: middle;
+	    font-size: 14px;
+	}
+}
+@media (min-width:@screen-lg-min) { 
+	body.has-tall-logo .header-tagline p {
+	    font-size: 16px
+	}
+}
+
+
+/* .has-tall-logo .page-header-primary
+-------------------------------------------------------------------------------------------------------------------------------------*/
+body.has-tall-logo .page-header-primary {
+    margin-top: -90px;
+    padding-top: 110px;
+    padding-bottom: 20px;
+}
+@media (min-width:600px) { 
+	body.has-tall-logo .page-header-primary {
+	    margin-top: -40px;
+	    padding-top: 80px;
+	    padding-bottom: 20px;
+	}
+}
+@media (min-width:@screen-md-min) and (min-height:868px) { 
+	body.has-tall-logo .page-header-primary {
+	    margin-top: -20px;
+	    padding-top: 70px;
+	    padding-bottom: 40px;
+	}
+}

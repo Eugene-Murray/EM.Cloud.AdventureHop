@@ -1,0 +1,62 @@
+/* general link styles
+-------------------------------------------------------------------------------------------------------------------------------------*/
+a {
+    color: @base-link-color; 
+}
+
+.link-color-inherit a, 
+.link-color-inherit {color:inherit}
+
+a:hover,
+a:focus {
+    color: @base-link-color-hover;
+}
+a:focus {
+    outline: none;
+}
+.header a:hover, 
+#nav a:hover,
+a.fa:hover, 
+a.ti:hover, 
+a.glyphicon:hover,
+a span.fa:hover, 
+a span.ti:hover, 
+a span.glyphicon:hover,
+a i.fa:hover, 
+a i.ti:hover, 
+a i.glyphicon:hover,
+.header a:focus, 
+#nav a:focus,
+a.fa:focus, 
+a.ti:focus, 
+a.glyphicon:focus,
+a span.fa:focus, 
+a span.ti:focus, 
+a span.glyphicon:focus,
+a i.fa:focus, 
+a i.ti:hover, 
+a i.glyphicon:focus{
+    text-decoration:none;
+}
+.link-underline,
+figcaption a {
+    text-decoration:underline
+}
+.link-underline:hover, 
+.link-underline:active, 
+.link-underline:focus,
+figcaption a:hover, 
+figcaption a:active, 
+figcaption a:focus {
+    text-decoration:none
+}
+.no-touch a[href^=tel] {
+    color: inherit;
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+}
+a.external:after {
+    content: "\00a0 \f08e";
+    font-size:70%;
+}

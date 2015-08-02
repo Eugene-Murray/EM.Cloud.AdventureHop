@@ -1,0 +1,137 @@
+/* .widget base
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.widget {
+    .widget-mixin;
+}
+
+@media (min-width:@screen-sm-min) {
+   .widget:not(.widget-title) {
+      font-size:14px;
+    }
+}
+
+.widget ul:last-child,
+.widget ol:last-child,
+.widget p:last-child,
+.widget .form-group:last-child,
+.widget form {
+  margin-bottom: 0;
+}
+
+
+/* .widget-title
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.widget-title {
+    .title-mixin;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+}
+.widget-title span {
+    .title-span-mixin;
+}
+
+
+/* .img-widget used in sidebar, .slide-panel and .footer
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.img-widget {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.img-widget img {
+    .img-widget-img-border;
+}
+.img-widget img, .img-widget li {
+    display: inline;
+    width: 100%;
+    height: auto;
+}
+
+.img-widget a {
+    display: inline-block;
+    padding: 0 2px 4px;
+    width: 65px;
+    height: 65px;
+    font-size: 0;
+}
+
+/* ----- .slide-panel .img-widget img border ----- */
+.slide-panel .img-widget img {
+    .slide-panel-img-widget-img-border;
+}
+
+/* ----- .slide-panel .img-widget img border ----- */
+.footer .img-widget img {
+    .footer-img-widget-img-border;
+}
+
+
+/* .widget .media-list
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.widget .panel-group {
+   margin:0;
+}
+.widget .media-list .media-list-content {
+   font-size: 12px;
+   line-height:1.6;
+}
+.widget .media-list li:not(:last-child) {
+    margin-bottom: 5px;
+    padding-bottom:5px;
+    border-bottom:1px solid @lightest;
+}
+.widget .media-list-visual {
+    width: 40px;
+    margin-right: -45px;
+}
+.widget .media-list li .media-list-content {
+    padding-left: 45px;
+}
+.widget .media-list:hover li {
+    background:@lightest;
+}
+
+
+/* remove link color on icon-list
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.widget .icon-list li > a {color:inherit}
+
+
+
+/* .widget .nav-tabs
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.widget .tab-pane {
+   .widget-tab-pane;
+}
+
+.widget .nav.nav-tabs > li > a {
+    .widget-nav-tabs-a;
+}
+.widget .nav.nav-tabs > li.active > a,
+.widget .nav.nav-tabs > li > a:hover,
+.widget .nav.nav-tabs > li.active > a:hover,
+.widget .nav.nav-tabs > li.active > a:active,
+.widget .nav.nav-tabs > li.active > a:focus {
+    .widget-nav-tabs-a-hover-active;
+}
+
+
+
+/* .widget > .panel-group (accordion / collapse)
+-------------------------------------------------------------------------------------------------------------------------------------*/
+.widget .panel-group .panel-heading + .panel-collapse > .panel-body{
+  .widget-panel-group-panel-body;
+}
+.widget .panel-group .panel-heading a {
+   .widget-panel-group-panel-heading-a;
+   font-size:14px;
+}
+.widget .panel-group .panel-heading a.collapsed {
+    .widget-panel-group-panel-heading-collapsed;
+}
+.widget .panel-group .panel-heading a:after {
+    right: 10px;
+    top:10px;
+}
+
