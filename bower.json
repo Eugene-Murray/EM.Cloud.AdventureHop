@@ -1,0 +1,30 @@
+{
+  "name": "EM.Cloud.AdventureHop",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Eugene-Murray/EM.Cloud.AdventureHop",
+  "authors": [
+    "Eugene Murray <eugene.murray@gmail.com>"
+  ],
+  "description": "Adventure Website",
+  "main": "app.js",
+  "keywords": [
+    "Knockout.js",
+    "Node.js"
+  ],
+  "license": "open",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "~2.10.6",
+    "font-awesome": "~4.4.0",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "knockout": "~3.3.0"
+  }
+}

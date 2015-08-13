@@ -1,0 +1,101 @@
+<!doctype html>
+<!--[if lte IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be Different Bootstrap Off Canvas Theme - Blog Summary Masonry</title>
+    <meta name="description" content="Blog Summary Masonry : Be Different Bootstrap Theme - a different, unique theme with 10 different color combos. Built with Bootstrap, custom css3, html5, and plenty of excellent components, sliders, and other useful elements">
+    
+    <!-- BASE CSS ============================================== -->
+    <!-- custom build of latest bootstrap see json or follow the link in the file ============================================== -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- ASSET CSS (if you are on a secure server remove the http: but not the // it won't work local but will work for both http and httpS ============================================== -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/theme-assets.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- LOGO FONT, replace with your own ============================================== -->
+    <link href="../assets/css/logo-font.css" rel="stylesheet" type="text/css">
+    
+    <!-- THEME CSS (unminified TOC version w/purchase) ============================================== -->
+    <link href="../assets/css/b-different-bw.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- SCRIPTS IN HEAD ============================================== -->
+    <script src="../assets/js/modernizr.2.8.3.js"></script>
+    
+    <!--[if lt IE 9]>
+   <script src="../assets/js/respond.min.js"></script>
+   <![endif]-->
+    
+    <!-- +++++++ jQuery library ============================================== -->
+    <!--<script src="../assets/js/jquery-1.11.1.min.js"></script>-->
+    <script src="../assets/js/jquery-2.1.1.min.js"></script>
+    
+    
+    <!-- WINDOWS 8 Phones BUG FIX -->
+    <script src="../assets/js/windows-fix.js"></script>
+</head>
+<body>
+
+<!-- +++++ No Script Fallback notice +++++ -->
+<noscript>
+<div>Turn on your JavaScript!</div>
+</noscript>
+<!-- accessibility skip to nav skip content -->
+<ul class="sr-only" id="top">
+    <li><a href="#nav" title="Skip to navigation" accesskey="n">Skip to Navigation</a></li>
+    <li><a href="#page" title="Skip to content" accesskey="c">Skip to Content</a></li>
+</ul>
+<!--  /.sr-only accessibility--> 
+<!-- =============== HEADER ==============================-->
+<!-- ko component: "site-header" -->
+<!-- /ko -->
+<!-- =============== END HEADER ==============================--> 
+
+<!-- ================== BEGIN SLIDE OUT PANELS  ================= -->
+<!-- ko component: "site-slide-out-panels" -->
+<!-- /ko -->
+<!-- END .slide-down-parent --> 
+<!-- ================== END SLIDE OUT PANELS  ================= --> 
+<!-- =============== BEGIN #page ==============================-->
+
+ <!-- Main Application Body -->
+    <div id="appHost" class="container" data-bind="if: name">
+      <!-- ko component: { name: name, params: data } -->
+      <!-- /ko -->
+    </div>
+
+
+<!-- ================== END #page ================= --> 
+<!-- ================== FOOTER ================= -->
+<!-- ko component: "site-footer" -->
+<!-- /ko -->
+<!-- ================== /.END footer ================= --> 
+<!-- _________ GO TO TOP ___________ --> 
+<a id="go-to-top" href="#top" title="up"> <i class="ti ti-arrow-up"></i> </a> 
+
+<!-- _________ FOOTER SCRIPTS  ________ --> 
+<script src="../assets/js/jquery.touch-swipe.js"></script> <!-- adds touch swipe to the theme's bootstrap carousel --> 
+<script src="../assets/js/bootstrap.min.js"></script> <!-- bootstrap's js --> 
+<script src="../assets/js/jquery.bootstrap.addon.js"></script><!-- initializations and custom scripts for bootstrap --> 
+<script src="../assets/js/jquery.magnific-popup.js"></script><!-- image popups, video, modals, etc., contains the initializations --> 
+<script src="../assets/js/jquery.slick-slider.min.js"></script> <!-- base carousel/slider SLICK SLIDER --> 
+<script src="../assets/js/jquery.isotope.masonry.js"></script> <!-- Isotope w/Masonry also contains the initializations --> 
+<script src="../assets/js/sammy-0.7.4.js"></script>
+
+
+
+<script src="../assets/js/adventurehop-startup.js"></script> <!-- CORE scripts and initializations -->
+
+
+
+<script type="text/javascript" src="../assets/js/require-2.1.js" data-main="/app/main"></script>
+
+
+
+</body>
+</html>
