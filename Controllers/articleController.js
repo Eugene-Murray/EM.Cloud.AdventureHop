@@ -8,9 +8,9 @@ var articlesController = function(Article){
             res.send('Title is required');
         }
         else {
-            book.save();
+            article.save();
             res.status(201);
-            res.send(book);
+            res.send(article);
         }
     }
 
@@ -31,8 +31,8 @@ var articlesController = function(Article){
                 var returnArticles = [];
                 articles.forEach(function(element, index, array){
                     var newArticle = element.toJSON();
-                    articleBook.links= {};
-                    articleBook.links.self = 'http://' + req.headers.host + '/api/articles/' + newArticle._id
+                    newArticle.links= {};
+                    newArticle.links.self = 'http://' + req.headers.host + '/api/articles/' + newArticle._id
                     returnArticles.push(newArticle);
                 });
                 res.json(returnArticles);
