@@ -1,10 +1,10 @@
 var express = require('express');
 
 
-var routes = function(taskDao){
+var routes = function(itemDao){
     console.log("routes");
     var articleRouter = express.Router();
-    var articleController = require('../Controllers/articleController')(taskDao);
+    var articleController = require('../Controllers/articleController')(itemDao);
     
     articleRouter.route('/')
         .post(articleController.post)

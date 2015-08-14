@@ -1,6 +1,6 @@
 var DocumentDBClient = require('documentdb').DocumentClient;
 var config = require('./config');
-var TaskDao = require('./models/taskDao');
+var ItemDao = require('./models/itemDao');
 
 var express = require('express'),
     bodyParser = require('body-parser');
@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 var docDbClient = new DocumentDBClient(config.host, {
     masterKey: config.authKey
 });
-var taskDao = new TaskDao(docDbClient, config.databaseId, config.collectionId);
-taskDao.init();
+var itemDao = new ItemDao(docDbClient, config.databaseId, config.collectionId);
+itemDao.init();
 
-var articleRouter = require('./Routes/articleRoutes')(taskDao);
+var articleRouter = require('./Routes/articleRoutes')(itemDao);
 app.use('/api/articles', articleRouter); 
 app.use(express.static(__dirname + '/public'));
 
