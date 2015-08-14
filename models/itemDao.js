@@ -76,6 +76,8 @@ ItemDao.prototype = {
 
   getItem: function(itemId, callback) {
     var self = this;
+    console.log("Get Item");
+    
 
     var querySpec = {
       query: 'SELECT * FROM root r WHERE r.id=@id',
