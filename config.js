@@ -5,8 +5,8 @@ config.authKey = process.env.AUTH_KEY || "Px8s2c2IZdkcbJuaO+bT9UjdgHWPBN6pKTUwFv
 config.databaseId = "ToDoList";
 config.collectionId = "Items";
 
-config.AHdatabaseId = "AdventureHop";
-config.AHcollectionId = "Articles";
+//config.AHdatabaseId = "AdventureHop";
+//config.AHcollectionId = "Articles";
 
 
 module.exports = config;
