@@ -1,34 +1,24 @@
+var DocumentDBClient = require('documentdb').DocumentClient;
+var config = require('./config');
+var TaskDao = require('./models/taskDao');
+
 var express = require('express'),
-    mongoose = require('mongoose'),
     bodyParser = require('body-parser');
 
-
-var db;
-console.log('Start app.js');
-if(process.env.ENV == 'Test'){
-
-    db = mongoose.connect('mongodb://' + process.env.IP + '/itemsAPI_test');
-}
-
-else{
-    db= mongoose.connect('mongodb://' + process.env.IP + '/itemsAPI');
-}
-
-var Book = require('./models/itemsModel');
-
+console.log('Starting app.js');
 var app = express();
-
 var port = process.env.PORT || 3000;
-
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-itemRouter = require('./Routes/itemRoutes')(Book);
+var docDbClient = new DocumentDBClient(config.host, {
+    masterKey: config.authKey
+});
+var taskDao = new TaskDao(docDbClient, config.databaseId, config.collectionId);
+taskDao.init();
 
-
-app.use('/api/items', itemRouter); 
-
-// Looks for static content under the current directory + /public:
+var articleRouter = require('./Routes/articleRoutes')(taskDao);
+app.use('/api/articles', articleRouter); 
 app.use(express.static(__dirname + '/public'));
 
 
