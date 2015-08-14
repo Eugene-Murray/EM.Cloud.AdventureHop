@@ -2,7 +2,7 @@
   "name": "EM.Cloud.AdventureHop.net",
   "version": "1.0.0",
   "description": "Adventure Travel App",
-  "main": "app.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Eugene-Murray/EM.Cloud.AdventureHop.git"
