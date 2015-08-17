@@ -77,11 +77,10 @@ ItemDao.prototype = {
     });
   },
 
-  getItem: function(itemId, callback) {
+  getItemById: function(itemId, callback) {
     var self = this;
-    console.log("Get Item");
+    console.log("Get Item By Id");
     
-
     var querySpec = {
       query: 'SELECT * FROM root r WHERE r.id=@id',
       parameters: [{
@@ -97,7 +96,61 @@ ItemDao.prototype = {
         callback(null, results[0]);
       }
     });
+  },
+  
+  getItemBySite: function(siteName, callback) {
+    var self = this;
+    console.log("Get Item By Site");
+    
+    var querySpec = {
+      query: 'SELECT * FROM root r WHERE r.siteName=@siteName',
+      parameters: [{
+        name: '@siteName',
+        value: siteName
+      }]
+    };
+
+    self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
+      if (err) {
+        callback(err);
+      } else {
+        callback(null, results[0]);
+      }
+    });
+  },
+  
+  getItemsBySiteSectionRegion: function(args, callback) {
+    var self = this;
+    console.log("Get ItemsBySiteSectionRegion");
+    
+    var querySpec = {
+      query: 'SELECT * FROM root r WHERE r.site=@site AND r.siteSection=@section AND r.region=@region',
+      parameters: [{
+        name: '@site',
+        value: args.site
+      },
+      {
+        name: '@section',
+        value: args.section
+      },
+      {
+        name: '@region',
+        value: args.region
+      }]
+    };
+
+    self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
+      if (err) {
+        callback(err);
+      } else {
+        
+        console.log(results);
+        
+        callback(null, results[0]);
+      }
+    });
   }
+  
 };
 
 module.exports = ItemDao;
