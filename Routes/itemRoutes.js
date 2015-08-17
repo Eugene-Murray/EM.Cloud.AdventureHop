@@ -6,15 +6,15 @@ var routes = function(itemDao){
     console.log("routes");
     var self = this;
     self.itemDao = itemDao;
-    var articleRouter = express.Router();
-    var articleController = require('../Controllers/articleController')(itemDao);
+    var itemRouter = express.Router();
+    var itemController = require('../Controllers/itemController')(itemDao);
     
-    articleRouter.route('/')
-        .post(articleController.post)
-        .get(articleController.get);
+    itemRouter.route('/')
+        .post(itemController.post)
+        .get(itemController.get);
 
     
-    articleRouter.use('/:Id', function(req,res,next){
+    itemRouter.use('/:Id', function(req,res,next){
         console.log("get By Id");
         self.itemDao.getItem(req.params.Id, function(err, item){
             
@@ -32,17 +32,17 @@ var routes = function(itemDao){
         }); 
     });
     
-    articleRouter.route('/:Id').get(function(req,res){
+    itemRouter.route('/:Id').get(function(req,res){
             var returnItem = req.item.toJSON();
 
             returnItem.links = {};
-            var newLink = 'http://' + req.headers.host + '/api/articles/?category=' + returnItem.category;
+            var newLink = 'http://' + req.headers.host + '/api/items/?category=' + returnItem.category;
             returnItem.links.FilterByThisCategory = newLink.replace(' ', '%20');
             res.json(returnItem);
 
         });
         
-    return articleRouter;
+    return itemRouter;
 };
 
 module.exports = routes;

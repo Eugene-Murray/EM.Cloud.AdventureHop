@@ -43,13 +43,16 @@ ItemDao.prototype = {
   },
 
   addItem: function(item, callback) {
+    console.log("dao");
     var self = this;
     item.date = Date.now();
     item.show = true;
     self.client.createDocument(self.collection._self, item, function(err, doc) {
       if (err) {
+        console.log("dao - error");
         callback(err);
       } else {
+        console.log("dao - saved");
         callback(null);
       }
     });

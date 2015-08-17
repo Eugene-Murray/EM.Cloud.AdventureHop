@@ -17,8 +17,8 @@ var docDbClient = new DocumentDBClient(config.host, {
 var itemDao = new ItemDao(docDbClient, config.databaseId, config.collectionId);
 itemDao.init();
 
-var articleRouter = require('./Routes/articleRoutes')(itemDao);
-app.use('/api/articles', articleRouter); 
+var itemRouter = require('./Routes/itemRoutes')(itemDao);
+app.use('/api/articles', itemRouter); 
 app.use(express.static(__dirname + '/public'));
 
 
