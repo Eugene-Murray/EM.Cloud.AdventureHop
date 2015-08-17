@@ -98,7 +98,7 @@ ItemDao.prototype = {
     });
   },
   
-  getItemBySite: function(siteName, callback) {
+  getItemsBySite: function(siteName, callback) {
     var self = this;
     console.log("Get Item By Site");
     
@@ -117,39 +117,39 @@ ItemDao.prototype = {
         callback(null, results[0]);
       }
     });
-  },
+  } //,
   
-  getItemsBySiteSectionRegion: function(args, callback) {
-    var self = this;
-    console.log("Get ItemsBySiteSectionRegion");
+  // getItemsBySiteSectionRegion: function(args, callback) {
+  //   var self = this;
+  //   console.log("Get ItemsBySiteSectionRegion");
     
-    var querySpec = {
-      query: 'SELECT * FROM root r WHERE r.site=@site AND r.siteSection=@section AND r.region=@region',
-      parameters: [{
-        name: '@site',
-        value: args.site
-      },
-      {
-        name: '@section',
-        value: args.section
-      },
-      {
-        name: '@region',
-        value: args.region
-      }]
-    };
+  //   var querySpec = {
+  //     query: 'SELECT * FROM root r WHERE r.site=@site AND r.siteSection=@section AND r.region=@region',
+  //     parameters: [{
+  //       name: '@site',
+  //       value: args.site
+  //     },
+  //     {
+  //       name: '@section',
+  //       value: args.section
+  //     },
+  //     {
+  //       name: '@region',
+  //       value: args.region
+  //     }]
+  //   };
 
-    self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
-      if (err) {
-        callback(err);
-      } else {
+  //   self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
+  //     if (err) {
+  //       callback(err);
+  //     } else {
         
-        console.log(results);
+  //       console.log(results);
         
-        callback(null, results[0]);
-      }
-    });
-  }
+  //       callback(null, results[0]);
+  //     }
+  //   });
+  // }
   
 };
 

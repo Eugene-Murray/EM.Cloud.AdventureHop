@@ -1,8 +1,8 @@
 require.config({
 	paths: {
 		'text': '../assets/js/require-text-2.0.12',
-		'knockout': '../assets/js/knockout-3.2.0',
-		"moment": "../lib/moment/moment"
+		'knockout': '../assets/js/knockout-3.2.0'//,
+		//"moment": "../lib/moment/moment"
 	}
 });
 

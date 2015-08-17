@@ -80,10 +80,10 @@
                         <div class="entry-fancy-date">
                             <div>
                                 <span class="day">
-                                    <span data-bind="text: day"></span>
+                                    <span data-bind="text: moment(date).format('D')"></span>
                                 </span>
                                 <span class="month">
-                                    <span data-bind="text: month"></span>
+                                    <span data-bind="text: moment(date).format('MMM')"></span>
                                 </span>
                             </div>
                         </div>

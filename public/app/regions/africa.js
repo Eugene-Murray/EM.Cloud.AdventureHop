@@ -1,8 +1,20 @@
-define(['knockout', 'moment', 'text!regions/africa.html'], function(ko, moment, templateString) {
+define(['knockout', 'text!regions/africa.html'], function(ko, templateString) {
 
 	function Africa(params) { 
-		var items = load();
-        self.articles = ko.observableArray(items);
+		//var items = load();
+        self.articles = ko.observableArray([]);
+        
+
+    $.get( "https://emcloudadventurehop-eugene-murray.c9.io/api/articles/ADVENTURE_HOP/REGION/NORTH_AMERICA", function( data ) {
+        
+        console.log(data);
+        
+        self.articles(data.items);
+        
+        console.log(self.articles());
+    });
+        
+        
 	}
 	
 	 var load = function(){
