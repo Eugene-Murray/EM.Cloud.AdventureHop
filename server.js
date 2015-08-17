@@ -8,6 +8,7 @@ var express = require('express'),
 console.log('Starting app.js');
 var app = express();
 var port = process.env.PORT || 3000;
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
@@ -20,7 +21,8 @@ itemDao.init();
 var itemRouter = require('./Routes/itemRoutes')(itemDao);
 app.use('/api/articles', itemRouter); 
 app.use(express.static(__dirname + '/public'));
-
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

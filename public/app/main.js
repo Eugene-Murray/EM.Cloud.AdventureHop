@@ -43,6 +43,7 @@ define(['knockout'], function(ko) {
 			, { route: '#/oceania', 					 	    component: 'oceania', module: 'regions/oceania' }
 			, { route: '#/polar-regions', 					 	component: 'polar-regions', module: 'regions/polarRegions' }
 			, { route: '#/south-america', 					 	component: 'south-america', module: 'regions/southAmerica' }
+			//, { route: '#/admin', 					 			component: 'admin', module: 'admin/page' }
 		];
 
 		pages.forEach(function(page) {

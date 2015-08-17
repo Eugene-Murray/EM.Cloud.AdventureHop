@@ -1,4 +1,4 @@
-define(['knockout', 'text!settings/page.html'], function(ko, templateString) {
+define(['knockout', 'text!admin/index.html'], function(ko, templateString) {
 
 	function SettingsViewmodel(params) { }
 
