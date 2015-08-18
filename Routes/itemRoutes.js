@@ -48,27 +48,61 @@ var routes = function(itemDao) {
         });
 
     });
+    
+    // itemRouter.use('/Config', function(req, res, next) {
+    //     console.log("get Config");
+    //     // self.itemDao.getConfig(req.params.Id, function(err, item) {
 
-    itemRouter.use('/:Id', function(req, res, next) {
-        console.log("get By Id");
-        console.log(req.params);
-        self.itemDao.getItemById(req.params.Id, function(err, item) {
+    //     //     if (err)
+    //     //         res.status(500).send(err);
+    //     //     else if (item) {
+    //     //         res.json(item);
+    //     //     }
+    //     //     else {
+    //     //         res.status(404).send('No config found');
+    //     //     }
 
-            if (err)
-                res.status(500).send(err);
-            else if (item) {
-                res.json(item);
-            }
-            else {
-                res.status(404).send('No item found');
-            }
+    //     // });
+        
+    //     var querySpec = {
+    //         query: 'SELECT * FROM root r WHERE r.documentType=@documentType',
+    //         parameters: [{
+    //             name: '@documentType',
+    //             value: 'CONFIG'
+    //         }]
+    //     };
 
-        });
-    });
+    //     self.itemDao.find(querySpec, function(err, items) {
+    //         if (err) {
+    //             throw (err);
+    //         }
+    //         res.json({
+    //             items: items
+    //         });
+    //     });
+        
+    // });
 
+    // itemRouter.use('/:Id', function(req, res, next) {
+    //     console.log("get By Id");
+    //     console.log(req.params);
+    //     self.itemDao.getItemById(req.params.Id, function(err, item) {
+
+    //         if (err)
+    //             res.status(500).send(err);
+    //         else if (item) {
+    //             res.json(item);
+    //         }
+    //         else {
+    //             res.status(404).send('No item found');
+    //         }
+
+    //     });
+    // });
+    
     itemRouter.route('/:Id')
         .get(function(req, res) {
-
+            config.console("get id link");
             var returnItem = req.item.toJSON();
 
             returnItem.links = {};
@@ -76,21 +110,23 @@ var routes = function(itemDao) {
             returnItem.links.FilterByThisSite = newLink.replace(' ', '%20');
             res.json(returnItem);
 
+        }).put(function(req,res){
+            console.log("put...");
+           var updateItem = req.body;
+           console.log(updateItem); 
+           console.log(self.itemDao);
+           
+        //   self.itemDao.updateItem(req.params.Id, updateItem,function(err, items) 
+        //   {
+        //         if (err) {
+        //             throw (err);
+        //         }
+        //         res.status(201);
+        //         res.send(updateItem);
+        //     });
+           
         });
 
-    // .put(function(req,res){
-    //     req.book.title = req.body.title;
-    //     req.book.author = req.body.author;
-    //     req.book.genre = req.body.genre;
-    //     req.book.read = req.body.read;
-    //     req.book.save(function(err){
-    //         if(err)
-    //             res.status(500).send(err);
-    //         else{
-    //             res.json(req.book);
-    //         }
-    //     });
-    // })
     // .patch(function(req,res){
     //     if(req.body._id)
     //         delete req.body._id;

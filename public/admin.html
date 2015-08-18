@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lte IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdventureHop - Admin</title>
+    <meta name="description" content="Blog Summary Masonry : Be Different Bootstrap Theme - a different, unique theme with 10 different color combos. Built with Bootstrap, custom css3, html5, and plenty of excellent components, sliders, and other useful elements">
+
+    <link href="../app/admin/slate.bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- SCRIPTS IN HEAD ============================================== -->
+    <script src="../assets/js/modernizr.2.8.3.js"></script>
+
+    <!--[if lt IE 9]>
+   <script src="../assets/js/respond.min.js"></script>
+   <![endif]-->
+
+    <!-- +++++++ jQuery library ============================================== -->
+    <script src="../assets/js/jquery-2.1.1.min.js"></script>
+
+
+    <!-- WINDOWS 8 Phones BUG FIX -->
+    <script src="../assets/js/windows-fix.js"></script>
+</head>
+
+<body>
+
+    <!-- +++++ No Script Fallback notice +++++ -->
+    <noscript>
+        <div>Turn on your JavaScript!</div>
+    </noscript>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                    <li role="presentation"><a href="admin.html#/">Content</a></li>
+                    <li role="presentation"><a href="#/config">Config</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Main Application Body -->
+                <div id="appHost" class="container" data-bind="if: name">
+                    <!-- ko component: { name: name, params: data } -->
+                    <!-- /ko -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+        <!-- _________ FOOTER SCRIPTS  ________ -->
+        <script src="../assets/js/jquery.touch-swipe.js"></script>
+        <!-- adds touch swipe to the theme's bootstrap carousel -->
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <!-- bootstrap's js -->
+        <script src="../assets/js/sammy-0.7.4.js"></script>
+        <script src="../lib/moment/moment.js"></script>
+
+        <script type="text/javascript" src="../assets/js/require-2.1.js" data-main="/app/admin/main"></script>
+
+
+
+</body>
+
+</html>

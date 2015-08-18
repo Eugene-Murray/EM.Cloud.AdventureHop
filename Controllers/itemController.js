@@ -9,12 +9,15 @@ var itemController = function(itemDao) {
         var item = req.body;
         console.log(item);
 
-        if(!req.body.title){
-            console.log("ERROR - title is required");
-            res.status(400);
-            res.send('title is required');
+        if(req.body.documentType != "CONFIG"){
+            
+            if(!req.body.title)
+                console.log("ERROR - title is required");
+                res.status(400);
+                res.send('title is required');
         }
-        else {
+        else 
+        {
             self.itemDao.addItem(item, function(err, item) {
             if (err) {
                 throw (err);
@@ -22,7 +25,6 @@ var itemController = function(itemDao) {
                 res.status(201);
                 res.send(item);
             });
-  
         }
         
     }

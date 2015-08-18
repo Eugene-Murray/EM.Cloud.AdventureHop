@@ -1,0 +1,12 @@
+<h2>Config</h2>
+<hr />
+
+<textarea rows="30" cols="100" data-bind="value: config">
+</textarea>
+<br />
+<button type="button" class="btn btn-success" data-bind="click: onClick_UpdateConfig">Update</button>
+<br />
+
+
+ <pre data-bind="text: config"></pre>
+ <pre data-bind="text: ko.toJSON($data, null, 2)"></pre>

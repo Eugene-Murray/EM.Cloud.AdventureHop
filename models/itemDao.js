@@ -58,14 +58,16 @@ ItemDao.prototype = {
     });
   },
 
-  updateItem: function(itemId, callback) {
+  updateItem: function(itemId, newItem, callback) {
     var self = this;
 
     self.getItem(itemId, function(err, doc) {
       if (err) {
+        console.log("err");
+        console.log(err);
         callback(err);
       } else {
-        doc.completed = true;
+        doc = newItem;
         self.client.replaceDocument(doc._self, doc, function(err, replaced) {
           if (err) {
             callback(err);
