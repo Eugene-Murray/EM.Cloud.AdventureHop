@@ -5,19 +5,34 @@ var configController = function(configDao) {
 
     var get = function(req, res) {
         console.log("configController.get");
+        
+        var configId = req.params.Id;
+            
+            self.documentDBDao.getConfig(configId, function(err, item){
+                if (err) {
+                    throw (err);
+                }
+                res.status(201);
+                res.send(item);
+            });
     }
 
-    var post = function(req, res) {
-        console.log("configController.post");
-    }
     
     var put = function(req, res) {
         console.log("configController.put");
+        
+        var configId = req.params.Id;
+        var updatedConfig = req.body;
+            
+        self.documentDBDao.updateItem(configId, updatedConfig, function(err, items) {
+            res.status(201);
+            res.send(updatedConfig);
+        });    
     }
 
     return {
         get: get,
-        post: post,
+        
         put: put
     }
 }

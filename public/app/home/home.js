@@ -7,6 +7,15 @@ define(['knockout', 'text!home/home.html'], function(ko, templateString) {
         
         var items = load();
         self.articles = ko.observableArray(items);
+        
+        
+        $.get("https://emcloudadventurehop-eugene-murray.c9.io/api/articles", function(data) {
+
+            console.log(data);
+
+            
+        });
+        
     }
 
     var load = function(){

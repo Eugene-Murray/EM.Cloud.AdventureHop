@@ -1,14 +1,14 @@
 var express = require('express');
 
 
-var routes = function(itemDao, configDao) {
+var routes = function(documentDBDao) {
     console.log("routes");
     
     var self = this;
     self.itemDao = itemDao;
     var siteRouter = express.Router();
-    var itemController = require('../Controllers/itemController')(itemDao);
-    var configController = require('../Controllers/configController')(configDao);
+    var itemController = require('../Controllers/itemController')(documentDBDao);
+    var configController = require('../Controllers/configController')(documentDBDao);
 
     // https://emcloudadventurehop-eugene-murray.c9.io/api/articles 
     siteRouter.route('/articles')
@@ -30,7 +30,6 @@ var routes = function(itemDao, configDao) {
     // https://emcloudadventurehop-eugene-murray.c9.io/api/config     
     siteRouter.route('/config')
       .get(configController.get) 
-      .post(configController.post)
       .put(configController.put);    
 
 

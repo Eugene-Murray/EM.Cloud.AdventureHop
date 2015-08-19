@@ -1,6 +1,6 @@
-var itemController = function(itemDao) {
+var itemController = function(documentDBDao) {
     var self = this;
-    self.itemDao = itemDao;
+    self.documentDBDao = documentDBDao;
 
     var getAllHomePageArticles = function(req, res) {
         console.log("itemController.get");
@@ -21,7 +21,7 @@ var itemController = function(itemDao) {
             }]
         };
 
-        self.itemDao.find(querySpec, function(err, items) {
+        self.documentDBDao.find(querySpec, function(err, items) {
             if (err) {
                 throw (err);
             }
@@ -52,7 +52,7 @@ var itemController = function(itemDao) {
         }
         else 
         {
-            self.itemDao.addItem(item, function(err, item) {
+            self.documentDBDao.addItem(item, function(err, item) {
             if (err) {
                 throw (err);
             }
@@ -68,7 +68,7 @@ var itemController = function(itemDao) {
             
             var itemId = req.params.Id;
             
-            self.itemDao.getItemById(itemId, function(err, item){
+            self.documentDBDao.getItemById(itemId, function(err, item){
                 if (err) {
                     throw (err);
                 }
@@ -98,7 +98,7 @@ var itemController = function(itemDao) {
             }]
         };
 
-        self.itemDao.find(querySpec, function(err, items) {
+        self.documentDBDao.find(querySpec, function(err, items) {
             if (err) {
                 throw (err);
             }
@@ -113,7 +113,7 @@ var itemController = function(itemDao) {
         var itemId = req.params.Id;
         var updatedItem = req.body;
             
-        self.itemDao.updateItem(itemId, updatedItem, function(err, items) {
+        self.documentDBDao.updateItem(itemId, updatedItem, function(err, items) {
             res.status(201);
             res.send(updatedItem);
         });    
@@ -124,7 +124,7 @@ var itemController = function(itemDao) {
             
         var itemId = req.params.Id;
             
-        self.itemDao.softDeleteItem(itemId, null, function(err, items) {
+        self.documentDBDao.softDeleteItem(itemId, null, function(err, items) {
             res.status(201);
             res.send(updatedItem);
         });    

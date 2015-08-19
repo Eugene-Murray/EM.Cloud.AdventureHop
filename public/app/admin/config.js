@@ -6,7 +6,7 @@ define(['knockout', 'text!config.html', 'text!config.config'], function(ko, temp
 		self.config = ko.observable();
 		
 		
-		$.get("https://emcloudadventurehop-eugene-murray.c9.io/api/articles/Config", function(data) {
+		$.get("https://emcloudadventurehop-eugene-murray.c9.io/api/config", function(data) {
 
             console.log(data);
 
@@ -24,7 +24,7 @@ define(['knockout', 'text!config.html', 'text!config.config'], function(ko, temp
   		
   			$.ajax({
   				method: "PUT",
-  				url: "https://emcloudadventurehop-eugene-murray.c9.io/api/articles",
+  				url: "https://emcloudadventurehop-eugene-murray.c9.io/api/config",
   				data: newConfig,
   				contentType: "application/json; charset=utf-8"
 			})

@@ -67,7 +67,7 @@ ItemDao.prototype = {
     console.log("dao");
     var self = this;
     item.date = Date.now();
-    item.show = true;
+    item.softDelete = falase;
     self.client.createDocument(self.collection._self, item, function(err, doc) {
       if (err) {
         console.log("dao - error");
@@ -82,7 +82,7 @@ ItemDao.prototype = {
   updateItem: function(itemId, updatedItem, callback) {
     var self = this;
 
-    self.getItem(itemId, function(err, doc) {
+    self.getItemById(itemId, function(err, doc) {
       if (err) {
         console.log("err");
         console.log(err);
@@ -103,7 +103,7 @@ ItemDao.prototype = {
   softDelete: function(itemId, callback) {
     var self = this;
 
-    self.getItem(itemId, function(err, doc) {
+    self.getItemById(itemId, function(err, doc) {
       if (err) {
         console.log("err");
         console.log(err);
@@ -121,7 +121,21 @@ ItemDao.prototype = {
     });
   },
 
-  
+  getConfig: function(configId, callback) {
+    var self = this;
+
+    self.getItemById(configId, function(err, doc) {
+      if (err) {
+        console.log("err");
+        console.log(err);
+        callback(err);
+      } else {
+        callback(doc);
+      }
+        });
+      }
+    });
+  }
   
   // getItemsBySite: function(siteName, callback) {
   //   var self = this;
