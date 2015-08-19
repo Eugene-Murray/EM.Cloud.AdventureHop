@@ -1,6 +1,7 @@
 var DocumentDBClient = require('documentdb').DocumentClient;
 var config = require('./config');
 var ItemDao = require('./models/itemDao');
+var ConfigDao = require('./models/configDao');
 
 var express = require('express'),
     bodyParser = require('body-parser');
@@ -15,11 +16,13 @@ app.use(bodyParser.json());
 var docDbClient = new DocumentDBClient(config.host, {
     masterKey: config.authKey
 });
+var configDao = new ConfigDao(docDbClient, config.databaseId, config.collectionId);
+configDao.init();
 var itemDao = new ItemDao(docDbClient, config.databaseId, config.collectionId);
 itemDao.init();
 
-var itemRouter = require('./Routes/itemRoutes')(itemDao);
-app.use('/api/articles', itemRouter); 
+var siteRouter = require('./Routes/siteRoutes')(itemDao, configDao);
+app.use('/api', siteRouter); 
 app.use(express.static(__dirname + '/public'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
