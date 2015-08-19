@@ -41,6 +41,27 @@ ItemDao.prototype = {
       }
     });
   },
+  
+  getItemById: function(itemId, callback) {
+    var self = this;
+    console.log("Get Item By Id");
+    
+    var querySpec = {
+      query: 'SELECT * FROM root r WHERE r.id=@id',
+      parameters: [{
+        name: '@id',
+        value: itemId
+      }]
+    };
+
+    self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
+      if (err) {
+        callback(err);
+      } else {
+        callback(null, results[0]);
+      }
+    });
+  },
 
   addItem: function(item, callback) {
     console.log("dao");
@@ -78,48 +99,50 @@ ItemDao.prototype = {
       }
     });
   },
-
-  getItemById: function(itemId, callback) {
+  
+  softDelete: function(itemId, callback) {
     var self = this;
-    console.log("Get Item By Id");
-    
-    var querySpec = {
-      query: 'SELECT * FROM root r WHERE r.id=@id',
-      parameters: [{
-        name: '@id',
-        value: itemId
-      }]
-    };
 
-    self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
+    self.getItem(itemId, function(err, doc) {
       if (err) {
+        console.log("err");
+        console.log(err);
         callback(err);
       } else {
-        callback(null, results[0]);
+        doc.softDelete = true;
+        self.client.replaceDocument(doc._self, doc, function(err, replaced) {
+          if (err) {
+            callback(err);
+          } else {
+            callback(null);
+          }
+        });
       }
     });
   },
-  
-  getItemsBySite: function(siteName, callback) {
-    var self = this;
-    console.log("Get Item By Site");
-    
-    var querySpec = {
-      query: 'SELECT * FROM root r WHERE r.siteName=@siteName',
-      parameters: [{
-        name: '@siteName',
-        value: siteName
-      }]
-    };
 
-    self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
-      if (err) {
-        callback(err);
-      } else {
-        callback(null, results[0]);
-      }
-    });
-  } //,
+  
+  
+  // getItemsBySite: function(siteName, callback) {
+  //   var self = this;
+  //   console.log("Get Item By Site");
+    
+  //   var querySpec = {
+  //     query: 'SELECT * FROM root r WHERE r.siteName=@siteName',
+  //     parameters: [{
+  //       name: '@siteName',
+  //       value: siteName
+  //     }]
+  //   };
+
+  //   self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
+  //     if (err) {
+  //       callback(err);
+  //     } else {
+  //       callback(null, results[0]);
+  //     }
+  //   });
+  // } //,
   
   // getItemsBySiteSectionRegion: function(args, callback) {
   //   var self = this;

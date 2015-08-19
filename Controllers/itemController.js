@@ -6,7 +6,7 @@ var itemController = function(itemDao) {
         console.log("itemController.get");
         
         var querySpec = {
-            query: 'SELECT * FROM root r WHERE r.showOnHomePage=@showOnHomePage AND r.documentType=@documentType',
+            query: 'SELECT * FROM root r WHERE r.showOnHomePage=@showOnHomePage AND r.documentType=@documentType AND r.softDelete=@softDelete',
             parameters: [{
                 name: '@showOnHomePage',
                 value: true
@@ -14,6 +14,10 @@ var itemController = function(itemDao) {
             {
                 name: '@documentType',
                 value: 'CONTENT'
+            },
+            {
+                name: '@softDelete',
+                value: false
             }]
         };
 
@@ -79,10 +83,18 @@ var itemController = function(itemDao) {
             var region = req.params.Region;
             
             var querySpec = {
-            query: 'SELECT * FROM root r WHERE r.region=@region',
+            query: 'SELECT * FROM root r WHERE r.region=@region AND r.documentType=@documentType AND r.softDelete=@softDelete',
             parameters: [{
                 name: '@region',
                 value: region
+            },
+            {
+                name: '@documentType',
+                value: 'CONTENT'
+            },
+            {
+                name: '@softDelete',
+                value: false
             }]
         };
 
@@ -108,7 +120,14 @@ var itemController = function(itemDao) {
     }
     
     var deleteById = function(req,res){
-            console.log("/articles/:Id - delete... not yet implenteded");
+         console.log("/articles/:Id - delete...");
+            
+        var itemId = req.params.Id;
+            
+        self.itemDao.softDeleteItem(itemId, null, function(err, items) {
+            res.status(201);
+            res.send(updatedItem);
+        });    
     }   
 
     return {
