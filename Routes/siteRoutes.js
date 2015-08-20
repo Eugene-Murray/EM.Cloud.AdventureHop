@@ -3,9 +3,6 @@ var express = require('express');
 
 var routes = function(documentDBDao) {
     console.log("routes");
-    
-    var self = this;
-    self.itemDao = itemDao;
     var siteRouter = express.Router();
     var itemController = require('../Controllers/itemController')(documentDBDao);
     var configController = require('../Controllers/configController')(documentDBDao);

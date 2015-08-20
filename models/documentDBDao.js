@@ -25,7 +25,6 @@ documentDBDao.prototype = {
         if (err) {
           callback(err);
         }
-
         self.collection = coll;
       });
     });
@@ -131,11 +130,9 @@ documentDBDao.prototype = {
 
     self.getItemById(configId, function(err, doc) {
           if (err) {
-            console.log("err");
-            console.log(err);
             callback(err);
           } else {
-            callback(doc);
+            callback(null, doc);
           }
      });
   }

@@ -6,12 +6,13 @@ var itemController = function(documentDBDao) {
         console.log("itemController.get");
         
         var querySpec = {
-            query: 'SELECT * FROM root r WHERE r.showOnHomePage=@showOnHomePage AND r.documentType=@documentType AND r.softDelete=@softDelete',
+            // query: 'SELECT * FROM root r WHERE r.showOnHomePage=@showOnHomePage AND r.documentType=@documentType AND r.softDelete=@softDelete',
+            // parameters: [{
+            //     name: '@showOnHomePage',
+            //     value: true
+            // },
+            query: 'SELECT * FROM root r WHERE r.documentType=@documentType AND r.softDelete=@softDelete',
             parameters: [{
-                name: '@showOnHomePage',
-                value: true
-            },
-            {
                 name: '@documentType',
                 value: 'CONTENT'
             },

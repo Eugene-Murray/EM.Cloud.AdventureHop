@@ -6,11 +6,13 @@ var configController = function(configDao) {
     var get = function(req, res) {
         console.log("configController.get()");
         
-        var configId = req.params.Id;
+        var configId = "2593f816-deff-8032-9469-21a7cca5ee50";
             
             self.documentDBDao.getConfig(configId, function(err, item){
                 if (err) {
-                    throw (err);
+                    console.log("ERROR: " + err);
+                    res.status(400);
+                    res.send("ERROR: " + err);
                 }
                 res.status(201);
                 res.send(item);
@@ -21,7 +23,7 @@ var configController = function(configDao) {
     var put = function(req, res) {
         console.log("configController.put()");
         
-        var configId = req.params.Id;
+        var configId = "2593f816-deff-8032-9469-21a7cca5ee50";
         var updatedConfig = req.body;
             
         self.documentDBDao.updateItem(configId, updatedConfig, function(err, items) {
@@ -32,7 +34,6 @@ var configController = function(configDao) {
 
     return {
         get: get,
-        
         put: put
     }
 }
