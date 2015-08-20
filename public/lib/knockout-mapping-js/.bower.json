@@ -1,0 +1,36 @@
+{
+  "name": "knockout-mapping-js",
+  "main": "build/output/knockout.mapping-latest.js",
+  "version": "2.4.2",
+  "homepage": "https://github.com/LRPalacios/knockout.mapping",
+  "authors": [
+    "LRPalacios <luisz54@hotmail.com>"
+  ],
+  "description": "knockout plugin to map JSON or javascript objet to ko model",
+  "keywords": [
+    "knockout",
+    "knockout-mapping",
+    "mapping"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": ">=2.2.0"
+  },
+  "_release": "2.4.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.4.2",
+    "commit": "155ee32797915fd75912f4293bf515f4f08ab78d"
+  },
+  "_source": "git://github.com/LRPalacios/knockout.mapping.git",
+  "_target": "~2.4.2",
+  "_originalSource": "knockout-mapping-js",
+  "_direct": true
+}

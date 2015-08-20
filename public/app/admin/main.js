@@ -1,7 +1,8 @@
 require.config({
 	paths: {
 		'text': '../../assets/js/require-text-2.0.12',
-		'knockout': '../../assets/js/knockout-3.2.0'
+		'knockout': './../../lib/knockout/dist/knockout',
+		'knockout-mapping': './../../lib/knockout-mapping-js/knockout.mapping'
 	}
 });
 
