@@ -4,7 +4,7 @@ var configController = function(configDao) {
     self.configDao = configDao;
 
     var get = function(req, res) {
-        console.log("configController.get");
+        console.log("configController.get()");
         
         var configId = req.params.Id;
             
@@ -19,7 +19,7 @@ var configController = function(configDao) {
 
     
     var put = function(req, res) {
-        console.log("configController.put");
+        console.log("configController.put()");
         
         var configId = req.params.Id;
         var updatedConfig = req.body;
