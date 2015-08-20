@@ -2,11 +2,68 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <h2>Content</h2>
+
+    <div class="col-md-12">
+        <h2>All Articles</h2>
+        <hr style="height: 1px;border: 0;border-top: 1px solid #ccc;" />
+        
+        
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Article Type</th>
+            <th>Region</th>
+            <th>Show On Home?</th>
+            <th>Soft Delete?</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: articles">
+        <tr>
+            <td data-bind="text: title"></td>
+            <td data-bind="text: articleType"></td>
+            <td data-bind="text: region"></td>
+            <td><input type="checkbox" data-bind="checked: softDelete" /></td>
+            <td><input type="checkbox" data-bind="checked: softDelete" /></td>
+            <td data-bind="text: id"></td>
+            
+        </tr>
+    </tbody>
+</table>
+        
+        
+    </div>
+
+  </div>
+  
+  
+  <!-- Input stuff -->
+  <form class="form-horizontal">
+  
+  <div class="row">
+
+    <div class="col-md-12">
+        <h2>Add / Edit Article</h2>
         <hr style="height: 1px;border: 0;border-top: 1px solid #ccc;" />
     </div>
-    <div class="col-md-1"></div>
+    </div>
+  
+  <div class="row">
+
+    <div class="col-md-4">
+        <label for="regions" class="col-sm-2 control-label">Region</label>
+        <select data-bind="options: config.regions" id="regions"></select>
+   </div>
+   <div class="col-md-4">
+        <label for="siteSections" class="col-sm-2 control-label">Site Section</label>
+        <select data-bind="options: config.siteSections" id="siteSections"></select>
   </div>
+   <div class="col-md-4">
+        <label for="articleTypes" class="col-sm-2 control-label">Article Types</label>
+        <select data-bind="options: config.articleTypes" id="articleTypes"></select>
+ </div>
+
+  </div>
+  </form>
 </div>

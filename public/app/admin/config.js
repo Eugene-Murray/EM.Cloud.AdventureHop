@@ -10,7 +10,7 @@ define(['knockout', 'text!config.html', 'text!config.config'], function(ko, temp
 
             console.log(data);
 
-            self.config(JSON.stringify(data.items[0]));
+            self.config(JSON.stringify(data));
 
             console.log(self.config());
         });
