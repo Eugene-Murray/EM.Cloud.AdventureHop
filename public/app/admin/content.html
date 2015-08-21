@@ -118,7 +118,39 @@
     <div class="col-md-12">
         <label for="carouselImages" class="col-sm-2 control-label">carouselImages</label>
         <!-- ko foreach: articleToEdit.carouselImages -->
-        <input type="text" class="form-control" id="htmlContent" data-bind="value: articleToEdit.htmlContent">
+        <div class="col-xs-3">
+            <input type="text" class="form-control"  data-bind="value: title">
+        </div>
+        <div class="col-xs-2">
+            <input type="text" class="form-control"  data-bind="value: index">
+        </div>
+        <div class="col-xs-2">
+            <input type="text" class="form-control"  data-bind="value: active">
+        </div>
+        <input type="text" class="form-control"  data-bind="value: imageUrl">
+        <!-- /ko -->
+   </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+        <label for="comments" class="col-sm-2 control-label">comments</label>
+        <!-- ko foreach: articleToEdit.comments -->
+        <div class="col-xs-3">
+            <input type="text" class="form-control"  data-bind="value: nameofAuthor">
+        </div>
+        <input type="text" class="form-control"  data-bind="value: comment">
+        <!-- /ko -->
+   </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+        <label for="comments" class="col-sm-2 control-label">tags</label>
+        <!-- ko foreach: articleToEdit.tags -->
+        <div class="col-xs-3">
+            <input type="text" class="form-control"  data-bind="value: tag">
+        </div>
         <!-- /ko -->
    </div>
   </div>

@@ -87,6 +87,7 @@ define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.h
 	   // var article = _.find(articles, function(article) {
     //         return article.id() == selectedArticle.id();
     //     });
+    
         Content.prototype.articleToEdit.title(selectedArticle.title());
         Content.prototype.articleToEdit.nameofAuthor(selectedArticle.nameofAuthor());
         Content.prototype.articleToEdit.description(selectedArticle.description());
