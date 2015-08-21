@@ -3,6 +3,7 @@ require.config({
 		'text': '../../assets/js/require-text-2.0.12',
 		'knockout': './../../lib/knockout/dist/knockout',
 		'knockout-mapping': './../../lib/knockout-mapping-js/knockout.mapping',
+		'underscore': './../../lib/underscore/underscore-min',
 		'Article': './../core/article'
 	}
 });

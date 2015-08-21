@@ -26,7 +26,7 @@
             <td data-bind="text: region"></td>
             <td><input type="checkbox" data-bind="checked: softDelete" /></td>
             <td><input type="checkbox" data-bind="checked: softDelete" /></td>
-            <td data-bind="text: id"></td>
+            <td><a href="#" data-bind="click: $parent.onClick_EditArticle"><span data-bind="text: id"></span></a></td>
             
         </tr>
     </tbody>
@@ -65,5 +65,64 @@
  </div>
 
   </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+        <label for="title" class="col-sm-2 control-label">Title</label>
+        <input type="text" class="form-control" id="title" data-bind="value: articleToEdit.title">
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="regionUrl" class="col-sm-2 control-label">regionUrl</label>
+        <input type="text" class="form-control" id="regionUrl" data-bind="value: articleToEdit.regionUrl">
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="nameofAuthor" class="col-sm-2 control-label">nameofAuthor</label>
+        <input type="text" class="form-control" id="nameofAuthor" data-bind="value: articleToEdit.nameofAuthor">
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="date" class="col-sm-2 control-label">date</label>
+        <input type="text" class="form-control" id="date" data-bind="value: articleToEdit.date">
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="description" class="col-sm-2 control-label">description</label>
+        <input type="text" class="form-control" id="description" data-bind="value: articleToEdit.description">
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="imageUrl" class="col-sm-2 control-label">imageUrl</label>
+        <input type="text" class="form-control" id="imageUrl" data-bind="value: articleToEdit.imageUrl">
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="videoUrl" class="col-sm-2 control-label">videoUrl</label>
+        <input type="text" class="form-control" id="videoUrl" data-bind="value: articleToEdit.videoUrl">
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="htmlContent" class="col-sm-2 control-label">htmlContent</label>
+        <input type="text" class="form-control" id="htmlContent" data-bind="value: articleToEdit.htmlContent">
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="carouselImages" class="col-sm-2 control-label">carouselImages</label>
+        <!-- ko foreach: articleToEdit.carouselImages -->
+        <input type="text" class="form-control" id="htmlContent" data-bind="value: articleToEdit.htmlContent">
+        <!-- /ko -->
+   </div>
+  </div>
+  
+  
   </form>
 </div>

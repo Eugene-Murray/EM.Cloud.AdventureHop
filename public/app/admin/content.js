@@ -1,4 +1,4 @@
-define(['knockout', 'knockout-mapping', 'Article', 'text!content.html'], function(ko, koMap, Article, templateString) {
+define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.html'], function(ko, koMap, _, Article, templateString) {
 
 	function Content(params) { 
 		var self = this;
@@ -7,11 +7,16 @@ define(['knockout', 'knockout-mapping', 'Article', 'text!content.html'], functio
 			regions : ko.observableArray(),
 			articleTypes : ko.observableArray()
 			};
-			self.articles = ko.observableArray([]);
 		
 		self.load();
+		console.log(Content.prototype.articleToEdit.title());
 	}
 	
+	// Properties
+	Content.prototype.articles = ko.observableArray([]);
+	Content.prototype.articleToEdit = new Article();
+	
+	// Functions
 	Content.prototype.load = function() {
 		var self = this;
 		$.get("https://emcloudadventurehop-eugene-murray.c9.io/api/config", function(data) {
@@ -64,9 +69,9 @@ define(['knockout', 'knockout-mapping', 'Article', 'text!content.html'], functio
 		            article.imageUrl(item.imageUrl);
 		            article.videoUrl(item.videoUrl);
 		            article.htmlContent(item.htmlContent);
-		            //self.article.carouselImages: ko.observableArray([]),
-		            //self.article.comments: ko.observableArray([]),
-		            //self.article.tags: ko.observableArray([])
+		            article.carouselImages(item.carouselImages),
+		            article.comments(item.comments),
+		            article.tags(item.tags)
 
   					articles[index] = article;
 			});
@@ -75,6 +80,25 @@ define(['knockout', 'knockout-mapping', 'Article', 'text!content.html'], functio
             
         });
 		
+	};
+	
+	Content.prototype.onClick_EditArticle = function(selectedArticle, event) {
+	   // var articles = Content.prototype.articles();
+	   // var article = _.find(articles, function(article) {
+    //         return article.id() == selectedArticle.id();
+    //     });
+        Content.prototype.articleToEdit.title(selectedArticle.title());
+        Content.prototype.articleToEdit.nameofAuthor(selectedArticle.nameofAuthor());
+        Content.prototype.articleToEdit.description(selectedArticle.description());
+        Content.prototype.articleToEdit.regionUrl(selectedArticle.regionUrl());
+        Content.prototype.articleToEdit.date(selectedArticle.date());
+        Content.prototype.articleToEdit.imageUrl(selectedArticle.imageUrl());
+        Content.prototype.articleToEdit.videoUrl(selectedArticle.videoUrl());
+        Content.prototype.articleToEdit.htmlContent(selectedArticle.htmlContent());
+        Content.prototype.articleToEdit.carouselImages(selectedArticle.carouselImages()),
+		Content.prototype.articleToEdit.comments(selectedArticle.comments()),
+		Content.prototype.articleToEdit.tags(selectedArticle.tags())
+        
 	};
 
 	return { template: templateString, viewModel: Content };
