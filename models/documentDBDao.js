@@ -68,7 +68,7 @@ documentDBDao.prototype = {
     console.log("documentDBDao.addItem()");
     var self = this;
     item.date = Date.now();
-    item.softDelete = falase;
+    item.softDelete = false;
     self.client.createDocument(self.collection._self, item, function(err, doc) {
       if (err) {
         console.log("dao - error");
