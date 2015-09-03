@@ -79,7 +79,7 @@ var itemController = function(documentDBDao) {
     }
     
     var getAllRegionArticles = function(req, res) {
-            console.log("/articles/:Region - get...");
+            console.log("/articles/Region:Region - get...");
             
             var region = req.params.Region;
             

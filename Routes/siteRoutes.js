@@ -20,7 +20,7 @@ var routes = function(documentDBDao) {
         .delete(itemController.deleteById);   
         
     // https://emcloudadventurehop-eugene-murray.c9.io/api/articles/ADVENTURE_HOP/REGION/NORTH_AMERICA    
-    siteRouter.route('/articles/:Region')
+    siteRouter.route('/articles/Region/:Region')
         .get(itemController.getAllRegionArticles);
         
         
