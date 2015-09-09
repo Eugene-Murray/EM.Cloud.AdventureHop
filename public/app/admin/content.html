@@ -67,56 +67,74 @@
   </div>
   
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="title" class="col-sm-2 control-label">Title</label>
+    </div>
+    <div class="col-md-10">
         <input type="text" class="form-control" id="title" data-bind="value: articleToEdit.title">
    </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="regionUrl" class="col-sm-2 control-label">regionUrl</label>
+        </div>
+        <div class="col-md-10">
         <input type="text" class="form-control" id="regionUrl" data-bind="value: articleToEdit.regionUrl">
    </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="nameofAuthor" class="col-sm-2 control-label">nameofAuthor</label>
+    </div>
+    <div class="col-md-10">
         <input type="text" class="form-control" id="nameofAuthor" data-bind="value: articleToEdit.nameofAuthor">
    </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="date" class="col-sm-2 control-label">date</label>
+    </div>
+    <div class="col-md-10">
         <input type="text" class="form-control" id="date" data-bind="value: articleToEdit.date">
    </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="description" class="col-sm-2 control-label">description</label>
+    </div>
+    <div class="col-md-10">
         <input type="text" class="form-control" id="description" data-bind="value: articleToEdit.description">
    </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="imageUrl" class="col-sm-2 control-label">imageUrl</label>
+    </div>
+    <div class="col-md-10">
         <input type="text" class="form-control" id="imageUrl" data-bind="value: articleToEdit.imageUrl">
    </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="videoUrl" class="col-sm-2 control-label">videoUrl</label>
+    </div>
+    <div class="col-md-10">
         <input type="text" class="form-control" id="videoUrl" data-bind="value: articleToEdit.videoUrl">
    </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="htmlContent" class="col-sm-2 control-label">htmlContent</label>
+    </div>
+    <div class="col-md-10">
         <input type="text" class="form-control" id="htmlContent" data-bind="value: articleToEdit.htmlContent">
    </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="carouselImages" class="col-sm-2 control-label">carouselImages</label>
+    </div>    
+    <div class="col-md-10">
         <!-- ko foreach: articleToEdit.carouselImages -->
         <div class="col-xs-3">
             <input type="text" class="form-control"  data-bind="value: title">
@@ -133,8 +151,10 @@
   </div>
   
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2">
         <label for="comments" class="col-sm-2 control-label">comments</label>
+    </div>
+    <div class="col-md-10">
         <!-- ko foreach: articleToEdit.comments -->
         <div class="col-xs-3">
             <input type="text" class="form-control"  data-bind="value: nameofAuthor">
@@ -147,6 +167,8 @@
   <div class="row">
     <div class="col-md-12">
         <label for="comments" class="col-sm-2 control-label">tags</label>
+    </div>
+    <div class="col-md-10">
         <!-- ko foreach: articleToEdit.tags -->
         <div class="col-xs-3">
             <input type="text" class="form-control"  data-bind="value: tag">
