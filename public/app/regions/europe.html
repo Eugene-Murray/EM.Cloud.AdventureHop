@@ -22,108 +22,56 @@
             <div class="row"> 
                 <!-- ____ PRIMARY COLUMN GOES HERE ____ -->
                 <div class="col-sm-8 col-md-9 col-sm-push-4 col-md-push-3 primary-column" role="main"> 
-                    
-                    <!-- _____________ BEGIN 'entry-post' VIDEO HOLDER _________ -->
+                
+                    <!-- ko foreach: articles -->
+                
                     <article class="entry-summary">
                         <header class="entry-header">
-                            <h3 class="entry-title"> <a href="blog-single.html">Video Holder Post</a> </h3>
+                            <h3 class="entry-title"> <span data-bind="text: title"></span> </h3>
                             <ul class="entry-meta list-inline">
                                 <li>
                                     <span class="ti ti-pencil-alt">
                                     </span>
-                                    by Nameof Author</li>
-                                <li><a href="blog-single.html#view-comments">
+                                    <span data-bind="text: nameofAuthor"></span></li>
+                                <li>
                                     <span class="ti ti-comments">
                                     </span>
-                                    5 Comments</a></li>
+                                    <span data-bind="text: comments.length"></span> Comments</li>
                                 <li>
                                     <span class="ti ti-calendar">
                                     </span>
-                                    January 8, 2015</li>
+                                    <span data-bind="text: date"></span></li>
                             </ul>
+                            <!-- ko if: tags.length > 0 -->
                             <ul class="entry-tags hidden-xs">
-                                <!-- these are too tiny and not important for small screens-->
-                                <li><a href="#">video</a></li>
-                                <li><a href="#">css3</a></li>
-                                <li><a href="#">theme</a></li>
+                                <!-- ko foreach: tags -->
+                                <li><a><span data-bind="text: tag"></span></a></li>
+                                <!-- /ko -->
                             </ul>
+                            <!-- /ko -->
                         </header>
                         
                         <!--/ entry-header -->
                         <div class="row sixteen-gutter">
                             <div class="col-md-6 col-lg-7 entry-visual">
-                                <div class="video-holder vimeo"> 
-                                    <!-- change to youtube if youtube --> 
-                                    <!--IF there is a problem the api for vimeo and youtube your page will delay loading, the solution is the following html combined with the script in the jquery.main.js file --> 
-                                    <a class="video-trigger" href="65543364"> 
-                                    <!-- id of video either at youtube or vimeo --> 
-                                    <i class="fa fa-youtube-play"> 
-                                    <!-- this icon for all sources of videos--> 
-                                    </i> <img src="http://b.vimeocdn.com/ts/436/594/436594814_640.jpg" alt=""/> </a> </div>
-                                <!-- ./video-holder vimeo --> 
-                            </div>
-                            <!-- ./entry-visual -->
-                            
-                            <div class="col-md-6 col-lg-5 entry-content">
-                                <p>Bootstrap Side Navigation practically invented the term "bloatware". We pride ourselves not only on our feature set, but our user-proof administration and non-complex configuration. What does the buzzword "customer-defined" really mean? We think that most leading-edge entry pages use far too much XSLT, and not enough AJAX...</p>
-                                <p><a class="btn btn-inverse" href="blog-single.html">Read More</a></p>
-                            </div>
-                        </div>
-                        
-                        <!-- / .entry-content /.row -->
-                        
-                        <div class="entry-fancy-date">
-                            <div>
-                                <span class="day">
-                                    8
-                                </span>
-                                <span class="month">
-                                    jan
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- _____________ END 'blog-entry-summary' VIDEO HOLDER _________ --> 
-                    
-                     
-                    <!-- _____________ BEGIN 'entry-post' REGULAR IMAGE _________ -->
-                    <article class="entry-summary">
-                        <header class="entry-header">
-                            <h3 class="entry-title"> <a href="blog-single.html">Just an Image</a> </h3>
-                            <ul class="entry-meta list-inline">
-                                <li>
-                                    <span class="ti ti-pencil-alt">
-                                    </span>
-                                    by Nameof Author</li>
-                                <li><a href="blog-single.html#view-comments">
-                                    <span class="ti ti-comments">
-                                    </span>
-                                    5 Comments</a></li>
-                                <li>
-                                    <span class="ti ti-calendar">
-                                    </span>
-                                    February 28, 2015</li>
-                            </ul>
-                            <ul class="entry-tags hidden-xs">
-                                <!-- these are too tiny and not important for small screens-->
-                                <li><a href="#">image</a></li>
-                                <li><a href="#">css3</a></li>
-                                <li><a href="#">off-canvas</a></li>
-                            </ul>
-                        </header>
-                        
-                        <!--/ entry-header -->
-                        <div class="row sixteen-gutter">
-                            <div class="col-md-6 col-lg-7 entry-visual">
-                                <figure> <a href="blog-single.html"><img src="assets/demo-images/portfolio/4830134044.jpg" class="img-responsive" alt=""></a>
-                                    <figcaption><a href="http://www.flickr.com/photos/fontfont/4830134044/">CC BY 2.0 FontFont</a></figcaption>
+                                <figure> 
+                                <!-- ko if: articleType == "IMAGE" -->
+                                <img class="img-responsive" data-bind="attr: { src: imageUrl, alt: title }">
+                                <!-- /ko -->
+                                <!-- ko if: articleType == "YOUTUBE_VIDEO" -->
+                                <iframe width="100%" height="100%" data-bind="attr: { src: videoUrl, alt: title }" frameborder="0" allowfullscreen></iframe>
+                                <!-- /ko -->
                                 </figure>
                             </div>
                             <!-- ./entry-visual -->
                             
                             <div class="col-md-6 col-lg-5 entry-content">
-                                <p>Bootstrap Side Navigation practically invented the term "bloatware". We pride ourselves not only on our feature set, but our user-proof administration and non-complex configuration. What does the buzzword "customer-defined" really mean? We think that most leading-edge entry pages use far too much XSLT, and not enough AJAX...</p>
-                                <p><a class="btn btn-inverse" href="blog-single.html">Read More</a></p>
+                                <p data-bind="text: description"></p>
+                                <ul class="entry-tags hidden-xs">
+                                <!-- ko foreach: comments -->
+                                <li><a><span data-bind="text: nameofAuthor"></span> > <span data-bind="text: comment"></span></a></li>
+                                <!-- /ko -->
+                                </ul>
                             </div>
                         </div>
                         
@@ -132,87 +80,17 @@
                         <div class="entry-fancy-date">
                             <div>
                                 <span class="day">
-                                    28
+                                    <span data-bind="text: moment(date).format('D')"></span>
                                 </span>
                                 <span class="month">
-                                    feb
+                                    <span data-bind="text: moment(date).format('MMM YYYY')"></span>
                                 </span>
                             </div>
                         </div>
                     </article>
-                    <!-- _____________ END 'entry-post' REGULAR IMAGE _________ --> 
-                    
-                    <!-- _____________ BEGIN 'entry-post' NO IMAGE _________ -->
-                    <article class="entry-summary">
-                        <header class="entry-header">
-                            <h3 class="entry-title"> <a href="blog-single.html">There's No Image</a> </h3>
-                            <ul class="entry-meta list-inline">
-                                <li>
-                                    <span class="ti ti-pencil-alt">
-                                    </span>
-                                    by Nameof Author</li>
-                                <li><a href="blog-single.html#view-comments">
-                                    <span class="ti ti-comments">
-                                    </span>
-                                    5 Comments</a></li>
-                                <li>
-                                    <span class="ti ti-calendar">
-                                    </span>
-                                    March 3, 2015</li>
-                            </ul>
-                            <ul class="entry-tags hidden-xs">
-                                <!-- these are too tiny and not important for small screens-->
-                                <li><a href="#">sans-image</a></li>
-                                <li><a href="#">css3</a></li>
-                                <li><a href="#">off-canvas</a></li>
-                            </ul>
-                        </header>
-                        
-                        <!--/ entry-header -->
-                        <div class="row sixteen-gutter">
-                            <div class="col-sm-12 entry-content">
-                                <p>Bootstrap Side Navigation practically invented the term "bloatware". We pride ourselves not only on our feature set, but our user-proof administration and non-complex configuration. What does the buzzword "customer-defined" really mean? We think that most leading-edge entry pages use far too much XSLT, and not enough AJAX...</p>
-                                <p><a class="btn btn-inverse" href="blog-single.html">Read More</a></p>
-                            </div>
-                        </div>
-                        
-                        <!-- / .entry-content /.row -->
-                        
-                        <div class="entry-fancy-date">
-                            <div>
-                                <span class="day">
-                                    3
-                                </span>
-                                <span class="month">
-                                    mar
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- _____________ END 'entry-post' NO IMAGE _________ --> 
-                    
-                    <!-- ____ PAGINATION GOES HERE ____ -->
-                    <div class="text-center">
-                        <span class="new-pagination-toggle">
-                            Pagination
-                        </span>
-                        <ul class="new-pagination pagination pagination-lg clearfix">
-                            <li><a href="#">&laquo;</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li class="disabled">
-                                <span>
-                                    ...
-                                </span>
-                            </li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">&raquo;</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.text-center holding .pagination --> 
-                    <!-- vertical spacer visible at xs viewport size -->
-                    <hr class="vertical-spacer vertical-spacer-sm  visible-xs">
+    
+                     <!-- /ko -->
+                     
                 </div>
                 <!-- _________ END /.col-*-* :: containing primary content ______ --> 
                 
@@ -351,3 +229,5 @@
     <!--=========== END CONTENT FOR THE PAGE ============================================================ --> 
 </div>
 <!-- ================== END #page ================= --> 
+
+

@@ -4,11 +4,11 @@ define(['knockout', 'text!shared/slide-out-panels.html'], function(ko, templateS
 	    
 	    console.log("SlideOutPanels::init");
 	    
-	    $('#nav').click(function(e) {
-            console.log("#nav::click");
-            $('.slide-panel').removeClass('open'); 
-            $('.menu-toggle').removeClass('active-slide-btn'); 
-        });
+	   // $('#nav').click(function(e) {
+    //         console.log("#nav::click");
+    //         $('.slide-panel').removeClass('open'); 
+    //         $('.menu-toggle').removeClass('active-slide-btn'); 
+    //     });
 		
 // 		$('.slide-panel .close').click(function(e) {
 //                 $('.active-slide-btn').removeClass('active-slide-btn');

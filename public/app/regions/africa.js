@@ -1,6 +1,9 @@
 define(['knockout', 'text!regions/africa.html'], function(ko, templateString) {
 
     function Africa(params) {
+        
+         
+    
         //var items = load();
         self.articles = ko.observableArray([]);
 
@@ -10,6 +13,22 @@ define(['knockout', 'text!regions/africa.html'], function(ko, templateString) {
             self.articles(data.items);
 
             console.log(self.articles());
+            
+            var x = $('.slide-panel');
+            
+            console.log("fffffffffffffffff");
+            console.log(x);
+            
+            
+            
+            // setTimeout(function(){ 
+                
+            //     $('.slide-panel').removeClass('open'); 
+            //     //$('.menu-toggle').removeClass('active-slide-btn');
+                
+                
+            // }, 6000);
+            
         });
 
 
