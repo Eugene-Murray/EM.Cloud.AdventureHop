@@ -39,7 +39,7 @@
   
   
   <!-- Input stuff -->
-  <form class="form-horizontal">
+  <form class="form-horizontal" style="padding: 2px">
   
   <div class="row">
 
@@ -52,129 +52,140 @@
   <div class="row">
 
     <div class="col-md-4">
-        <label for="regions" class="col-sm-2 control-label">Region</label>
-        <select data-bind="options: config.regions" id="regions"></select>
+        <label for="regions" class="col-sm-4 control-label">Region</label>
+        <select class="form-control input-sm" data-bind="options: config.regions" id="regions"></select>
    </div>
    <div class="col-md-4">
-        <label for="siteSections" class="col-sm-2 control-label">Site Section</label>
-        <select data-bind="options: config.siteSections" id="siteSections"></select>
+        <label for="siteSections" class="col-sm-4 control-label">Site Section</label>
+        <select class="form-control input-sm" data-bind="options: config.siteSections" id="siteSections"></select>
   </div>
    <div class="col-md-4">
-        <label for="articleTypes" class="col-sm-2 control-label">Article Types</label>
-        <select data-bind="options: config.articleTypes" id="articleTypes"></select>
+        <label for="articleTypes" class="col-sm-6 control-label">Article Types</label>
+        <select class="form-control input-sm" data-bind="options: config.articleTypes" id="articleTypes"></select>
  </div>
 
   </div>
   
-  <div class="row">
+  <div class="row" style="padding: 2px">
     <div class="col-md-2">
         <label for="title" class="col-sm-2 control-label">Title</label>
     </div>
-    <div class="col-md-10">
-        <input type="text" class="form-control" id="title" data-bind="value: articleToEdit.title">
+    <div class="col-md-6">
+        <input type="text" class="form-control input-sm" id="title" data-bind="value: articleToEdit.title">
    </div>
+   <div class="col-md-4"></div>
   </div>
-  <div class="row">
+  <div class="row" style="padding: 2px">
     <div class="col-md-2">
         <label for="regionUrl" class="col-sm-2 control-label">regionUrl</label>
         </div>
-        <div class="col-md-10">
-        <input type="text" class="form-control" id="regionUrl" data-bind="value: articleToEdit.regionUrl">
+        <div class="col-md-6">
+        <input type="text" class="form-control input-sm" id="regionUrl" data-bind="value: articleToEdit.regionUrl">
    </div>
+   <div class="col-md-4"></div>
   </div>
-  <div class="row">
-    <div class="col-md-2">
+  <div class="row" style="padding: 2px">
+    <div class="col-md-2" >
         <label for="nameofAuthor" class="col-sm-2 control-label">nameofAuthor</label>
     </div>
-    <div class="col-md-10">
-        <input type="text" class="form-control" id="nameofAuthor" data-bind="value: articleToEdit.nameofAuthor">
+    <div class="col-md-6">
+        <input type="text" class="form-control input-sm" id="nameofAuthor" data-bind="value: articleToEdit.nameofAuthor">
    </div>
+   <div class="col-md-4"></div>
   </div>
-  <div class="row">
+  <div class="row" style="padding: 2px">
     <div class="col-md-2">
         <label for="date" class="col-sm-2 control-label">date</label>
     </div>
-    <div class="col-md-10">
-        <input type="text" class="form-control" id="date" data-bind="value: articleToEdit.date">
+    <div class="col-md-6">
+        <input type="text" class="form-control input-sm" id="date" data-bind="value: articleToEdit.date">
    </div>
+   <div class="col-md-4"></div>
   </div>
-  <div class="row">
+  <div class="row" style="padding: 2px">
     <div class="col-md-2">
         <label for="description" class="col-sm-2 control-label">description</label>
     </div>
-    <div class="col-md-10">
-        <input type="text" class="form-control" id="description" data-bind="value: articleToEdit.description">
+    <div class="col-md-6">
+        <textarea class="form-control" id="description" data-bind="value: articleToEdit.description" rows="4" cols="50" />
    </div>
+   <div class="col-md-4"></div>
   </div>
-  <div class="row">
-    <div class="col-md-2">
-        <label for="imageUrl" class="col-sm-2 control-label">imageUrl</label>
-    </div>
-    <div class="col-md-10">
-        <input type="text" class="form-control" id="imageUrl" data-bind="value: articleToEdit.imageUrl">
-   </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-        <label for="videoUrl" class="col-sm-2 control-label">videoUrl</label>
-    </div>
-    <div class="col-md-10">
-        <input type="text" class="form-control" id="videoUrl" data-bind="value: articleToEdit.videoUrl">
-   </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-        <label for="htmlContent" class="col-sm-2 control-label">htmlContent</label>
-    </div>
-    <div class="col-md-10">
-        <input type="text" class="form-control" id="htmlContent" data-bind="value: articleToEdit.htmlContent">
-   </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-        <label for="carouselImages" class="col-sm-2 control-label">carouselImages</label>
-    </div>    
-    <div class="col-md-10">
+  <!--<div class="row" style="padding: 2px">-->
+  <!--  <div class="col-md-2">-->
+  <!--      <label for="imageUrl" class="col-sm-2 control-label">imageUrl</label>-->
+  <!--  </div>-->
+  <!--  <div class="col-md-10">-->
+  <!--      <input type="text" class="form-control" id="imageUrl" data-bind="value: articleToEdit.imageUrl">-->
+  <!-- </div>-->
+  <!--</div>-->
+  <!--<div class="row" style="padding: 2px">-->
+  <!--  <div class="col-md-2" >-->
+  <!--      <label for="videoUrl" class="col-sm-2 control-label">videoUrl</label>-->
+  <!--  </div>-->
+  <!--  <div class="col-md-10">-->
+  <!--      <input type="text" class="form-control" id="videoUrl" data-bind="value: articleToEdit.videoUrl">-->
+  <!-- </div>-->
+  <!--</div>-->
+  <!--<div class="row" style="padding: 2px">-->
+  <!--  <div class="col-md-2">-->
+  <!--      <label for="htmlContent" class="col-sm-2 control-label">htmlContent</label>-->
+  <!--  </div>-->
+  <!--  <div class="col-md-10">-->
+  <!--      <input type="text" class="form-control" id="htmlContent" data-bind="value: articleToEdit.htmlContent">-->
+  <!-- </div>-->
+  <!--</div>-->
+  <!--<div class="row"  style="padding: 2px">-->
+  <!--  <div class="col-md-2">-->
+  <!--      <label for="carouselImages" class="col-sm-2 control-label">carouselImages</label>-->
+  <!--  </div>    -->
+  <!--  <div class="col-md-10">-->
         <!-- ko foreach: articleToEdit.carouselImages -->
-        <div class="col-xs-3">
-            <input type="text" class="form-control"  data-bind="value: title">
-        </div>
-        <div class="col-xs-2">
-            <input type="text" class="form-control"  data-bind="value: index">
-        </div>
-        <div class="col-xs-2">
-            <input type="text" class="form-control"  data-bind="value: active">
-        </div>
-        <input type="text" class="form-control"  data-bind="value: imageUrl">
+  <!--      <div class="col-xs-3">-->
+  <!--          <input type="text" class="form-control"  data-bind="value: title">-->
+  <!--      </div>-->
+  <!--      <div class="col-xs-2">-->
+  <!--          <input type="text" class="form-control"  data-bind="value: index">-->
+  <!--      </div>-->
+  <!--      <div class="col-xs-2">-->
+  <!--          <input type="text" class="form-control"  data-bind="value: active">-->
+  <!--      </div>-->
+  <!--      <input type="text" class="form-control"  data-bind="value: imageUrl">-->
         <!-- /ko -->
-   </div>
-  </div>
+  <!-- </div>-->
+  <!--</div>-->
   
-  <div class="row">
-    <div class="col-md-2">
-        <label for="comments" class="col-sm-2 control-label">comments</label>
-    </div>
-    <div class="col-md-10">
+  <!--<div class="row">-->
+  <!--  <div class="col-md-2">-->
+  <!--      <label for="comments" class="col-sm-2 control-label">comments</label>-->
+  <!--  </div>-->
+  <!--  <div class="col-md-10">-->
         <!-- ko foreach: articleToEdit.comments -->
-        <div class="col-xs-3">
-            <input type="text" class="form-control"  data-bind="value: nameofAuthor">
-        </div>
-        <input type="text" class="form-control"  data-bind="value: comment">
+  <!--      <div class="col-xs-3">-->
+  <!--          <input type="text" class="form-control"  data-bind="value: nameofAuthor">-->
+  <!--      </div>-->
+  <!--      <input type="text" class="form-control"  data-bind="value: comment">-->
         <!-- /ko -->
-   </div>
-  </div>
+  <!-- </div>-->
+  <!--</div>-->
   
-  <div class="row">
-    <div class="col-md-12">
-        <label for="comments" class="col-sm-2 control-label">tags</label>
-    </div>
-    <div class="col-md-10">
+  <!--<div class="row">-->
+  <!--  <div class="col-md-12">-->
+  <!--      <label for="comments" class="col-sm-2 control-label">tags</label>-->
+  <!--  </div>-->
+  <!--  <div class="col-md-10">-->
         <!-- ko foreach: articleToEdit.tags -->
-        <div class="col-xs-3">
-            <input type="text" class="form-control"  data-bind="value: tag">
-        </div>
+  <!--      <div class="col-xs-3">-->
+  <!--          <input type="text" class="form-control"  data-bind="value: tag">-->
+  <!--      </div>-->
         <!-- /ko -->
-   </div>
+  <!-- </div>-->
+  <!--</div>-->
+  
+  <div class="row" style="padding: 2px">
+      <div class="pull-right">
+          <button type="button" class="btn btn-primary" data-bind="click: onClick_Save">Save</button>
+      </div>
   </div>
   
   

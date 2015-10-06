@@ -102,5 +102,11 @@ define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.h
         
 	};
 
+	Content.prototype.onClick_Save = function(){
+		console.log("ContentVM :: on");
+		
+		console.log(this.articleToEdit.title());
+	};
+
 	return { template: templateString, viewModel: Content };
 });
