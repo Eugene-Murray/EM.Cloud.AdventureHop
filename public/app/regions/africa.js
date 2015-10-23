@@ -8,7 +8,7 @@ define(['knockout', 'text!regions/africa.html'], function(ko, templateString) {
         self.articles = ko.observableArray([]);
 
 
-        $.get("https://emcloudadventurehop-eugene-murray.c9.io/api/articles/region/north_america", function(data) {
+        $.get("/api/articles/region/north_america", function(data) {
 
             self.articles(data.items);
 
