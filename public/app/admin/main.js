@@ -23,8 +23,8 @@ define(['knockout'], function(ko) {
 	var sammyConfig = Sammy('#appHost', function() {
 		var self = this;
 		var pages = [
-			  { route: ['admin.html#/', 'admin.html#/'], 							component: 'content', 	module: 'content'} 
-			, { route: '#/config', 												component: 'config', module: 'config' }
+			  { route: ['admin.html#/', 'admin.html#/'], component: 'content', 	module: 'content'} 
+			, { route: '#/config', component: 'config', module: 'config' }
 		];
 
 		pages.forEach(function(page) {

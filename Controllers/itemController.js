@@ -2,24 +2,11 @@ var itemController = function(documentDBDao) {
     var self = this;
     self.documentDBDao = documentDBDao;
 
-    var getAllHomePageArticles = function(req, res) {
-        console.log("itemController.get");
+    var getAllArticles = function(req, res) {
+        console.log("itemController.getAllArticles");
         
         var querySpec = {
-            // query: 'SELECT * FROM root r WHERE r.showOnHomePage=@showOnHomePage AND r.documentType=@documentType AND r.softDelete=@softDelete',
-            // parameters: [{
-            //     name: '@showOnHomePage',
-            //     value: true
-            // },
-            query: 'SELECT * FROM root r WHERE r.documentType=@documentType AND r.softDelete=@softDelete',
-            parameters: [{
-                name: '@documentType',
-                value: 'CONTENT'
-            },
-            {
-                name: '@softDelete',
-                value: false
-            }]
+            query: 'SELECT * FROM root r'
         };
 
         self.documentDBDao.find(querySpec, function(err, items) {
@@ -33,19 +20,42 @@ var itemController = function(documentDBDao) {
 
     }
 
+    // var getAllHomePageArticles = function(req, res) {
+    //     console.log("itemController.get");
+        
+    //     var querySpec = {
+    //         // query: 'SELECT * FROM root r WHERE r.showOnHomePage=@showOnHomePage AND r.documentType=@documentType AND r.softDelete=@softDelete',
+    //         // parameters: [{
+    //         //     name: '@showOnHomePage',
+    //         //     value: true
+    //         // },
+    //         query: 'SELECT * FROM root r WHERE r.documentType=@documentType AND r.softDelete=@softDelete',
+    //         parameters: [{
+    //             name: '@documentType',
+    //             value: 'CONTENT'
+    //         },
+    //         {
+    //             name: '@softDelete',
+    //             value: false
+    //         }]
+    //     };
+
+    //     self.documentDBDao.find(querySpec, function(err, items) {
+    //         if (err) {
+    //             throw (err);
+    //         }
+    //         res.json({
+    //             items: items
+    //         });
+    //     });
+
+    // }
+
     var post = function(req, res) {
         console.log("itemController.post");
         var item = req.body;
         console.log(item);
 
-        if(req.body.documentType != "CONTENT")
-        {
-                console.log("ERROR - documentType is not CONTENT");
-                res.status(400);
-                res.send('ERROR - documentType is not CONTENT');
-        }
-            
-            
         if(!req.body.title){
                 console.log("ERROR - title is required");
                 res.status(400);
@@ -55,9 +65,11 @@ var itemController = function(documentDBDao) {
         {
             self.documentDBDao.addItem(item, function(err, item) {
             if (err) {
+                console.warn(err);
                 throw (err);
             }
-                res.status(201);
+                console.warn(res);
+                res.status(200);
                 res.send(item);
             });
         }
@@ -132,7 +144,8 @@ var itemController = function(documentDBDao) {
     }   
 
     return {
-        getAllHomePageArticles: getAllHomePageArticles,
+        //getAllHomePageArticles: getAllHomePageArticles,
+        getAllArticles: getAllArticles,
         post: post,
         getById: getById,
         getAllRegionArticles: getAllRegionArticles,

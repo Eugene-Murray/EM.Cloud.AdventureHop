@@ -2,6 +2,8 @@ define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.h
 
 	function Content(params) { 
 		var self = this;
+		self.articles = ko.observableArray([]);
+		self.articleToEdit = new Article();
 		self.config = {
 			siteSections : ko.observableArray(),
 			regions : ko.observableArray(),
@@ -9,12 +11,11 @@ define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.h
 			};
 		
 		self.load();
-		console.log(Content.prototype.articleToEdit.title());
+		
 	}
 	
 	// Properties
-	Content.prototype.articles = ko.observableArray([]);
-	Content.prototype.articleToEdit = new Article();
+	
 	
 	// Functions
 	Content.prototype.load = function() {
@@ -88,24 +89,47 @@ define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.h
     //         return article.id() == selectedArticle.id();
     //     });
     
-        Content.prototype.articleToEdit.title(selectedArticle.title());
-        Content.prototype.articleToEdit.nameofAuthor(selectedArticle.nameofAuthor());
-        Content.prototype.articleToEdit.description(selectedArticle.description());
-        Content.prototype.articleToEdit.regionUrl(selectedArticle.regionUrl());
-        Content.prototype.articleToEdit.date(selectedArticle.date());
-        Content.prototype.articleToEdit.imageUrl(selectedArticle.imageUrl());
-        Content.prototype.articleToEdit.videoUrl(selectedArticle.videoUrl());
-        Content.prototype.articleToEdit.htmlContent(selectedArticle.htmlContent());
-        Content.prototype.articleToEdit.carouselImages(selectedArticle.carouselImages()),
-		Content.prototype.articleToEdit.comments(selectedArticle.comments()),
-		Content.prototype.articleToEdit.tags(selectedArticle.tags())
+        this.articleToEdit.title(selectedArticle.title());
+        this.articleToEdit.nameofAuthor(selectedArticle.nameofAuthor());
+        this.articleToEdit.description(selectedArticle.description());
+        this.articleToEdit.regionUrl(selectedArticle.regionUrl());
+        this.articleToEdit.date(selectedArticle.date());
+        this.articleToEdit.imageUrl(selectedArticle.imageUrl());
+        this.articleToEdit.videoUrl(selectedArticle.videoUrl());
+        this.articleToEdit.htmlContent(selectedArticle.htmlContent());
+        this.articleToEdit.carouselImages(selectedArticle.carouselImages()),
+		this.articleToEdit.comments(selectedArticle.comments()),
+		this.articleToEdit.tags(selectedArticle.tags())
         
 	};
 
 	Content.prototype.onClick_Save = function(){
-		console.log("ContentVM :: on");
+		console.log("ContentVM ::onClick_Save");
 		
-		console.log(this.articleToEdit.title());
+		console.warn(ko.toJSON(this.articleToEdit));
+		
+		$.ajax({
+		    url: 'https://emcloudadventurehop-eugene-murray.c9.io/api/articles',
+		    dataType: "json",
+		    type: "POST",
+		    contentType: 'application/json; charset=utf-8',
+		    data: ko.toJSON(this.articleToEdit),
+		    async: true,
+		    processData: false,
+		    cache: false,
+		    success: function (data) {
+		    	console.warn("!!!!!!!!!!!!!!!!!!!");
+		        console.warn(data.payload);
+		        this.load();
+		    },
+		    error: function (xhr) {
+		        console.warn(">>>>>>>>>>>>>");
+		        console.warn(xhr);
+		        
+		        this.load();
+		    }
+		});
+		
 	};
 
 	return { template: templateString, viewModel: Content };

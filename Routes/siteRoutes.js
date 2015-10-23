@@ -9,9 +9,12 @@ var routes = function(documentDBDao) {
 
     // https://emcloudadventurehop-eugene-murray.c9.io/api/articles 
     siteRouter.route('/articles')
-        .get(itemController.getAllHomePageArticles) // get all for home page
+        //.get(itemController.getAllHomePageArticles) // get all for home page
+        .get(itemController.getAllArticles)
         .post(itemController.post); // save new
-        
+     
+    // siteRouter.route('/articles/Section/:Section') 
+    //     .get(itemController.getAllArticlesBySection)
     
     // https://emcloudadventurehop-eugene-murray.c9.io/api/articles/519be2ff-876a-53e9-3b52-2cb1db3feb7d    
     siteRouter.route('/articles/:Id')
