@@ -2,6 +2,8 @@ define(['knockout', 'text!regions/polar-regions.html'], function(ko, templateStr
 
 	function PolarRegions(params) { 
 		
+		
+		
 		self.articles = ko.observableArray([]);
 
         $.get("https://emcloudadventurehop-eugene-murray.c9.io/api/articles/region/north_america", function(data) {

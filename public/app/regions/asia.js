@@ -1,6 +1,8 @@
 define(['knockout', 'text!regions/asia.html'], function(ko, templateString) {
 
 	function Asia(params) { 
+	    
+	    $("#navigation-panel").removeClass("open");
 	
         self.articles = ko.observableArray([]);
 

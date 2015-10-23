@@ -2,7 +2,7 @@ define(['knockout', 'text!regions/africa.html'], function(ko, templateString) {
 
     function Africa(params) {
         
-         
+         $("#navigation-panel").removeClass("open");
     
         //var items = load();
         self.articles = ko.observableArray([]);
