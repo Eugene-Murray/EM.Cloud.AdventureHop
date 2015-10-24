@@ -2,7 +2,11 @@ define(['knockout', 'text!regions/south-america.html'], function(ko, templateStr
 
 	function SouthAmerica(params) { 
 	
-		$("#navigation-panel").removeClass("open");
+		 $('.active-slide-btn').removeClass('active-slide-btn');
+        $('#navigation-panel').removeClass('open');
+        $('html').removeClass('slide-active');
+        $('#page').removeClass('page-off');
+        
 		
 		self.articles = ko.observableArray([]);
 

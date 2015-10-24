@@ -2,7 +2,10 @@ define(['knockout', 'text!regions/north-america.html'], function(ko, templateStr
 
 	function NorthAmerica(params) { 
 	
-		$("#navigation-panel").removeClass("open");
+		 $('.active-slide-btn').removeClass('active-slide-btn');
+        $('#navigation-panel').removeClass('open');
+        $('html').removeClass('slide-active');
+        $('#page').removeClass('page-off');
 		
 		self.articles = ko.observableArray([]);
 

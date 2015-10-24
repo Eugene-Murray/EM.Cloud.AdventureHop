@@ -2,6 +2,10 @@ define(['knockout', 'text!regions/polar-regions.html'], function(ko, templateStr
 
 	function PolarRegions(params) { 
 		
+		 $('.active-slide-btn').removeClass('active-slide-btn');
+        $('#navigation-panel').removeClass('open');
+        $('html').removeClass('slide-active');
+        $('#page').removeClass('page-off');
 		
 		
 		self.articles = ko.observableArray([]);
