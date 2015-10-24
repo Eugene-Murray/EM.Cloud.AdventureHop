@@ -20,7 +20,7 @@ define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.h
 	// Functions
 	Content.prototype.load = function() {
 		var self = this;
-		$.get("https://emcloudadventurehop-eugene-murray.c9.io/api/config", function(data) {
+		$.get("/api/config", function(data) {
             console.log("Content - get config");
             var regions = [];
             var index1 = 0;
@@ -50,7 +50,7 @@ define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.h
             self.config.articleTypes(articleTypes);
         });
         
-        $.get("https://emcloudadventurehop-eugene-murray.c9.io/api/articles", function(data) {
+        $.get("/api/articles", function(data) {
             console.log("Content - get all articles");
             var articles = [];
             $.each(data.items, function( index, item ) {
