@@ -6,7 +6,7 @@ define(['knockout', 'text!config.html', 'text!config.config'], function(ko, temp
 		self.config = ko.observable();
 		
 		
-		$.get("https://emcloudadventurehop-eugene-murray.c9.io/api/config", function(data) {
+		$.get("/api/config", function(data) {
 
             console.log(data);
 

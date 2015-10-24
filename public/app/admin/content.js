@@ -109,7 +109,7 @@ define(['knockout', 'knockout-mapping', 'underscore', 'Article', 'text!content.h
 		console.warn(ko.toJSON(this.articleToEdit));
 		
 		$.ajax({
-		    url: 'https://emcloudadventurehop-eugene-murray.c9.io/api/articles',
+		    url: '/api/articles',
 		    dataType: "json",
 		    type: "POST",
 		    contentType: 'application/json; charset=utf-8',
