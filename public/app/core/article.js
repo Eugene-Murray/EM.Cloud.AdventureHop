@@ -13,7 +13,12 @@ define(['knockout'], function(ko) {
             self.date = ko.observable(); 
             self.title = ko.observable();
             self.description = ko.observable();
-            self.carouselImages = ko.observableArray([]);
+            self.carouselImages = ko.observableArray([{
+                title : '',
+                index : '',
+                active : '',
+                imageUrl : ''
+                }]);
             self.imageUrl = ko.observable();
             self.videoUrl = ko.observable();
             self.htmlContent = ko.observable();

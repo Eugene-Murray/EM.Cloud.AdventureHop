@@ -111,49 +111,50 @@
    </div>
    <div class="col-md-4"></div>
   </div>
-  <!--<div class="row" style="padding: 2px">-->
-  <!--  <div class="col-md-2">-->
-  <!--      <label for="imageUrl" class="col-sm-2 control-label">imageUrl</label>-->
-  <!--  </div>-->
-  <!--  <div class="col-md-10">-->
-  <!--      <input type="text" class="form-control" id="imageUrl" data-bind="value: articleToEdit.imageUrl">-->
-  <!-- </div>-->
-  <!--</div>-->
-  <!--<div class="row" style="padding: 2px">-->
-  <!--  <div class="col-md-2" >-->
-  <!--      <label for="videoUrl" class="col-sm-2 control-label">videoUrl</label>-->
-  <!--  </div>-->
-  <!--  <div class="col-md-10">-->
-  <!--      <input type="text" class="form-control" id="videoUrl" data-bind="value: articleToEdit.videoUrl">-->
-  <!-- </div>-->
-  <!--</div>-->
-  <!--<div class="row" style="padding: 2px">-->
-  <!--  <div class="col-md-2">-->
-  <!--      <label for="htmlContent" class="col-sm-2 control-label">htmlContent</label>-->
-  <!--  </div>-->
-  <!--  <div class="col-md-10">-->
-  <!--      <input type="text" class="form-control" id="htmlContent" data-bind="value: articleToEdit.htmlContent">-->
-  <!-- </div>-->
-  <!--</div>-->
-  <!--<div class="row"  style="padding: 2px">-->
-  <!--  <div class="col-md-2">-->
-  <!--      <label for="carouselImages" class="col-sm-2 control-label">carouselImages</label>-->
-  <!--  </div>    -->
-  <!--  <div class="col-md-10">-->
-        <!-- ko foreach: articleToEdit.carouselImages -->
-  <!--      <div class="col-xs-3">-->
-  <!--          <input type="text" class="form-control"  data-bind="value: title">-->
-  <!--      </div>-->
-  <!--      <div class="col-xs-2">-->
-  <!--          <input type="text" class="form-control"  data-bind="value: index">-->
-  <!--      </div>-->
-  <!--      <div class="col-xs-2">-->
-  <!--          <input type="text" class="form-control"  data-bind="value: active">-->
-  <!--      </div>-->
-  <!--      <input type="text" class="form-control"  data-bind="value: imageUrl">-->
-        <!-- /ko -->
-  <!-- </div>-->
-  <!--</div>-->
+  <div class="row" style="padding: 2px">
+    <div class="col-md-2">
+        <label for="imageUrl" class="col-sm-2 control-label">imageUrl</label>
+    </div>
+    <div class="col-md-10">
+        <input type="text" class="form-control input-sm" id="imageUrl" data-bind="value: articleToEdit.imageUrl">
+   </div>
+  </div>
+  <div class="row" style="padding: 2px">
+    <div class="col-md-2" >
+        <label for="videoUrl" class="col-sm-2 control-label">videoUrl</label>
+    </div>
+    <div class="col-md-10">
+        <input type="text" class="form-control input-sm" id="videoUrl" data-bind="value: articleToEdit.videoUrl">
+   </div>
+  </div>
+  <div class="row" style="padding: 2px">
+    <div class="col-md-2">
+        <label for="htmlContent" class="col-sm-2 control-label">htmlContent</label>
+    </div>
+    <div class="col-md-10">
+        <textarea class="form-control" id="description" data-bind="value: articleToEdit.htmlContent" rows="10" cols="50" />     
+   </div>
+  </div>
+  <div class="row"  style="padding: 2px">
+    <div class="col-md-2">
+        <label for="carouselImages" class="col-sm-2 control-label">carouselImages</label>
+    </div>    
+    <div class="col-md-10">
+         <!-- ko foreach: articleToEdit.carouselImages -->
+        <div class="col-xs-3">
+            <label for="carouselImgTitle" class="col-sm-2 control-label">Title</label>
+            <input id="carouselImgTitle" type="text" class="form-control input-sm"  data-bind="value: title">
+        </div>
+        <div class="col-xs-2">
+            <input type="text" class="form-control input-sm"  data-bind="value: index">
+        </div>
+        <div class="col-xs-2">
+            <input type="text" class="form-control input-sm"  data-bind="value: active">
+        </div>
+        <input type="text" class="form-control input-sm"  data-bind="value: imageUrl">
+         <!-- /ko -->
+   </div>
+  </div>
   
   <!--<div class="row">-->
   <!--  <div class="col-md-2">-->
